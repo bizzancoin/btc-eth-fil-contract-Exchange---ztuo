@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/admin/admin.iml" filepath="$PROJECT_DIR$/admin/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/agent-api/agent-api.iml" filepath="$PROJECT_DIR$/agent-api/agent-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bipay-core/bipay-core.iml" filepath="$PROJECT_DIR$/bipay-core/bipay-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bitrade-parent.iml" filepath="$PROJECT_DIR$/bitrade-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chat/chat.iml" filepath="$PROJECT_DIR$/chat/chat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cloud/cloud.iml" filepath="$PROJECT_DIR$/cloud/cloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contract-option-api/contract-option-api.iml" filepath="$PROJECT_DIR$/contract-option-api/contract-option-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contract-option-core/contract-option-core.iml" filepath="$PROJECT_DIR$/contract-option-core/contract-option-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contract-swap-api/contract-swap-api.iml" filepath="$PROJECT_DIR$/contract-swap-api/contract-swap-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/contract-swap-core/contract-swap-core.iml" filepath="$PROJECT_DIR$/contract-swap-core/contract-swap-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/core/core.iml" filepath="$PROJECT_DIR$/core/core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exchange/exchange.iml" filepath="$PROJECT_DIR$/exchange/exchange.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exchange-api/exchange-api.iml" filepath="$PROJECT_DIR$/exchange-api/exchange-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exchange-core/exchange-core.iml" filepath="$PROJECT_DIR$/exchange-core/exchange-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/market/market.iml" filepath="$PROJECT_DIR$/market/market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/open-api/open-api.iml" filepath="$PROJECT_DIR$/open-api/open-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otc-api/otc-api.iml" filepath="$PROJECT_DIR$/otc-api/otc-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/otc-core/otc-core.iml" filepath="$PROJECT_DIR$/otc-core/otc-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ucenter-api/ucenter-api.iml" filepath="$PROJECT_DIR$/ucenter-api/ucenter-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wallet/wallet.iml" filepath="$PROJECT_DIR$/wallet/wallet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wallet_udun/wallet_udun.iml" filepath="$PROJECT_DIR$/wallet_udun/wallet_udun.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul/zuul.iml" filepath="$PROJECT_DIR$/zuul/zuul.iml" />
+    </modules>
+  </component>
+</project>

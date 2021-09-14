@@ -1,0 +1,13 @@
+#Tue Jun 08 15:15:40 CST 2021
+path.3=classes_1.dex
+path.2=classes_0.dex
+path.1=classes.dex
+path.0=classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+base.3=F\:\\ztuo-android\\app\\build\\intermediates\\dex\\release\\mergeLibDexRelease\\out\\classes_1.dex
+base.2=F\:\\ztuo-android\\app\\build\\intermediates\\dex\\release\\mergeLibDexRelease\\out\\classes_0.dex
+base.1=F\:\\ztuo-android\\app\\build\\intermediates\\dex\\release\\mergeProjectDexRelease\\out\\classes.dex
+base.0=F\:\\ztuo-android\\app\\build\\intermediates\\dex\\release\\mergeExtDexRelease\\out\\classes.dex

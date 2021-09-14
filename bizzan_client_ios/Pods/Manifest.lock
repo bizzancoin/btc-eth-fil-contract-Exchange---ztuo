@@ -1,0 +1,110 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - BaiduMobStat (5.0.0)
+  - Bugly (2.5.0)
+  - CocoaAsyncSocket (7.6.3)
+  - FLAnimatedImage (1.0.12)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - IQKeyboardManager (6.3.0)
+  - Masonry (1.1.0)
+  - MJExtension (3.0.17)
+  - MJRefresh (3.2.0)
+  - PGDatePicker (2.6.9):
+    - PGPickerView
+  - PGPickerView (1.3.8)
+  - SDAutoLayout (2.1.9)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - Toast (4.0.0)
+  - UMengAnalytics-NO-IDFA (4.2.5)
+  - VTMagic (1.2.4):
+    - VTMagic/Core (= 1.2.4)
+  - VTMagic/Core (1.2.4)
+  - YBImageBrowser (1.1.2):
+    - FLAnimatedImage (~> 1.0.12)
+    - SDWebImage (~> 4.3.3)
+  - YBPopupMenu (1.1.2)
+
+DEPENDENCIES:
+  - AFNetworking
+  - BaiduMobStat
+  - Bugly
+  - CocoaAsyncSocket
+  - FLAnimatedImage (~> 1.0.12)
+  - FMDB
+  - IQKeyboardManager
+  - Masonry
+  - MJExtension
+  - MJRefresh
+  - PGDatePicker
+  - SDAutoLayout (~> 2.1.7)
+  - SDWebImage
+  - Toast
+  - UMengAnalytics-NO-IDFA
+  - VTMagic
+  - YBImageBrowser (~> 1.1.2)
+  - YBPopupMenu (~> 1.1.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - BaiduMobStat
+    - Bugly
+    - CocoaAsyncSocket
+    - FLAnimatedImage
+    - FMDB
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - PGDatePicker
+    - PGPickerView
+    - SDAutoLayout
+    - SDWebImage
+    - Toast
+    - UMengAnalytics-NO-IDFA
+    - VTMagic
+    - YBImageBrowser
+    - YBPopupMenu
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  BaiduMobStat: 23910d0496fb881a1284dcdca5ef736ccdb11c6d
+  Bugly: 3ca9f255c01025582df26f9222893b383c7e4b4e
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  IQKeyboardManager: 2ca9d64893247556f53523dcd8d78641f0ba7c23
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 74ec83124a68891619fb7ba9c5c811bbf1691076
+  MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
+  PGDatePicker: 88960f3760edac96219c10320f25536ad31d0f44
+  PGPickerView: 037acfb132a4c8054fb43aaa59a5ff50c7f747f5
+  SDAutoLayout: 6b6f4db0d009dfc46cef14ef710dbb164e86616c
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  UMengAnalytics-NO-IDFA: 16666e32edce5be44ae5b14aaaa7f3582e09d6ab
+  VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
+  YBImageBrowser: 3e61edabcb1927ddc095a96465f47fc551b8f9bf
+  YBPopupMenu: 6efb286385d95ba5f97c58b8464ec873645e8764
+
+PODFILE CHECKSUM: 8931e77b3a6443e805eed5442eac9217c8541ce7
+
+COCOAPODS: 1.5.3

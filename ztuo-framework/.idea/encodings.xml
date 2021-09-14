@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/agent-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/agent-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/agent-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bipay-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/bipay-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chat" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chat/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/chat/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cloud/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-option-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-option-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-option-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-option-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-option-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-swap-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-swap-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-swap-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-swap-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/contract-swap-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exchange" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exchange-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exchange-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exchange-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exchange-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exchange-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exchange-core/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exchange/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/exchange/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/market" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/market/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/market/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/otc-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/otc-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/otc-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/otc-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/otc-core/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ucenter-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ucenter-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ucenter-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wallet" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wallet/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wallet/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wallet_udun" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wallet_udun/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/wallet_udun/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,508 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.bizzan.app"
+4    android:versionCode="1"
+5    android:versionName="1.0.6" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->F:\ztuo-android\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->F:\ztuo-android\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->F:\ztuo-android\app\src\main\AndroidManifest.xml:5:5-67
+11-->F:\ztuo-android\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.CAMERA" />
+12-->F:\ztuo-android\app\src\main\AndroidManifest.xml:6:5-65
+12-->F:\ztuo-android\app\src\main\AndroidManifest.xml:6:22-62
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->F:\ztuo-android\app\src\main\AndroidManifest.xml:7:5-76
+13-->F:\ztuo-android\app\src\main\AndroidManifest.xml:7:22-73
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->F:\ztuo-android\app\src\main\AndroidManifest.xml:8:5-79
+14-->F:\ztuo-android\app\src\main\AndroidManifest.xml:8:22-76
+15    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+15-->F:\ztuo-android\app\src\main\AndroidManifest.xml:9:5-76
+15-->F:\ztuo-android\app\src\main\AndroidManifest.xml:9:22-73
+16    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+16-->F:\ztuo-android\app\src\main\AndroidManifest.xml:10:5-75
+16-->F:\ztuo-android\app\src\main\AndroidManifest.xml:10:22-72
+17    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+17-->F:\ztuo-android\app\src\main\AndroidManifest.xml:11:5-80
+17-->F:\ztuo-android\app\src\main\AndroidManifest.xml:11:22-77
+18    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+18-->F:\ztuo-android\app\src\main\AndroidManifest.xml:12:5-81
+18-->F:\ztuo-android\app\src\main\AndroidManifest.xml:12:22-78
+19    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+19-->F:\ztuo-android\app\src\main\AndroidManifest.xml:13:5-83
+19-->F:\ztuo-android\app\src\main\AndroidManifest.xml:13:22-80
+20    <uses-permission android:name="android.permission.BLUETOOTH" />
+20-->F:\ztuo-android\app\src\main\AndroidManifest.xml:14:5-68
+20-->F:\ztuo-android\app\src\main\AndroidManifest.xml:14:22-65
+21    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+21-->F:\ztuo-android\app\src\main\AndroidManifest.xml:12:5-81
+21-->F:\ztuo-android\app\src\main\AndroidManifest.xml:12:22-78
+22    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+22-->F:\ztuo-android\app\src\main\AndroidManifest.xml:16:5-79
+22-->F:\ztuo-android\app\src\main\AndroidManifest.xml:16:22-76
+23    <uses-permission android:name="android.permission.GET_TASKS" />
+23-->F:\ztuo-android\app\src\main\AndroidManifest.xml:17:5-68
+23-->F:\ztuo-android\app\src\main\AndroidManifest.xml:17:22-65
+24    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+24-->F:\ztuo-android\app\src\main\AndroidManifest.xml:16:5-79
+24-->F:\ztuo-android\app\src\main\AndroidManifest.xml:16:22-76
+25
+26    <application
+26-->F:\ztuo-android\app\src\main\AndroidManifest.xml:20:5-198:19
+27        android:name="com.bizzan.app.MyApplication"
+27-->F:\ztuo-android\app\src\main\AndroidManifest.xml:21:9-42
+28        android:allowBackup="true"
+28-->F:\ztuo-android\app\src\main\AndroidManifest.xml:22:9-35
+29        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+29-->[com.android.support:support-compat:28.0.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\f14724208b5bfeeef0d6bdefe649bca7\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+30        android:debuggable="true"
+31        android:icon="@mipmap/ic_cm_logo"
+31-->F:\ztuo-android\app\src\main\AndroidManifest.xml:23:9-42
+32        android:label="@string/app_name"
+32-->F:\ztuo-android\app\src\main\AndroidManifest.xml:24:9-41
+33        android:largeHeap="true"
+33-->F:\ztuo-android\app\src\main\AndroidManifest.xml:25:9-33
+34        android:networkSecurityConfig="@xml/network"
+34-->F:\ztuo-android\app\src\main\AndroidManifest.xml:26:9-53
+35        android:roundIcon="@mipmap/ic_cm_logo"
+35-->F:\ztuo-android\app\src\main\AndroidManifest.xml:27:9-47
+36        android:supportsRtl="true"
+36-->F:\ztuo-android\app\src\main\AndroidManifest.xml:28:9-35
+37        android:theme="@style/AppTheme.StartingWindowTheme" >
+37-->F:\ztuo-android\app\src\main\AndroidManifest.xml:29:9-60
+38        <activity android:name="com.bizzan.ui.wallet.SelectCoinActivity" />
+38-->F:\ztuo-android\app\src\main\AndroidManifest.xml:30:9-75
+38-->F:\ztuo-android\app\src\main\AndroidManifest.xml:30:19-63
+39        <activity android:name="com.bizzan.ui.wallet.SelectAccountActivity" />
+39-->F:\ztuo-android\app\src\main\AndroidManifest.xml:31:9-69
+39-->F:\ztuo-android\app\src\main\AndroidManifest.xml:31:19-66
+40        <activity android:name="com.bizzan.ui.wallet.WalletListActivity" />
+40-->F:\ztuo-android\app\src\main\AndroidManifest.xml:32:9-66
+40-->F:\ztuo-android\app\src\main\AndroidManifest.xml:32:19-63
+41
+42        <provider
+42-->F:\ztuo-android\app\src\main\AndroidManifest.xml:34:9-43:20
+43            android:name="android.support.v4.content.FileProvider"
+43-->F:\ztuo-android\app\src\main\AndroidManifest.xml:35:13-67
+44            android:authorities="com.bizzan.app.fileprovider"
+44-->F:\ztuo-android\app\src\main\AndroidManifest.xml:36:13-62
+45            android:enabled="true"
+45-->F:\ztuo-android\app\src\main\AndroidManifest.xml:37:13-35
+46            android:exported="false"
+46-->F:\ztuo-android\app\src\main\AndroidManifest.xml:38:13-37
+47            android:grantUriPermissions="true" >
+47-->F:\ztuo-android\app\src\main\AndroidManifest.xml:39:13-47
+48            <meta-data
+48-->F:\ztuo-android\app\src\main\AndroidManifest.xml:40:13-42:54
+49                android:name="android.support.FILE_PROVIDER_PATHS"
+49-->F:\ztuo-android\app\src\main\AndroidManifest.xml:41:17-67
+50                android:resource="@xml/file_paths" />
+50-->F:\ztuo-android\app\src\main\AndroidManifest.xml:42:17-51
+51        </provider> <!-- Umeng -->
+52        <meta-data
+52-->F:\ztuo-android\app\src\main\AndroidManifest.xml:44:9-46:56
+53            android:name="UMENG_APPKEY"
+53-->F:\ztuo-android\app\src\main\AndroidManifest.xml:45:13-40
+54            android:value="5d676f05570df3627e00086c" />
+54-->F:\ztuo-android\app\src\main\AndroidManifest.xml:46:13-53
+55
+56        <activity
+56-->F:\ztuo-android\app\src\main\AndroidManifest.xml:48:9-52:52
+57            android:name="com.bizzan.ui.home.MainActivity"
+57-->F:\ztuo-android\app\src\main\AndroidManifest.xml:49:13-49
+58            android:configChanges="orientation|screenSize"
+58-->F:\ztuo-android\app\src\main\AndroidManifest.xml:50:13-59
+59            android:launchMode="singleTask"
+59-->F:\ztuo-android\app\src\main\AndroidManifest.xml:51:13-44
+60            android:screenOrientation="portrait" />
+60-->F:\ztuo-android\app\src\main\AndroidManifest.xml:52:13-49
+61        <activity
+61-->F:\ztuo-android\app\src\main\AndroidManifest.xml:53:9-57:52
+62            android:name="com.bizzan.ui.login.LoginActivity"
+62-->F:\ztuo-android\app\src\main\AndroidManifest.xml:54:13-51
+63            android:configChanges="orientation|screenSize"
+63-->F:\ztuo-android\app\src\main\AndroidManifest.xml:55:13-59
+64            android:launchMode="singleTask"
+64-->F:\ztuo-android\app\src\main\AndroidManifest.xml:56:13-44
+65            android:screenOrientation="portrait" />
+65-->F:\ztuo-android\app\src\main\AndroidManifest.xml:57:13-49
+66        <activity
+66-->F:\ztuo-android\app\src\main\AndroidManifest.xml:58:9-61:52
+67            android:name="com.bizzan.ui.common.LeadActivity"
+67-->F:\ztuo-android\app\src\main\AndroidManifest.xml:59:13-51
+68            android:configChanges="orientation|screenSize"
+68-->F:\ztuo-android\app\src\main\AndroidManifest.xml:60:13-59
+69            android:screenOrientation="portrait" />
+69-->F:\ztuo-android\app\src\main\AndroidManifest.xml:61:13-49
+70        <activity
+70-->F:\ztuo-android\app\src\main\AndroidManifest.xml:62:9-65:52
+71            android:name="com.bizzan.ui.common.PermissionActivity"
+71-->F:\ztuo-android\app\src\main\AndroidManifest.xml:63:13-57
+72            android:configChanges="orientation|screenSize"
+72-->F:\ztuo-android\app\src\main\AndroidManifest.xml:64:13-59
+73            android:screenOrientation="portrait" />
+73-->F:\ztuo-android\app\src\main\AndroidManifest.xml:65:13-49
+74        <activity
+74-->F:\ztuo-android\app\src\main\AndroidManifest.xml:66:9-76:20
+75            android:name="com.bizzan.ui.common.StartActivity"
+75-->F:\ztuo-android\app\src\main\AndroidManifest.xml:67:13-52
+76            android:configChanges="orientation|screenSize"
+76-->F:\ztuo-android\app\src\main\AndroidManifest.xml:68:13-59
+77            android:hardwareAccelerated="true"
+77-->F:\ztuo-android\app\src\main\AndroidManifest.xml:69:13-47
+78            android:screenOrientation="portrait" >
+78-->F:\ztuo-android\app\src\main\AndroidManifest.xml:70:13-49
+79            <intent-filter>
+79-->F:\ztuo-android\app\src\main\AndroidManifest.xml:71:13-75:29
+80                <action android:name="android.intent.action.MAIN" />
+80-->F:\ztuo-android\app\src\main\AndroidManifest.xml:72:17-69
+80-->F:\ztuo-android\app\src\main\AndroidManifest.xml:72:25-66
+81
+82                <category android:name="android.intent.category.LAUNCHER" />
+82-->F:\ztuo-android\app\src\main\AndroidManifest.xml:74:17-77
+82-->F:\ztuo-android\app\src\main\AndroidManifest.xml:74:27-74
+83            </intent-filter>
+84        </activity>
+85        <activity
+85-->F:\ztuo-android\app\src\main\AndroidManifest.xml:77:9-80:52
+86            android:name="com.bizzan.ui.kline.KlineActivity"
+86-->F:\ztuo-android\app\src\main\AndroidManifest.xml:78:13-51
+87            android:configChanges="orientation|screenSize"
+87-->F:\ztuo-android\app\src\main\AndroidManifest.xml:79:13-59
+88            android:screenOrientation="portrait" />
+88-->F:\ztuo-android\app\src\main\AndroidManifest.xml:80:13-49
+89        <activity
+89-->F:\ztuo-android\app\src\main\AndroidManifest.xml:81:9-85:52
+90            android:name="com.bizzan.ui.signup.SignUpActivity"
+90-->F:\ztuo-android\app\src\main\AndroidManifest.xml:82:13-53
+91            android:configChanges="orientation|screenSize"
+91-->F:\ztuo-android\app\src\main\AndroidManifest.xml:83:13-59
+92            android:launchMode="singleTask"
+92-->F:\ztuo-android\app\src\main\AndroidManifest.xml:84:13-44
+93            android:screenOrientation="portrait" />
+93-->F:\ztuo-android\app\src\main\AndroidManifest.xml:85:13-49
+94        <activity
+94-->F:\ztuo-android\app\src\main\AndroidManifest.xml:86:9-89:52
+95            android:name="com.bizzan.ui.forgot_pwd.ForgotPwdActivity"
+95-->F:\ztuo-android\app\src\main\AndroidManifest.xml:87:13-60
+96            android:configChanges="orientation|screenSize"
+96-->F:\ztuo-android\app\src\main\AndroidManifest.xml:88:13-59
+97            android:screenOrientation="portrait" />
+97-->F:\ztuo-android\app\src\main\AndroidManifest.xml:89:13-49
+98        <activity
+98-->F:\ztuo-android\app\src\main\AndroidManifest.xml:90:9-94:52
+99            android:name="com.bizzan.ui.myinfo.MyInfoActivity"
+99-->F:\ztuo-android\app\src\main\AndroidManifest.xml:91:13-53
+100            android:configChanges="orientation|screenSize"
+100-->F:\ztuo-android\app\src\main\AndroidManifest.xml:92:13-59
+101            android:launchMode="singleTask"
+101-->F:\ztuo-android\app\src\main\AndroidManifest.xml:93:13-44
+102            android:screenOrientation="portrait" />
+102-->F:\ztuo-android\app\src\main\AndroidManifest.xml:94:13-49
+103        <activity
+103-->F:\ztuo-android\app\src\main\AndroidManifest.xml:95:9-98:52
+104            android:name="com.bizzan.ui.wallet.WalletActivity"
+104-->F:\ztuo-android\app\src\main\AndroidManifest.xml:96:13-53
+105            android:configChanges="orientation|screenSize"
+105-->F:\ztuo-android\app\src\main\AndroidManifest.xml:97:13-59
+106            android:screenOrientation="portrait" />
+106-->F:\ztuo-android\app\src\main\AndroidManifest.xml:98:13-49
+107        <activity
+107-->F:\ztuo-android\app\src\main\AndroidManifest.xml:99:9-102:52
+108            android:name="com.bizzan.ui.wallet_detail.WalletDetailActivity"
+108-->F:\ztuo-android\app\src\main\AndroidManifest.xml:100:13-66
+109            android:configChanges="orientation|screenSize"
+109-->F:\ztuo-android\app\src\main\AndroidManifest.xml:101:13-59
+110            android:screenOrientation="portrait" />
+110-->F:\ztuo-android\app\src\main\AndroidManifest.xml:102:13-49
+111        <activity
+111-->F:\ztuo-android\app\src\main\AndroidManifest.xml:103:9-106:52
+112            android:name="com.bizzan.ui.my_order.MyOrderActivity"
+112-->F:\ztuo-android\app\src\main\AndroidManifest.xml:104:13-56
+113            android:configChanges="orientation|screenSize"
+113-->F:\ztuo-android\app\src\main\AndroidManifest.xml:105:13-59
+114            android:screenOrientation="portrait" />
+114-->F:\ztuo-android\app\src\main\AndroidManifest.xml:106:13-49
+115        <activity
+115-->F:\ztuo-android\app\src\main\AndroidManifest.xml:107:9-110:52
+116            android:name="com.bizzan.ui.my_ads.AdsActivity"
+116-->F:\ztuo-android\app\src\main\AndroidManifest.xml:108:13-50
+117            android:configChanges="orientation|screenSize"
+117-->F:\ztuo-android\app\src\main\AndroidManifest.xml:109:13-59
+118            android:screenOrientation="portrait" />
+118-->F:\ztuo-android\app\src\main\AndroidManifest.xml:110:13-49
+119        <activity
+119-->F:\ztuo-android\app\src\main\AndroidManifest.xml:111:9-114:52
+120            android:name="com.bizzan.ui.message.MessageActivity"
+120-->F:\ztuo-android\app\src\main\AndroidManifest.xml:112:13-55
+121            android:configChanges="orientation|screenSize"
+121-->F:\ztuo-android\app\src\main\AndroidManifest.xml:113:13-59
+122            android:screenOrientation="portrait" />
+122-->F:\ztuo-android\app\src\main\AndroidManifest.xml:114:13-49
+123        <activity
+123-->F:\ztuo-android\app\src\main\AndroidManifest.xml:115:9-118:52
+124            android:name="com.bizzan.ui.credit.CreditActivity"
+124-->F:\ztuo-android\app\src\main\AndroidManifest.xml:116:13-53
+125            android:configChanges="orientation|screenSize"
+125-->F:\ztuo-android\app\src\main\AndroidManifest.xml:117:13-59
+126            android:screenOrientation="portrait" />
+126-->F:\ztuo-android\app\src\main\AndroidManifest.xml:118:13-49
+127        <activity
+127-->F:\ztuo-android\app\src\main\AndroidManifest.xml:119:9-122:52
+128            android:name="com.bizzan.ui.setting.SettingActivity"
+128-->F:\ztuo-android\app\src\main\AndroidManifest.xml:120:13-55
+129            android:configChanges="orientation|screenSize"
+129-->F:\ztuo-android\app\src\main\AndroidManifest.xml:121:13-59
+130            android:screenOrientation="portrait" />
+130-->F:\ztuo-android\app\src\main\AndroidManifest.xml:122:13-49
+131        <activity
+131-->F:\ztuo-android\app\src\main\AndroidManifest.xml:123:9-126:52
+132            android:name="com.bizzan.ui.feed.FeedbackActivity"
+132-->F:\ztuo-android\app\src\main\AndroidManifest.xml:124:13-53
+133            android:configChanges="orientation|screenSize"
+133-->F:\ztuo-android\app\src\main\AndroidManifest.xml:125:13-59
+134            android:screenOrientation="portrait" />
+134-->F:\ztuo-android\app\src\main\AndroidManifest.xml:126:13-49
+135        <activity
+135-->F:\ztuo-android\app\src\main\AndroidManifest.xml:127:9-130:52
+136            android:name="com.bizzan.ui.aboutus.AboutUsActivity"
+136-->F:\ztuo-android\app\src\main\AndroidManifest.xml:128:13-55
+137            android:configChanges="orientation|screenSize"
+137-->F:\ztuo-android\app\src\main\AndroidManifest.xml:129:13-59
+138            android:screenOrientation="portrait" />
+138-->F:\ztuo-android\app\src\main\AndroidManifest.xml:130:13-49
+139        <activity android:name="com.bizzan.ui.releaseAd.ReleaseAdsActivity" />
+139-->F:\ztuo-android\app\src\main\AndroidManifest.xml:131:9-69
+139-->F:\ztuo-android\app\src\main\AndroidManifest.xml:131:19-66
+140        <activity android:name="com.bizzan.ui.country.CountryActivity" />
+140-->F:\ztuo-android\app\src\main\AndroidManifest.xml:132:9-64
+140-->F:\ztuo-android\app\src\main\AndroidManifest.xml:132:19-61
+141        <activity android:name="com.bizzan.ui.account_pwd.AccountPwdActivity" />
+141-->F:\ztuo-android\app\src\main\AndroidManifest.xml:133:9-71
+141-->F:\ztuo-android\app\src\main\AndroidManifest.xml:133:19-68
+142        <activity android:name="com.bizzan.ui.buy_or_sell.C2CBuyOrSellActivity" />
+142-->F:\ztuo-android\app\src\main\AndroidManifest.xml:134:9-73
+142-->F:\ztuo-android\app\src\main\AndroidManifest.xml:134:19-70
+143        <activity android:name="com.bizzan.ui.recharge.RechargeActivity" />
+143-->F:\ztuo-android\app\src\main\AndroidManifest.xml:135:9-66
+143-->F:\ztuo-android\app\src\main\AndroidManifest.xml:135:19-63
+144        <activity android:name="com.bizzan.ui.extract.ExtractActivity" />
+144-->F:\ztuo-android\app\src\main\AndroidManifest.xml:136:9-64
+144-->F:\ztuo-android\app\src\main\AndroidManifest.xml:136:19-61
+145        <activity android:name="com.bizzan.ui.ctc.CTCActivity" />
+145-->F:\ztuo-android\app\src\main\AndroidManifest.xml:137:9-56
+145-->F:\ztuo-android\app\src\main\AndroidManifest.xml:137:19-53
+146        <activity android:name="com.bizzan.ui.ctc.CTCOrderDetailActivity" />
+146-->F:\ztuo-android\app\src\main\AndroidManifest.xml:138:9-67
+146-->F:\ztuo-android\app\src\main\AndroidManifest.xml:138:19-64
+147        <activity android:name="com.bizzan.ui.extract.AddressActivity" />
+147-->F:\ztuo-android\app\src\main\AndroidManifest.xml:139:9-64
+147-->F:\ztuo-android\app\src\main\AndroidManifest.xml:139:19-61
+148        <activity android:name="com.bizzan.ui.bind_phone.BindPhoneActivity" />
+148-->F:\ztuo-android\app\src\main\AndroidManifest.xml:140:9-69
+148-->F:\ztuo-android\app\src\main\AndroidManifest.xml:140:19-66
+149        <activity android:name="com.bizzan.ui.bind_email.BindEmailActivity" />
+149-->F:\ztuo-android\app\src\main\AndroidManifest.xml:141:9-69
+149-->F:\ztuo-android\app\src\main\AndroidManifest.xml:141:19-66
+150        <activity android:name="com.bizzan.ui.bind_email.EmailActivity" />
+150-->F:\ztuo-android\app\src\main\AndroidManifest.xml:142:9-65
+150-->F:\ztuo-android\app\src\main\AndroidManifest.xml:142:19-62
+151        <activity android:name="com.bizzan.ui.edit_login_pwd.EditLoginPwdActivity" />
+151-->F:\ztuo-android\app\src\main\AndroidManifest.xml:143:9-76
+151-->F:\ztuo-android\app\src\main\AndroidManifest.xml:143:19-73
+152        <activity android:name="com.bizzan.ui.bind_phone.PhoneActivity" />
+152-->F:\ztuo-android\app\src\main\AndroidManifest.xml:144:9-65
+152-->F:\ztuo-android\app\src\main\AndroidManifest.xml:144:19-62
+153        <activity android:name="com.bizzan.ui.change_phone.ChangePhoneActivity" />
+153-->F:\ztuo-android\app\src\main\AndroidManifest.xml:145:9-73
+153-->F:\ztuo-android\app\src\main\AndroidManifest.xml:145:19-70
+154        <activity android:name="com.bizzan.ui.change_phone.ChangeLeadActivity" />
+154-->F:\ztuo-android\app\src\main\AndroidManifest.xml:146:9-72
+154-->F:\ztuo-android\app\src\main\AndroidManifest.xml:146:19-69
+155        <activity android:name="com.bizzan.ui.message_detail.MessageDetailActivity" />
+155-->F:\ztuo-android\app\src\main\AndroidManifest.xml:147:9-77
+155-->F:\ztuo-android\app\src\main\AndroidManifest.xml:147:19-74
+156        <activity android:name="com.bizzan.ui.lock.LockActivity" />
+156-->F:\ztuo-android\app\src\main\AndroidManifest.xml:148:9-58
+156-->F:\ztuo-android\app\src\main\AndroidManifest.xml:148:19-55
+157        <activity
+157-->F:\ztuo-android\app\src\main\AndroidManifest.xml:149:9-151:47
+158            android:name="com.bizzan.ui.set_lock.SetLockActivity"
+158-->F:\ztuo-android\app\src\main\AndroidManifest.xml:150:13-56
+159            android:launchMode="singleTask" />
+159-->F:\ztuo-android\app\src\main\AndroidManifest.xml:151:13-44
+160        <activity android:name="com.bizzan.ui.order_detail.OrderDetailActivity" />
+160-->F:\ztuo-android\app\src\main\AndroidManifest.xml:152:9-73
+160-->F:\ztuo-android\app\src\main\AndroidManifest.xml:152:19-70
+161        <activity android:name="com.bizzan.ui.appeal.AppealActivity" />
+161-->F:\ztuo-android\app\src\main\AndroidManifest.xml:153:9-62
+161-->F:\ztuo-android\app\src\main\AndroidManifest.xml:153:19-59
+162        <activity android:name="com.bizzan.ui.account_pwd.EditAccountPwdActivity" />
+162-->F:\ztuo-android\app\src\main\AndroidManifest.xml:154:9-75
+162-->F:\ztuo-android\app\src\main\AndroidManifest.xml:154:19-72
+163        <activity android:name="com.bizzan.ui.account_pwd.ResetAccountPwdActivity" />
+163-->F:\ztuo-android\app\src\main\AndroidManifest.xml:155:9-76
+163-->F:\ztuo-android\app\src\main\AndroidManifest.xml:155:19-73
+164        <activity android:name="com.bizzan.ui.chatlist.ChatListActivity" />
+164-->F:\ztuo-android\app\src\main\AndroidManifest.xml:156:9-66
+164-->F:\ztuo-android\app\src\main\AndroidManifest.xml:156:19-63
+165        <activity android:name="com.bizzan.ui.chat.ChatActivity" />
+165-->F:\ztuo-android\app\src\main\AndroidManifest.xml:157:9-58
+165-->F:\ztuo-android\app\src\main\AndroidManifest.xml:157:19-55
+166        <activity android:name="com.bizzan.ui.entrust.TrustListActivity" />
+166-->F:\ztuo-android\app\src\main\AndroidManifest.xml:158:9-66
+166-->F:\ztuo-android\app\src\main\AndroidManifest.xml:158:19-63
+167        <activity android:name="com.bizzan.ui.entrust.TrustListConstractActivity" />
+167-->F:\ztuo-android\app\src\main\AndroidManifest.xml:159:9-75
+167-->F:\ztuo-android\app\src\main\AndroidManifest.xml:159:19-72
+168        <activity android:name="com.bizzan.ui.entrust.TrustlistconstractdataActivity" />
+168-->F:\ztuo-android\app\src\main\AndroidManifest.xml:160:9-79
+168-->F:\ztuo-android\app\src\main\AndroidManifest.xml:160:19-76
+169        <activity android:name="com.bizzan.ui.entrust.TrustDetailActivity" />
+169-->F:\ztuo-android\app\src\main\AndroidManifest.xml:161:9-68
+169-->F:\ztuo-android\app\src\main\AndroidManifest.xml:161:19-65
+170        <activity android:name="com.bizzan.ui.myEntrust.MyEntrustActivity" />
+170-->F:\ztuo-android\app\src\main\AndroidManifest.xml:162:9-68
+170-->F:\ztuo-android\app\src\main\AndroidManifest.xml:162:19-65
+171        <activity android:name="com.bizzan.ui.bind_account.BindAccountActivity" />
+171-->F:\ztuo-android\app\src\main\AndroidManifest.xml:163:9-73
+171-->F:\ztuo-android\app\src\main\AndroidManifest.xml:163:19-70
+172        <activity android:name="com.bizzan.ui.bind_account.BindAliActivity" />
+172-->F:\ztuo-android\app\src\main\AndroidManifest.xml:164:9-69
+172-->F:\ztuo-android\app\src\main\AndroidManifest.xml:164:19-66
+173        <activity android:name="com.bizzan.ui.bind_account.BindBankActivity" />
+173-->F:\ztuo-android\app\src\main\AndroidManifest.xml:165:9-70
+173-->F:\ztuo-android\app\src\main\AndroidManifest.xml:165:19-67
+174        <activity android:name="com.bizzan.ui.bind_account.BindWeiChatActivity" /> <!-- 新加的 -->
+174-->F:\ztuo-android\app\src\main\AndroidManifest.xml:166:9-73
+174-->F:\ztuo-android\app\src\main\AndroidManifest.xml:166:19-70
+175        <activity android:name="com.bizzan.ui.aboutus.AboutJianJieActivity" />
+175-->F:\ztuo-android\app\src\main\AndroidManifest.xml:167:9-69
+175-->F:\ztuo-android\app\src\main\AndroidManifest.xml:167:19-66
+176        <activity android:name="com.bizzan.ui.aboutus.AboutWeiXinActivity" />
+176-->F:\ztuo-android\app\src\main\AndroidManifest.xml:168:9-68
+176-->F:\ztuo-android\app\src\main\AndroidManifest.xml:168:19-65
+177        <activity android:name="com.bizzan.ui.wallet.ChongBiJLActivity" />
+177-->F:\ztuo-android\app\src\main\AndroidManifest.xml:169:9-65
+177-->F:\ztuo-android\app\src\main\AndroidManifest.xml:169:19-62
+178        <activity android:name="com.bizzan.ui.wallet.TiBiJLActivity" />
+178-->F:\ztuo-android\app\src\main\AndroidManifest.xml:170:9-62
+178-->F:\ztuo-android\app\src\main\AndroidManifest.xml:170:19-59
+179        <activity android:name="com.bizzan.ui.setting.GongGaoActivity" />
+179-->F:\ztuo-android\app\src\main\AndroidManifest.xml:171:9-64
+179-->F:\ztuo-android\app\src\main\AndroidManifest.xml:171:19-61
+180        <activity android:name="com.bizzan.ui.setting.HelpActivity" />
+180-->F:\ztuo-android\app\src\main\AndroidManifest.xml:172:9-61
+180-->F:\ztuo-android\app\src\main\AndroidManifest.xml:172:19-58
+181        <activity android:name="com.bizzan.ui.message_detail.MessageHelpActivity" />
+181-->F:\ztuo-android\app\src\main\AndroidManifest.xml:173:9-75
+181-->F:\ztuo-android\app\src\main\AndroidManifest.xml:173:19-72
+182        <activity android:name="com.bizzan.ui.setting.HelpXinShouActivity" />
+182-->F:\ztuo-android\app\src\main\AndroidManifest.xml:174:9-68
+182-->F:\ztuo-android\app\src\main\AndroidManifest.xml:174:19-65
+183        <activity android:name="com.bizzan.ui.setting.HelpChangjianActivity" />
+183-->F:\ztuo-android\app\src\main\AndroidManifest.xml:175:9-70
+183-->F:\ztuo-android\app\src\main\AndroidManifest.xml:175:19-67
+184        <activity android:name="com.bizzan.ui.setting.HelpJiaoyiActivity" />
+184-->F:\ztuo-android\app\src\main\AndroidManifest.xml:176:9-67
+184-->F:\ztuo-android\app\src\main\AndroidManifest.xml:176:19-64
+185        <activity android:name="com.bizzan.ui.setting.HelpBizhongActivity" />
+185-->F:\ztuo-android\app\src\main\AndroidManifest.xml:177:9-68
+185-->F:\ztuo-android\app\src\main\AndroidManifest.xml:177:19-65
+186        <activity android:name="com.bizzan.ui.setting.HelpHangqingActivity" />
+186-->F:\ztuo-android\app\src\main\AndroidManifest.xml:178:9-69
+186-->F:\ztuo-android\app\src\main\AndroidManifest.xml:178:19-66
+187        <activity android:name="com.bizzan.ui.setting.HelpTiaokuanActivity" />
+187-->F:\ztuo-android\app\src\main\AndroidManifest.xml:179:9-69
+187-->F:\ztuo-android\app\src\main\AndroidManifest.xml:179:19-66
+188        <activity android:name="com.bizzan.ui.setting.HelpQitaActivity" />
+188-->F:\ztuo-android\app\src\main\AndroidManifest.xml:180:9-65
+188-->F:\ztuo-android\app\src\main\AndroidManifest.xml:180:19-62
+189        <activity android:name="com.bizzan.ui.credit.CreditInfoActivity" />
+189-->F:\ztuo-android\app\src\main\AndroidManifest.xml:181:9-66
+189-->F:\ztuo-android\app\src\main\AndroidManifest.xml:181:19-63
+190        <activity android:name="com.bizzan.ui.seller.SellerApplyActivity" />
+190-->F:\ztuo-android\app\src\main\AndroidManifest.xml:182:9-67
+190-->F:\ztuo-android\app\src\main\AndroidManifest.xml:182:19-64
+191        <activity android:name="com.bizzan.ui.seller.SellerApplyCommitActivity" />
+191-->F:\ztuo-android\app\src\main\AndroidManifest.xml:183:9-73
+191-->F:\ztuo-android\app\src\main\AndroidManifest.xml:183:19-70
+192        <activity android:name="com.bizzan.ui.aboutus.AddUrlActivity" />
+192-->F:\ztuo-android\app\src\main\AndroidManifest.xml:184:9-63
+192-->F:\ztuo-android\app\src\main\AndroidManifest.xml:184:19-60
+193        <activity
+193-->F:\ztuo-android\app\src\main\AndroidManifest.xml:185:9-186:46
+194            android:name="com.bizzan.ui.wallet.OverturnActivity"
+194-->F:\ztuo-android\app\src\main\AndroidManifest.xml:185:19-61
+195            android:launchMode="singleTask" />
+195-->F:\ztuo-android\app\src\main\AndroidManifest.xml:186:13-44
+196        <activity android:name="com.bizzan.ui.setting.LanguageActivity" />
+196-->F:\ztuo-android\app\src\main\AndroidManifest.xml:187:9-64
+196-->F:\ztuo-android\app\src\main\AndroidManifest.xml:187:19-62
+197
+198        <service android:name="com.bizzan.serivce.MyService" />
+198-->F:\ztuo-android\app\src\main\AndroidManifest.xml:189:9-54
+198-->F:\ztuo-android\app\src\main\AndroidManifest.xml:189:18-51
+199        <service android:name="com.bizzan.serivce.MyTextService" />
+199-->F:\ztuo-android\app\src\main\AndroidManifest.xml:190:9-58
+199-->F:\ztuo-android\app\src\main\AndroidManifest.xml:190:18-55
+200        <service android:name="com.bizzan.serivce.MyTextService_contract" />
+200-->F:\ztuo-android\app\src\main\AndroidManifest.xml:191:9-67
+200-->F:\ztuo-android\app\src\main\AndroidManifest.xml:191:18-64
+201
+202        <receiver android:name="com.maiml.updatelibrary.receiver.InstallReceiver" >
+202-->F:\ztuo-android\app\src\main\AndroidManifest.xml:193:9-197:20
+202-->F:\ztuo-android\app\src\main\AndroidManifest.xml:193:19-82
+203            <intent-filter android:priority="20" >
+203-->F:\ztuo-android\app\src\main\AndroidManifest.xml:194:13-196:29
+203-->F:\ztuo-android\app\src\main\AndroidManifest.xml:194:28-49
+204                <action android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+204-->F:\ztuo-android\app\src\main\AndroidManifest.xml:195:17-82
+204-->F:\ztuo-android\app\src\main\AndroidManifest.xml:195:25-79
+205            </intent-filter>
+206        </receiver>
+207
+208        <activity
+208-->[:lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\release\AndroidManifest.xml:12:9-17:63
+209            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
+209-->[:lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\release\AndroidManifest.xml:13:13-74
+210            android:configChanges="orientation|keyboardHidden"
+210-->[:lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\release\AndroidManifest.xml:14:13-63
+211            android:screenOrientation="portrait"
+211-->[:lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\release\AndroidManifest.xml:15:13-49
+212            android:theme="@style/Theme.AppCompat.NoActionBar"
+212-->[:lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\release\AndroidManifest.xml:16:13-63
+213            android:windowSoftInputMode="stateAlwaysHidden" />
+213-->[:lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\release\AndroidManifest.xml:17:13-60
+214        <activity
+214-->[com.yanzhenjie:permission:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ffb76ffc88e443cffe8c97c21c91a502\permission-1.1.0\AndroidManifest.xml:25:9-30:75
+215            android:name="com.yanzhenjie.permission.PermissionActivity"
+215-->[com.yanzhenjie:permission:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ffb76ffc88e443cffe8c97c21c91a502\permission-1.1.0\AndroidManifest.xml:26:13-72
+216            android:configChanges="keyboardHidden|orientation|screenSize"
+216-->[com.yanzhenjie:permission:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ffb76ffc88e443cffe8c97c21c91a502\permission-1.1.0\AndroidManifest.xml:27:13-74
+217            android:launchMode="standard"
+217-->[com.yanzhenjie:permission:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ffb76ffc88e443cffe8c97c21c91a502\permission-1.1.0\AndroidManifest.xml:28:13-42
+218            android:theme="@style/permission_PermissionActivity"
+218-->[com.yanzhenjie:permission:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ffb76ffc88e443cffe8c97c21c91a502\permission-1.1.0\AndroidManifest.xml:29:13-65
+219            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+219-->[com.yanzhenjie:permission:1.1.0] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ffb76ffc88e443cffe8c97c21c91a502\permission-1.1.0\AndroidManifest.xml:30:13-72
+220        <activity
+220-->[:captchasdk-release-1.0.2:] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\111748401da7da544819d36ec867b454\captchasdk-release-1.0.2\AndroidManifest.xml:16:9-21:20
+221            android:name="com.tencent.captchasdk.TCaptchaPopupActivity"
+221-->[:captchasdk-release-1.0.2:] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\111748401da7da544819d36ec867b454\captchasdk-release-1.0.2\AndroidManifest.xml:17:13-72
+222            android:configChanges="orientation|keyboardHidden|navigation"
+222-->[:captchasdk-release-1.0.2:] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\111748401da7da544819d36ec867b454\captchasdk-release-1.0.2\AndroidManifest.xml:18:13-74
+223            android:exported="false"
+223-->[:captchasdk-release-1.0.2:] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\111748401da7da544819d36ec867b454\captchasdk-release-1.0.2\AndroidManifest.xml:19:13-37
+224            android:theme="@style/TCaptchaPopupDialogActivity" >
+224-->[:captchasdk-release-1.0.2:] C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\111748401da7da544819d36ec867b454\captchasdk-release-1.0.2\AndroidManifest.xml:20:13-63
+225        </activity>
+226    </application>
+227
+228</manifest>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="h3C-dq-0Pf" customClass="MyPromoteShareView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ASG-BL-JZN">
+                    <rect key="frame" x="0.0" y="387" width="375" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请您的好友来赚钱吧！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRm-Ww-XYS">
+                            <rect key="frame" x="10" y="15" width="305" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="eHH-CN-Qcf"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="closeImage" translatesAutoresizingMaskIntoConstraints="NO" id="qwK-Op-J8J">
+                            <rect key="frame" x="335" y="15" width="20" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="20" id="WRe-pB-YPv"/>
+                                <constraint firstAttribute="height" constant="20" id="n9e-Nf-3c9"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ayb-Vh-10O">
+                            <rect key="frame" x="10" y="56" width="120" height="120"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="ayb-Vh-10O" secondAttribute="height" id="KEE-EX-rgd"/>
+                                <constraint firstAttribute="width" constant="120" id="keQ-ON-mso"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="邀请好友，赚取佣金\n和朋友一起赚钱" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muC-34-OUP">
+                            <rect key="frame" x="140" y="56" width="225" height="38.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pe-p9-K14">
+                            <rect key="frame" x="315" y="0.0" width="60" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="CfN-Sp-uWH"/>
+                                <constraint firstAttribute="width" constant="60" id="Epe-70-7vk"/>
+                            </constraints>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="专属推广链接：" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4P-XE-rD6">
+                            <rect key="frame" x="140" y="156" width="225" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="0Pe-p9-K14" secondAttribute="trailing" id="1oe-TW-SCX"/>
+                        <constraint firstItem="qwK-Op-J8J" firstAttribute="centerY" secondItem="uRm-Ww-XYS" secondAttribute="centerY" id="5Iu-Ze-qA3"/>
+                        <constraint firstItem="qwK-Op-J8J" firstAttribute="top" secondItem="uRm-Ww-XYS" secondAttribute="top" id="Cgg-UL-dO5"/>
+                        <constraint firstItem="qwK-Op-J8J" firstAttribute="leading" secondItem="uRm-Ww-XYS" secondAttribute="trailing" constant="20" id="D7c-Iv-S9l"/>
+                        <constraint firstItem="I4P-XE-rD6" firstAttribute="trailing" secondItem="muC-34-OUP" secondAttribute="trailing" id="GBw-o6-zYa"/>
+                        <constraint firstItem="ayb-Vh-10O" firstAttribute="top" secondItem="uRm-Ww-XYS" secondAttribute="bottom" constant="20" id="GWz-Qh-HbF"/>
+                        <constraint firstItem="0Pe-p9-K14" firstAttribute="top" secondItem="ASG-BL-JZN" secondAttribute="top" id="Q7R-gC-BUU"/>
+                        <constraint firstItem="uRm-Ww-XYS" firstAttribute="leading" secondItem="ASG-BL-JZN" secondAttribute="leading" constant="10" id="Qds-6l-6Br"/>
+                        <constraint firstAttribute="trailing" secondItem="qwK-Op-J8J" secondAttribute="trailing" constant="20" id="Rpq-lz-vMS"/>
+                        <constraint firstItem="I4P-XE-rD6" firstAttribute="bottom" secondItem="ayb-Vh-10O" secondAttribute="bottom" constant="-3" id="XNa-kY-bIW"/>
+                        <constraint firstAttribute="trailing" secondItem="muC-34-OUP" secondAttribute="trailing" constant="10" id="ZiI-kB-fG2"/>
+                        <constraint firstAttribute="height" constant="200" id="mJS-Ll-qzD"/>
+                        <constraint firstItem="I4P-XE-rD6" firstAttribute="leading" secondItem="muC-34-OUP" secondAttribute="leading" id="okq-dq-vyP"/>
+                        <constraint firstItem="muC-34-OUP" firstAttribute="top" secondItem="ayb-Vh-10O" secondAttribute="top" id="ru4-Un-J2U"/>
+                        <constraint firstItem="muC-34-OUP" firstAttribute="leading" secondItem="ayb-Vh-10O" secondAttribute="trailing" constant="10" id="sWh-Ff-bP5"/>
+                        <constraint firstItem="qwK-Op-J8J" firstAttribute="top" secondItem="ASG-BL-JZN" secondAttribute="top" constant="15" id="t76-Df-lho"/>
+                        <constraint firstItem="ayb-Vh-10O" firstAttribute="leading" secondItem="ASG-BL-JZN" secondAttribute="leading" constant="10" id="veN-hy-F0x"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oZ-mM-vgz">
+                    <rect key="frame" x="0.0" y="587" width="180" height="50"/>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="1CG-yH-tbN"/>
+                        <constraint firstAttribute="height" constant="50" id="mAN-6v-zRm"/>
+                    </constraints>
+                    <state key="normal" title="保存至相册"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHc-mt-0DY">
+                    <rect key="frame" x="180" y="587" width="195" height="50"/>
+                    <color key="backgroundColor" red="0.61176470588235299" green="0.80784313725490198" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="复制">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3oZ-mM-vgz" firstAttribute="top" secondItem="ASG-BL-JZN" secondAttribute="bottom" id="70B-7q-nUn"/>
+                <constraint firstItem="OHc-mt-0DY" firstAttribute="height" secondItem="3oZ-mM-vgz" secondAttribute="height" id="9jC-gh-6fy"/>
+                <constraint firstAttribute="bottom" secondItem="3oZ-mM-vgz" secondAttribute="bottom" constant="30" id="Ibn-CA-aR5"/>
+                <constraint firstItem="3oZ-mM-vgz" firstAttribute="leading" secondItem="h3C-dq-0Pf" secondAttribute="leading" id="JzI-cp-NaZ"/>
+                <constraint firstItem="ASG-BL-JZN" firstAttribute="leading" secondItem="h3C-dq-0Pf" secondAttribute="leading" id="K5X-xh-cka"/>
+                <constraint firstAttribute="trailing" secondItem="OHc-mt-0DY" secondAttribute="trailing" id="NDU-6P-bXp"/>
+                <constraint firstItem="OHc-mt-0DY" firstAttribute="leading" secondItem="3oZ-mM-vgz" secondAttribute="trailing" id="Vjx-4h-L18"/>
+                <constraint firstItem="OHc-mt-0DY" firstAttribute="centerY" secondItem="3oZ-mM-vgz" secondAttribute="centerY" id="f6d-TO-WZR"/>
+                <constraint firstAttribute="trailing" secondItem="ASG-BL-JZN" secondAttribute="trailing" id="s6s-mW-aBd"/>
+            </constraints>
+            <connections>
+                <outlet property="BGViewHeight" destination="mJS-Ll-qzD" id="JC6-yb-Ita"/>
+                <outlet property="QRImage" destination="ayb-Vh-10O" id="uzS-Vl-KBh"/>
+                <outlet property="bgView" destination="ASG-BL-JZN" id="NW0-C9-CuI"/>
+                <outlet property="bottomViewHeight" destination="Ibn-CA-aR5" id="Elf-Mb-ECd"/>
+                <outlet property="cancelButton" destination="0Pe-p9-K14" id="pZP-Xu-Ba3"/>
+                <outlet property="inviteLabel" destination="muC-34-OUP" id="l1M-dy-g6i"/>
+                <outlet property="pasteButton" destination="OHc-mt-0DY" id="osf-zS-bH8"/>
+                <outlet property="promoteLinks" destination="I4P-XE-rD6" id="X9m-Za-kRp"/>
+                <outlet property="saveBtnWidth" destination="1CG-yH-tbN" id="QKG-2b-peS"/>
+                <outlet property="saveImageButton" destination="3oZ-mM-vgz" id="fbb-Lo-35o"/>
+                <outlet property="topTitleLabel" destination="uRm-Ww-XYS" id="bdp-DU-ZwF"/>
+            </connections>
+            <point key="canvasLocation" x="73.5" y="59.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeImage" width="25" height="25"/>
+    </resources>
+</document>

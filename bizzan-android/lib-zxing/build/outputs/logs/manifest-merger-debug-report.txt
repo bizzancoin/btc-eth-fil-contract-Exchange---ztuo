@@ -1,0 +1,53 @@
+-- Merging decision tree log ---
+manifest
+ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:1-17:12
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:1-17:12
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:1-17:12
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:1-17:12
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:1-17:12
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:1-17:12
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:1-17:12
+	package
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:2:5-36
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:1-17:12
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:1-17:12
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:1:11-69
+application
+ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:4:5-15:19
+	android:allowBackup
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:5:9-35
+activity#com.uuzuche.lib_zxing.activity.CaptureActivity
+ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:8:9-14:25
+	android:screenOrientation
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:11:13-49
+	android:windowSoftInputMode
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:12:13-60
+	android:configChanges
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:9:13-63
+	android:theme
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:13:13-63
+	android:name
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml:10:13-74
+uses-sdk
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+		ADDED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml
+		INJECTED from F:\ztuo-android\lib-zxing\src\main\AndroidManifest.xml

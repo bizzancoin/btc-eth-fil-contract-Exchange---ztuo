@@ -1,0 +1,58 @@
+//
+//  PrefixHeader.pch
+//  digitalCurrency
+//
+//  Created by sunliang on 2018/1/26.
+//  Copyright © 2018年 ztuo. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "Constant.h"
+#import "localizationDefine.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "UIViewController+navStyle.h"
+#import "ChangeLanguage.h"
+#import "NSUserDefaultUtil.h"
+#import "NSString+LCJudgeNumber.h"
+#import "UIView+Toast.h"
+#import "EasyShowOptions.h"
+#import "EasyShowView.h"
+#import "ToolUtil.h"
+#import "LoginViewController.h"
+#import "YLUserInfo.h"
+#import "BaseViewController.h"
+#import "AFNetworking.h"
+#import "VTMagic.h"
+#import "LYEmptyView.h"
+#import "UIScrollView+Empty.h"
+#import "ShowLoGinVC.h"
+#import "MD5.h"
+#import "keychianTool.h"
+#import "SocketManager.h"
+#import "ChatSocketManager.h"
+#import "SocketUtils.h"
+#import <UIImageView+WebCache.h>
+#import <UIButton+WebCache.h>
+#import "SDAutoLayout.h"
+#import "NSArray+Log.h"
+#import "NSDictionary+Log.h"
+#import "Masonry.h"
+#import "LEEAlert.h"
+#import "UINavigationController+Transition.h"
+#import "UIViewController+Layout.h"
+#import "XBRequest.h"
+#import "YBImageBrowser.h"
+#import "RKNotificationHub.h"
+#import "YLNavigationController.h"
+#import "UIImage+QTBackgroundColor.h"
+#import "GKCover.h"
+
+//add
+#import "UIColor+Extend.h"
+#import "UIImage+Extension.h"
+#endif /* PrefixHeader_pch */

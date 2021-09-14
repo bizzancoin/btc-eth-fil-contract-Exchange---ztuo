@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/er_market/er_market.iml" filepath="$PROJECT_DIR$/er_market/er_market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/er_robot_custom/er_robot_custom.iml" filepath="$PROJECT_DIR$/er_robot_custom/er_robot_custom.iml" />
+      <module fileurl="file://$PROJECT_DIR$/er_robot_normal/er_robot_normal.iml" filepath="$PROJECT_DIR$/er_robot_normal/er_robot_normal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/er_robot_price/er_robot_price.iml" filepath="$PROJECT_DIR$/er_robot_price/er_robot_price.iml" />
+      <module fileurl="file://$PROJECT_DIR$/exchange_robot.iml" filepath="$PROJECT_DIR$/exchange_robot.iml" />
+    </modules>
+  </component>
+</project>

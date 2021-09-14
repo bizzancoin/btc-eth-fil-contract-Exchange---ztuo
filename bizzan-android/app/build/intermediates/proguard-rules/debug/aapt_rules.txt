@@ -1,0 +1,478 @@
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:26
+-keep class android.support.v4.app.CoreComponentFactory { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:42
+-keep class android.support.v4.content.FileProvider { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:26
+-keep class com.bizzan.app.MyApplication { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:198
+-keep class com.bizzan.serivce.MyService { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:199
+-keep class com.bizzan.serivce.MyTextService { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:200
+-keep class com.bizzan.serivce.MyTextService_contract { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:175
+-keep class com.bizzan.ui.aboutus.AboutJianJieActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:135
+-keep class com.bizzan.ui.aboutus.AboutUsActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:176
+-keep class com.bizzan.ui.aboutus.AboutWeiXinActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:192
+-keep class com.bizzan.ui.aboutus.AddUrlActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:141
+-keep class com.bizzan.ui.account_pwd.AccountPwdActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:162
+-keep class com.bizzan.ui.account_pwd.EditAccountPwdActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:163
+-keep class com.bizzan.ui.account_pwd.ResetAccountPwdActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:161
+-keep class com.bizzan.ui.appeal.AppealActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:171
+-keep class com.bizzan.ui.bind_account.BindAccountActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:172
+-keep class com.bizzan.ui.bind_account.BindAliActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:173
+-keep class com.bizzan.ui.bind_account.BindBankActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:174
+-keep class com.bizzan.ui.bind_account.BindWeiChatActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:149
+-keep class com.bizzan.ui.bind_email.BindEmailActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:150
+-keep class com.bizzan.ui.bind_email.EmailActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:148
+-keep class com.bizzan.ui.bind_phone.BindPhoneActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:152
+-keep class com.bizzan.ui.bind_phone.PhoneActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:142
+-keep class com.bizzan.ui.buy_or_sell.C2CBuyOrSellActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:154
+-keep class com.bizzan.ui.change_phone.ChangeLeadActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:153
+-keep class com.bizzan.ui.change_phone.ChangePhoneActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:165
+-keep class com.bizzan.ui.chat.ChatActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:164
+-keep class com.bizzan.ui.chatlist.ChatListActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:66
+-keep class com.bizzan.ui.common.LeadActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:70
+-keep class com.bizzan.ui.common.PermissionActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:74
+-keep class com.bizzan.ui.common.StartActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:140
+-keep class com.bizzan.ui.country.CountryActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:123
+-keep class com.bizzan.ui.credit.CreditActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:189
+-keep class com.bizzan.ui.credit.CreditInfoActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:145
+-keep class com.bizzan.ui.ctc.CTCActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:146
+-keep class com.bizzan.ui.ctc.CTCOrderDetailActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:151
+-keep class com.bizzan.ui.edit_login_pwd.EditLoginPwdActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:169
+-keep class com.bizzan.ui.entrust.TrustDetailActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:166
+-keep class com.bizzan.ui.entrust.TrustListActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:167
+-keep class com.bizzan.ui.entrust.TrustListConstractActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:168
+-keep class com.bizzan.ui.entrust.TrustlistconstractdataActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:147
+-keep class com.bizzan.ui.extract.AddressActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:144
+-keep class com.bizzan.ui.extract.ExtractActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:131
+-keep class com.bizzan.ui.feed.FeedbackActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:94
+-keep class com.bizzan.ui.forgot_pwd.ForgotPwdActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:56
+-keep class com.bizzan.ui.home.MainActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:85
+-keep class com.bizzan.ui.kline.KlineActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:156
+-keep class com.bizzan.ui.lock.LockActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:61
+-keep class com.bizzan.ui.login.LoginActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:119
+-keep class com.bizzan.ui.message.MessageActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:155
+-keep class com.bizzan.ui.message_detail.MessageDetailActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:181
+-keep class com.bizzan.ui.message_detail.MessageHelpActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:170
+-keep class com.bizzan.ui.myEntrust.MyEntrustActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:115
+-keep class com.bizzan.ui.my_ads.AdsActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:111
+-keep class com.bizzan.ui.my_order.MyOrderActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:98
+-keep class com.bizzan.ui.myinfo.MyInfoActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:160
+-keep class com.bizzan.ui.order_detail.OrderDetailActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:143
+-keep class com.bizzan.ui.recharge.RechargeActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:139
+-keep class com.bizzan.ui.releaseAd.ReleaseAdsActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:190
+-keep class com.bizzan.ui.seller.SellerApplyActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:191
+-keep class com.bizzan.ui.seller.SellerApplyCommitActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:157
+-keep class com.bizzan.ui.set_lock.SetLockActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:179
+-keep class com.bizzan.ui.setting.GongGaoActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:180
+-keep class com.bizzan.ui.setting.HelpActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:185
+-keep class com.bizzan.ui.setting.HelpBizhongActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:183
+-keep class com.bizzan.ui.setting.HelpChangjianActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:186
+-keep class com.bizzan.ui.setting.HelpHangqingActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:184
+-keep class com.bizzan.ui.setting.HelpJiaoyiActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:188
+-keep class com.bizzan.ui.setting.HelpQitaActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:187
+-keep class com.bizzan.ui.setting.HelpTiaokuanActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:182
+-keep class com.bizzan.ui.setting.HelpXinShouActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:196
+-keep class com.bizzan.ui.setting.LanguageActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:127
+-keep class com.bizzan.ui.setting.SettingActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:89
+-keep class com.bizzan.ui.signup.SignUpActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:177
+-keep class com.bizzan.ui.wallet.ChongBiJLActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:193
+-keep class com.bizzan.ui.wallet.OverturnActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:39
+-keep class com.bizzan.ui.wallet.SelectAccountActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:38
+-keep class com.bizzan.ui.wallet.SelectCoinActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:178
+-keep class com.bizzan.ui.wallet.TiBiJLActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:103
+-keep class com.bizzan.ui.wallet.WalletActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:40
+-keep class com.bizzan.ui.wallet.WalletListActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:107
+-keep class com.bizzan.ui.wallet_detail.WalletDetailActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:202
+-keep class com.maiml.updatelibrary.receiver.InstallReceiver { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:220
+-keep class com.tencent.captchasdk.TCaptchaPopupActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:208
+-keep class com.uuzuche.lib_zxing.activity.CaptureActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\build\intermediates\merged_manifests\debug\AndroidManifest.xml:214
+-keep class com.yanzhenjie.permission.PermissionActivity { <init>(); }
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_start2.xml:2
+-keep class android.support.constraint.ConstraintLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ab7044de1bfd19e94a17211b795f48c7\res\layout\design_bottom_navigation_item.xml:27
+-keep class android.support.design.internal.BaselineLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ab7044de1bfd19e94a17211b795f48c7\res\layout\design_navigation_item.xml:17
+-keep class android.support.design.internal.NavigationMenuItemView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ab7044de1bfd19e94a17211b795f48c7\res\layout\design_navigation_menu.xml:17
+-keep class android.support.design.internal.NavigationMenuView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_four.xml:62
+-keep class android.support.design.widget.AppBarLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ab7044de1bfd19e94a17211b795f48c7\res\layout\design_text_input_password_icon.xml:18
+-keep class android.support.design.widget.CheckableImageButton { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_four.xml:70
+-keep class android.support.design.widget.CollapsingToolbarLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_four.xml:58
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ab7044de1bfd19e94a17211b795f48c7\res\layout\design_bottom_sheet_dialog.xml:26
+-keep class android.support.design.widget.CoordinatorLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ab7044de1bfd19e94a17211b795f48c7\res\layout\mtrl_layout_snackbar.xml:18
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ab7044de1bfd19e94a17211b795f48c7\res\layout\design_layout_snackbar.xml:18
+-keep class android.support.design.widget.Snackbar$SnackbarLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ab7044de1bfd19e94a17211b795f48c7\res\layout\mtrl_layout_snackbar_include.xml:18
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\ab7044de1bfd19e94a17211b795f48c7\res\layout\design_layout_snackbar_include.xml:18
+-keep class android.support.design.widget.SnackbarContentLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\pop_six_flat.xml:32
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_two.xml:72
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_six.xml:130
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_seven.xml:116
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_kline.xml:298
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_four.xml:153
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_my_order.xml:82
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_main.xml:275
+-keep class android.support.design.widget.TabLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_phone_sign_up.xml:130
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_email_sign_up.xml:92
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_email_forgot.xml:108
+-keep class android.support.design.widget.TextInputLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_one.xml:394
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_four.xml:167
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_seller_apply.xml:127
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_my_order.xml:99
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_main.xml:284
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_lead.xml:7
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_main.xml:2
+-keep class android.support.v4.widget.DrawerLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\frgment_text_three.xml:73
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_six.xml:115
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_seven.xml:101
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_five.xml:102
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_ctc.xml:135
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_alert_dialog_material.xml:41
+-keep class android.support.v4.widget.NestedScrollView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_six.xml:110
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_ing_order.xml:8
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_ad.xml:7
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\custom_listview_fresh.xml:2
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_wallet_detail.xml:16
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_my_entrust.xml:72
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_message.xml:66
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_current_trust.xml:20
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_current_constract.xml:22
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_ctc.xml:586
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_chat.xml:77
+-keep class android.support.v4.widget.SwipeRefreshLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_select_dialog_material.xml:23
+-keep class android.support.v7.app.AlertController$RecycleListView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_action_menu_item_layout.xml:17
+-keep class android.support.v7.view.menu.ActionMenuItemView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_expanded_menu_layout.xml:17
+-keep class android.support.v7.view.menu.ExpandedMenuView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_popup_menu_item_layout.xml:17
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_list_menu_item_layout.xml:17
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_cascading_menu_item_layout.xml:20
+-keep class android.support.v7.view.menu.ListMenuItemView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_screen_toolbar.xml:27
+-keep class android.support.v7.widget.ActionBarContainer { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_screen_toolbar.xml:43
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_action_mode_bar.xml:19
+-keep class android.support.v7.widget.ActionBarContextView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_screen_toolbar.xml:17
+-keep class android.support.v7.widget.ActionBarOverlayLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_action_menu_layout.xml:17
+-keep class android.support.v7.widget.ActionMenuView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_activity_chooser_view.xml:19
+-keep class android.support.v7.widget.ActivityChooserView$InnerLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_alert_dialog_material.xml:18
+-keep class android.support.v7.widget.AlertDialogLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_alert_dialog_button_bar_material.xml:26
+-keep class android.support.v7.widget.ButtonBarLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_screen_content_include.xml:19
+-keep class android.support.v7.widget.ContentFrameLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_alert_dialog_title_material.xml:45
+-keep class android.support.v7.widget.DialogTitle { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_screen_simple_overlay_action_mode.xml:23
+-keep class android.support.v7.widget.FitWindowsFrameLayout { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_screen_simple.xml:17
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_dialog_title_material.xml:22
+-keep class android.support.v7.widget.FitWindowsLinearLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\pop_six_multiples2.xml:35
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\pop_five_invite.xml:39
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\frgment_text_three.xml:208
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_volume.xml:67
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_usdt_market.xml:8
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_trust.xml:7
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_six.xml:389
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_seven.xml:167
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_one.xml:515
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_ing_order.xml:13
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_favorite_market.xml:9
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_eth_market.xml:8
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_depth.xml:74
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_contract.xml:8
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_btc_market.xml:8
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_ad.xml:12
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\dialog_timelimit_view.xml:24
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\dialog_coins_view.xml:24
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_wallet_list.xml:58
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_wallet_detail.xml:21
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_wallet.xml:315
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_trust_detail.xml:218
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_select_coin.xml:63
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_my_entrust.xml:78
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_message.xml:71
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_current_trust.xml:26
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_current_constract.xml:28
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_ctc.xml:593
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_country.xml:65
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_chat.xml:83
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_ads.xml:65
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_address.xml:67
+-keep class android.support.v7.widget.RecyclerView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_search_view.xml:75
+-keep class android.support.v7.widget.SearchView$SearchAutoComplete { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_screen_toolbar.xml:36
+-keep class android.support.v7.widget.Toolbar { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_screen_simple_overlay_action_mode.xml:32
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_screen_simple.xml:25
+-keep class android.support.v7.widget.ViewStubCompat { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_alert_dialog_title_material.xml:56
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_alert_dialog_material.xml:52
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\b1bc943b46a061b1d34eccfc5ff4c1f1\res\layout\abc_alert_dialog_button_bar_material.xml:43
+-keep class android.widget.Space { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_tibijilu.xml:30
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_help_xinshou.xml:126
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_help_tiaokuan.xml:126
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_help_qita.xml:126
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_help_jiaoyi.xml:126
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_help_hangqing.xml:126
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_help_changjian.xml:126
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_help_bizhong.xml:126
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_gonggao.xml:70
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_chongbijilu.xml:29
+-keep class com.bizzan.base.LinListView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_help.xml:139
+-keep class com.bizzan.base.MyListView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_five.xml:54
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\adapter_chat_list.xml:17
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\adapter_c2c.xml:34
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_my_info.xml:104
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_lock.xml:35
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_c2_cbuy.xml:115
+-keep class com.bizzan.customview.CircleImageView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_kline.xml:311
+-keep class com.bizzan.customview.CustomViewPager { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_one.xml:82
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_kline.xml:62
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_recharge.xml:65
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_order_detial.xml:64
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_help.xml:100
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_ctcorderdetail.xml:62
+-keep class com.bizzan.customview.intercept.WonderfulScrollView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_two.xml:82
+-keep class com.bizzan.customview.intercept.WonderfulViewPager { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_set_lock.xml:39
+-keep class com.bizzan.customview.lock.LockPatternIndicator { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_set_lock.xml:55
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_lock.xml:71
+-keep class com.bizzan.customview.lock.LockPatternView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_wallet_detail.xml:28
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_tibijilu.xml:63
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_current_trust.xml:34
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_chongbijilu.xml:62
+-keep class com.bizzan.ui.entrust.DropdownLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_seven.xml:159
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_kline.xml:286
+-keep class com.bizzan.ui.kline.kline.KLineView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\61c323b22a251e62734f43f815d4c25c\res\layout\pickerview_time.xml:19
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\61c323b22a251e62734f43f815d4c25c\res\layout\pickerview_options.xml:19
+-keep class com.contrarywind.view.WheelView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\41c90dbaf7af6186231b0c9afaf1ce05\res\layout\gt3_ll_geetest_view.xml:13
+-keep class com.geetest.sdk.views.GT3GeetestView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\41c90dbaf7af6186231b0c9afaf1ce05\res\layout\gt3_success_progressdialog.xml:12
+-keep class com.geetest.sdk.views.GT3View { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_my_info.xml:382
+-keep class com.kyleduo.switchbutton.SwitchButton { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\bdca3279c60a2db127e707ba63e4fe6e\res\layout\view_bezier.xml:28
+-keep class com.lcodecore.tkrefreshlayout.header.bezierlayout.RippleView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\bdca3279c60a2db127e707ba63e4fe6e\res\layout\view_bezier.xml:13
+-keep class com.lcodecore.tkrefreshlayout.header.bezierlayout.RoundDotView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\bdca3279c60a2db127e707ba63e4fe6e\res\layout\view_bezier.xml:21
+-keep class com.lcodecore.tkrefreshlayout.header.bezierlayout.RoundProgressView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\bdca3279c60a2db127e707ba63e4fe6e\res\layout\view_bezier.xml:6
+-keep class com.lcodecore.tkrefreshlayout.header.bezierlayout.WaveView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_seven.xml:906
+-keep class com.scwang.smart.refresh.footer.ClassicsFooter { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_seven.xml:897
+-keep class com.scwang.smart.refresh.header.ClassicsHeader { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_seven.xml:892
+-keep class com.scwang.smart.refresh.layout.SmartRefreshLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_one.xml:75
+-keep class com.scwang.smartrefresh.layout.SmartRefreshLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_one.xml:142
+-keep class com.sunfusheng.marqueeview.MarqueeView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\lib-zxing\build\intermediates\packaged_res\debug\layout\fragment_capture.xml:12
+-keep class com.uuzuche.lib_zxing.view.ViewfinderView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\pop_six_multiples.xml:114
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\pop_six_flat.xml:171
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\layout_text_two2.xml:184
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\layout_text_two.xml:158
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\layout_text_one2.xml:185
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\layout_text_one.xml:157
+-keep class com.xw.repo.BubbleSeekBar { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\4e1bf7f8fa506577c1c055bef08e2364\res\layout\recycler_swipe_view_load_more.xml:20
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\1cb69121adfea5f0b740cedc1906714a\res\layout\loading_wait_dialog.xml:23
+-keep class com.yanzhenjie.loading.LoadingView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\4e1bf7f8fa506577c1c055bef08e2364\res\layout\recycler_swipe_view_item.xml:17
+-keep class com.yanzhenjie.recyclerview.swipe.SwipeMenuLayout { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_chat_list.xml:66
+-keep class com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\4e1bf7f8fa506577c1c055bef08e2364\res\layout\recycler_swipe_view_item.xml:27
+-keep class com.yanzhenjie.recyclerview.swipe.SwipeMenuView { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\fragment_one.xml:102
+-keep class com.youth.banner.Banner { <init>(...); }
+
+# Referenced at C:\Users\Administrator\.gradle\caches\transforms-2\files-2.1\0d24470966b6c86581723094dbfe201b\res\layout\banner.xml:8
+-keep class com.youth.banner.view.BannerViewPager { <init>(...); }
+
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\frgment_text_three.xml:133
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_wallet_detail.xml:98
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_seller_apply_commit.xml:183
+# Referenced at E:\bizzan\dle\Ztuo1.0-Bizzan\ztuo-android\app\src\main\res\layout\activity_current_trust.xml:154
+-keep class org.angmarch.views.NiceSpinner { <init>(...); }
+

@@ -1,0 +1,33 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.github.mikephil.charting.test" >
+4
+5    <uses-sdk
+5-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:5:5-73
+6        android:minSdkVersion="8"
+6-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:5:15-40
+7        android:targetSdkVersion="23" />
+7-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:5:41-70
+8
+9    <instrumentation
+9-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:11:5-15:83
+10        android:name="android.test.InstrumentationTestRunner"
+10-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:11:22-75
+11        android:functionalTest="false"
+11-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:14:22-52
+12        android:handleProfiling="false"
+12-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:13:22-53
+13        android:label="Tests for com.github.mikephil.charting.test"
+13-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:15:22-81
+14        android:targetPackage="com.github.mikephil.charting.test" />
+14-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:12:22-79
+15
+16    <application android:debuggable="true" >
+16-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:7:5-9:19
+16-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:7:18-43
+17        <uses-library android:name="android.test.runner" />
+17-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:8:9-60
+17-->F:\ztuo-android\MPChartLib\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger2333189625062020595.xml:8:23-57
+18    </application>
+19
+20</manifest>

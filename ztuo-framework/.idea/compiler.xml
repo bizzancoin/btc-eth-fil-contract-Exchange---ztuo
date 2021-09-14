@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ucenter-api" />
+        <module name="contract-swap-core" />
+        <module name="otc-core" />
+        <module name="wallet" />
+        <module name="otc-api" />
+        <module name="admin" />
+        <module name="contract-swap-api" />
+        <module name="zuul" />
+        <module name="open-api" />
+        <module name="market" />
+        <module name="cloud" />
+        <module name="core" />
+        <module name="contract-option-core" />
+        <module name="exchange-api" />
+        <module name="chat" />
+        <module name="wallet_udun" />
+        <module name="exchange-core" />
+        <module name="agent-api" />
+        <module name="contract-option-api" />
+        <module name="bipay-core" />
+        <module name="exchange" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="admin" target="1.8" />
+      <module name="agent-api" target="1.8" />
+      <module name="bipay-core" target="1.8" />
+      <module name="bitrade-parent" target="1.8" />
+      <module name="chat" target="1.8" />
+      <module name="cloud" target="1.8" />
+      <module name="contract-option-api" target="1.8" />
+      <module name="contract-option-core" target="1.8" />
+      <module name="contract-swap-api" target="1.8" />
+      <module name="contract-swap-core" target="1.8" />
+      <module name="core" target="1.8" />
+      <module name="exchange" target="1.8" />
+      <module name="exchange-api" target="1.8" />
+      <module name="exchange-core" target="1.8" />
+      <module name="market" target="1.8" />
+      <module name="open-api" target="1.8" />
+      <module name="otc-api" target="1.8" />
+      <module name="otc-core" target="1.8" />
+      <module name="ucenter-api" target="1.8" />
+      <module name="wallet" target="1.8" />
+      <module name="wallet_udun" target="1.8" />
+      <module name="zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

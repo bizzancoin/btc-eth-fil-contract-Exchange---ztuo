@@ -1,0 +1,49 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.uuzuche.lib_zxing.test" >
+4
+5    <uses-sdk
+5-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:5:5-74
+6        android:minSdkVersion="14"
+6-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:5:15-41
+7        android:targetSdkVersion="25" />
+7-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:5:42-71
+8
+9    <instrumentation
+9-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:11:5-15:76
+10        android:name="android.support.test.runner.AndroidJUnitRunner"
+10-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:11:22-83
+11        android:functionalTest="false"
+11-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:14:22-52
+12        android:handleProfiling="false"
+12-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:13:22-53
+13        android:label="Tests for com.uuzuche.lib_zxing.test"
+13-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:15:22-74
+14        android:targetPackage="com.uuzuche.lib_zxing.test" />
+14-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:12:22-72
+15
+16    <application
+16-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:7:5-9:19
+17        android:allowBackup="true"
+17-->[__tested_artifact__::lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:18-44
+18        android:debuggable="true" >
+18-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:7:18-43
+19        <uses-library android:name="android.test.runner" />
+19-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:8:9-60
+19-->F:\ztuo-android\lib-zxing\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger1058107933011488803.xml:8:23-57
+20
+21        <activity
+21-->[__tested_artifact__::lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-17:63
+22            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
+22-->[__tested_artifact__::lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
+23            android:configChanges="orientation|keyboardHidden"
+23-->[__tested_artifact__::lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-63
+24            android:screenOrientation="portrait"
+24-->[__tested_artifact__::lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-49
+25            android:theme="@style/Theme.AppCompat.NoActionBar"
+25-->[__tested_artifact__::lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-63
+26            android:windowSoftInputMode="stateAlwaysHidden" />
+26-->[__tested_artifact__::lib-zxing] F:\ztuo-android\lib-zxing\build\intermediates\library_manifest\debug\AndroidManifest.xml:17:13-60
+27    </application>
+28
+29</manifest>
