@@ -1,0 +1,41 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  desc "Description of what the lane does"
+  lane :dev_lane do
+   gym(scheme: “digitalCurrency",
+
+        workspace: “digitalCurrency.xcworkspace",
+
+        include_bitcode: true,
+
+        configuration: "DEBUG",
+
+        export_method: "development”,                                 //什么种类的包
+
+        output_directory: "/Users/lanzz/Desktop/ceshi1”,    //导出到的文件夹  随意创建的文件夹
+
+        output_name: “GIBX.ipa”,                                   //包名 xxx可以随意代替
+
+        silent: false,
+
+        include_symbols: true,
+
+    )
+  end‘
+end

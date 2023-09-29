@@ -4,19 +4,19 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>xyz.qibit.er.robot</groupId>
+  <groupId>com.bizzan.er.robot</groupId>
   <artifactId>exchange_robot</artifactId>
   <version>1.0</version>
   <packaging>pom</packaging>
 
   <name>exchange_robot</name>
-  <url>https://www.qibit.xyz</url>
+  <url>https://www.bizzan.pro</url>
   <description>数字货币交易系统机器人交易程序</description>
   
   <parent>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>1.5.9.RELEASE</version>
+	<version>1.5.19.RELEASE</version>
 	<relativePath />
 	<!-- lookup parent from repository -->
   </parent>
@@ -25,28 +25,37 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	<project.build.jdk_version>1.8</project.build.jdk_version>
 	<spring-cloud.version>Edgware.RELEASE</spring-cloud.version>
-	<spring-boot_version>1.5.9.RELEASE</spring-boot_version>
+	<spring-boot_version>1.5.19.RELEASE</spring-boot_version>
 	<slf4j_version>1.7.7</slf4j_version>
 	<jcl_version>1.1</jcl_version>
-	<log4j_version>1.2.16</log4j_version>
-	<logback_version>1.1.11</logback_version>
+	<log4j_version>1.2.17</log4j_version>
+	<logback_version>1.2.3</logback_version>
 	<logback-ext-spring_version>0.1.4</logback-ext-spring_version>
 	<commons-logging_version>1.1.3</commons-logging_version>
   </properties>
   
   <modules>
-    <!--module>er_common</module-->
     <module>er_market</module>
     <module>er_robot_normal</module>
-	<module>er_robot_custom</module>
 	<module>er_robot_price</module>
   </modules>
+
   <dependencyManagement>
 	  <dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<version>${spring-boot_version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+			<version>1.4.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+			<version>1.4.7.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
@@ -125,7 +134,7 @@
 		<dependency>
 		    <groupId>com.alibaba</groupId>
 		    <artifactId>fastjson</artifactId>
-		    <version>1.2.49</version>
+		    <version>1.2.75</version>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -150,7 +159,7 @@
 	    <dependency>
 	      <groupId>junit</groupId>
 	      <artifactId>junit</artifactId>
-	      <version>3.8.1</version>
+	      <version>4.12</version>
 	      <scope>test</scope>
 	    </dependency>
 	  </dependencies>

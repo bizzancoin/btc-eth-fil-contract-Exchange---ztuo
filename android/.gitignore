@@ -1,0 +1,10 @@
+.git
+.gradle
+.idea
+.DS_Store
+app/build
+app/release/*
+lib-zxing/build
+MPChartLib/build
+app/priguardMapping.txt
+local.properties
