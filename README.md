@@ -61,13 +61,12 @@
 
 该项目截至到2023年7月，主要以优化为主，比如搭建流程、包升级、混合式APP 构建（UNIAPP开发）、安全优化和原生的Android 和 ios APP 优化等。
 
-# 关于使用
-
-这套代码，对于资金还是有一定的要求，一年下来，光服务器至少10 万，原生 APP 让维护成本更是雪上加霜 。
-当然也有性价比方案，比如单台服务器，8H32G 每月 两三千元，安全防护采用 Cloudflare 低配套餐，毕竟2023 年正常人都很难 ，总的来说，每个阶段应该辅以相应的策略，这里不展开了。
-
-<br>
-
-> 网络上遇到合适的人不容易，交个朋友！
 
 
+# 联系我们
+
+1、Whatsapp
+
+2、Telegram
+
+<img src="https://raw.githubusercontent.com/bizzancoin/btc-eth-fil-contract-Exchange---ztuo/master/img/whatsapp.jpg" alt="whatsapp" style="zoom: 33%;" />
