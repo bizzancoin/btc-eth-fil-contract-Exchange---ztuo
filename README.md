@@ -2,8 +2,6 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=200&size=16&pause=1000&width=502&lines=Hey%EF%BC%8CI+am+%E5%98%89%E7%A6%BE%E6%9C%9B%E5%B2%97+My+Telegram+is+%40usdtvps666)](https://git.io/typing-svg)
 
-
-
 # 演示地址
 
 > 演示地址经常换，以实际联系为主。
@@ -13,6 +11,18 @@
 2023年7月19日， ~~交易所开发项目暂停~~，现源码低价销售。
 
 新版H5 已经上线，采用uniapp 开发，私聊要演示。
+
+
+
+# 视频教程
+
+| 项目                        | 链接                                        |
+| --------------------------- | ------------------------------------------- |
+| 币严Bizzan平台币控盘K线操作 | https://www.youtube.com/watch?v=5LnzDJwIAss |
+|                             |                                             |
+|                             |                                             |
+
+
 
 # 开源和收费
 
@@ -41,9 +51,7 @@
 # 源码介绍
 数字货币交易所 ，区块链永续合约、秒合约交易所开源代码，基于Springboot 、vue 开发的开源数字货币交易所，ZTUO 交易所2021版。
 本系统项目代码有完整的撮合交易引擎源码、后台管理源码、前台源码、APP 源码、代理商源码、机器人源码。
-开源项目仅供学习，并不能用于运营。
-
-币严（bizzan）这套交易所代码，网络上很多，同样，坑也不少，究其原因是倒卖太多 .且号称完整源码，但不少提供的源码不完整。
+开源项目仅供学习。
 
 
 
@@ -59,10 +67,12 @@
 
 # 联系我们
 
-1、Whatsapp
+1、Whatsapp: 
 
-联系我：https://t.me/usdtvps666
+***‪+44 7936 866117‬***
 
 2、Telegram
+
+https://t.me/usdtvps666
 
 <img src="https://raw.githubusercontent.com/bizzancoin/btc-eth-fil-contract-Exchange---ztuo/master/img/whatsapp.jpg" alt="whatsapp" style="zoom: 33%;" />
