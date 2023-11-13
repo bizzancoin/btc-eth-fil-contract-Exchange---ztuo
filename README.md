@@ -53,7 +53,15 @@
 本系统项目代码有完整的撮合交易引擎源码、后台管理源码、前台源码、APP 源码、代理商源码、机器人源码。
 开源项目仅供学习。
 
+## 备注
 
+### 1、停止kill java 服务顺序
+
+`首先停止 er_robot_normal.jar、er_market.jar`
+
+`接着 exchange-api.jar、contract-option-api.jar、contract-second-api.jar、contract-swap-api.jar`
+
+`最后，ucenter-api.jar、cloud.jar、exchange.jar、market.jar、agent-api.jar、admin-api.jar、wallet_udun.jar、chat.jar、otc-api.jar、kline-robot.jar`
 
 ## 项目外包
 
@@ -62,8 +70,6 @@
 团队包含专业的项目经理、架构师、前端工程师、设计师、后端工程师、测试工程师、运维工程师，可以提供全流程的外包服务。
 
 项目可以是商城、DAPP系统、OA 系统、物流系统、ERP 系统、CMS 系统、支付系统、IM 聊天、微信公众号、微信小程序、Web3游戏等等。
-
-## 
 
 # 联系我们
 
