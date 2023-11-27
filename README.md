@@ -69,8 +69,9 @@
 
 ***‪+44 7936 866117‬***
 
+<img src="https://raw.githubusercontent.com/bizzancoin/btc-eth-fil-contract-Exchange---ztuo/master/img/whatsapp.png" alt="whatsapp" style="zoom: 33%;" />
+
 2、Telegram
 
 https://t.me/usdtvps666
 
-<img src="https://raw.githubusercontent.com/bizzancoin/btc-eth-fil-contract-Exchange---ztuo/master/img/whatsapp.jpg" alt="whatsapp" style="zoom: 33%;" />
