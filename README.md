@@ -4,13 +4,13 @@
 
 # 演示地址
 
-> 演示地址经常换，以实际联系为主。
+> 前端PC站：https://pc.usdtest.online
+> 前端H5（uniapp）：https://mob.usdtest.online
+> 代理商登录：https://agent.usdtest.online
+> 测试账号：douyaolai@qq.com 
+> 测试密码：admin123
 
 **<font color=OrangeRed>本项目源码仅供研究、学习使用，请遵守当地法律！</font>**
-
-2023年7月19日， ~~交易所开发项目暂停~~，现源码低价销售。
-
-新版H5 已经上线，采用uniapp 开发，私聊要演示。
 
 
 
