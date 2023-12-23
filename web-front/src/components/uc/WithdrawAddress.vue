@@ -20,7 +20,7 @@
                   <Input v-model="withdrawAddr" style="width: 90%;margin-top:10px;" size="large"></Input>
                 </div>
               </div>
-              <div class="mt25">
+              <div class="mt25" v-if="!xsShow">
                 <p class="describe">{{$t('uc.finance.withdraw.remark')}} / Memo</p>
                 <div class="title">
                   <Input v-model="remark" style="width:100%;margin-top:10px;" size="large"></Input>
@@ -32,9 +32,13 @@
             </div>
             <div class="action-content">
               <div class="action-body">
+
                 <p class="acb-p1 describe">{{$t('uc.finance.withdraw.addresslist')}}</p>
                 <div class="order-table">
-                  <Table :columns="tableColumnsRecharge" :no-data-text="$t('common.nodata')" :data="dataRecharge" :disabled-hover="true"></Table>
+                  <div class="xs_table" v-if="xsShow">
+                    <Table :columns="tableColumnsRecharge" :no-data-text="$t('common.nodata')" :data="dataRecharge" :disabled-hover="true" style="width: 180%;"></Table>
+                  </div>
+                  <Table v-else :columns="tableColumnsRecharge" :no-data-text="$t('common.nodata')" :data="dataRecharge" :disabled-hover="true"></Table>
                   <div style="margin: 10px;overflow: hidden">
                     <div style="float: right;">
                       <Page :total="dataCount" :current="1" @on-change="changePage" :loading="loading" class="recharge_btn"></Page>
@@ -62,14 +66,14 @@
           <!-- 手机验证码 -->
           <FormItem :label="$t('uc.finance.withdraw.smscode')" prop="vailCode2" v-show="validPhone">
             <Input v-model="formValidateAddr.vailCode2" size="large">
-            <!-- <Button slot="append">点击获取</Button> -->
-            <div class="timebox" slot="append">
-              <Button @click="send(2)" :disabled="disbtn">
-                <!--sendMsgDisabled2为true 时间+秒    sendMsgDisabled2为false为，点击获取 -->
-                <span v-if="sendMsgDisabled2">{{time2+$t('uc.finance.withdraw.second')}}</span>
-                <span v-if="!sendMsgDisabled2">{{$t('uc.finance.withdraw.clickget')}}</span>
-              </Button>
-            </div>
+              <!-- <Button slot="append">点击获取</Button> -->
+              <div class="timebox" slot="append">
+                <Button @click="send(2)" :disabled="disbtn">
+                  <!--sendMsgDisabled2为true 时间+秒    sendMsgDisabled2为false为，点击获取 -->
+                  <span v-if="sendMsgDisabled2">{{time2+$t('uc.finance.withdraw.second')}}</span>
+                  <span v-if="!sendMsgDisabled2">{{$t('uc.finance.withdraw.clickget')}}</span>
+                </Button>
+              </div>
             </Input>
           </FormItem>
           <!-- 邮箱 -->
@@ -79,13 +83,13 @@
           <!-- 邮箱验证码 -->
           <FormItem :label="$t('uc.finance.withdraw.emailcode')" prop="vailCode1" v-show="validEmail">
             <Input v-model="formValidateAddr.vailCode1" size="large">
-            <!-- <Button slot="append">点击获取</Button> -->
-            <div class="timebox" slot="append">
-              <Button @click="send(1)" :disabled="disbtn">
-                <span v-if="sendMsgDisabled1">{{time1+$t('uc.finance.withdraw.second')}}</span>
-                <span v-if="!sendMsgDisabled1">{{$t('uc.finance.withdraw.clickget')}}</span>
-              </Button>
-            </div>
+              <!-- <Button slot="append">点击获取</Button> -->
+              <div class="timebox" slot="append">
+                <Button @click="send(1)" :disabled="disbtn">
+                  <span v-if="sendMsgDisabled1">{{time1+$t('uc.finance.withdraw.second')}}</span>
+                  <span v-if="!sendMsgDisabled1">{{$t('uc.finance.withdraw.clickget')}}</span>
+                </Button>
+              </div>
             </Input>
           </FormItem>
         </Form>
@@ -103,6 +107,8 @@ export default {
   data() {
     var that = this;
     return {
+      xsShow: false,//手机显示
+      activeWidth: window.innerWidth,
       interval: function() {},
       disbtn: false,
       dataCount: 10,
@@ -127,7 +133,8 @@ export default {
         },
         {
           title: this.$t("uc.finance.withdraw.address"),
-          key: "address"
+          key: "address",
+          // width:'200%'
         },
         {
           title: this.$t("uc.finance.withdraw.remark"),
@@ -141,25 +148,25 @@ export default {
           render: (h, params) => {
             return h("div", [
               h(
-                "Button",
-                {
-                  props: {
-                    size: "small"
-                  },
-                  style: {
-                    border: "1px solid #ed4014",
-                    color: "#ed4014",
-                    "line-height": "1.2",
-                    "border-radius": "10px"
-                  },
-                  on: {
-                    click: () => {
-                      this.del(params.row.id);
-                      // this.getList(0, 10);
+                  "Button",
+                  {
+                    props: {
+                      size: "small"
+                    },
+                    style: {
+                      border: "1px solid #ed4014",
+                      color: "#ed4014",
+                      "line-height": "1.2",
+                      "border-radius": "10px"
+                    },
+                    on: {
+                      click: () => {
+                        this.del(params.row.id);
+                        // this.getList(0, 10);
+                      }
                     }
-                  }
-                },
-                that.$t("uc.finance.withdraw.delete")
+                  },
+                  that.$t("uc.finance.withdraw.delete")
               )
             ]);
           }
@@ -211,6 +218,20 @@ export default {
     this.coinType = this.$route.query.name;
     this.getCoin();
   },
+  watch: {
+    activeWidth: {
+
+      handler(val, oldVal) {
+        if (val <= 416) {
+          this.xsShow = true;
+        } else {
+          this.xsShow = false;
+        }
+      },
+      deep: true,//true 深度监听
+      immediate: true,
+    }
+  },
   methods: {
     refresh() {
       (this.coinType = null), (this.withdrawAddr = null), (this.remark = null);
@@ -219,38 +240,38 @@ export default {
     getMember() {
       //获取个人安全信息
       this.$http
-        .post(this.host + "/uc/approve/security/setting")
-        .then(response => {
-          var resp = response.body;
-          if (resp.code == 0) {
-            if (resp.data.mobilePhone) {
-              this.formValidateAddr.mobileNo = resp.data.mobilePhone;
-              this.validPhone = true;
-              this.validEmail = false;
+          .post(this.host + "/uc/approve/security/setting")
+          .then(response => {
+            var resp = response.body;
+            if (resp.code == 0) {
+              if (resp.data.mobilePhone) {
+                this.formValidateAddr.mobileNo = resp.data.mobilePhone;
+                this.validPhone = true;
+                this.validEmail = false;
+              } else {
+                this.formValidateAddr.email = resp.data.email;
+                this.validPhone = false;
+                this.validEmail = true;
+              }
             } else {
-              this.formValidateAddr.email = resp.data.email;
-              this.validPhone = false;
-              this.validEmail = true;
+              this.$Message.error(resp.message);
             }
-          } else {
-            this.$Message.error(resp.message);
-          }
-        });
+          });
     },
     getCoin() {
       //币种
       this.$http
-        .post(this.host + "/uc/withdraw/support/coin")
-        .then(response => {
-          var resp = response.body;
-          if (resp.code == 0) {
-            for (let i = 0; i < resp.data.length; i++) {
-              this.coinList.push(resp.data[i]);
+          .post(this.host + "/uc/withdraw/support/coin")
+          .then(response => {
+            var resp = response.body;
+            if (resp.code == 0) {
+              for (let i = 0; i < resp.data.length; i++) {
+                this.coinList.push(resp.data[i]);
+              }
+            } else {
+              this.$Message.error(resp.message);
             }
-          } else {
-            this.$Message.error(resp.message);
-          }
-        });
+          });
     },
     getList(pageNo, pageSize) {
       //获取地址
@@ -258,17 +279,17 @@ export default {
       params["pageNo"] = pageNo;
       params["pageSize"] = pageSize;
       this.$http
-        .post(this.host + "/uc/withdraw/address/page", params)
-        .then(response => {
-          var resp = response.body;
-          if (resp.code == 0 && resp.data.content) {
-            this.dataRecharge = resp.data.content;
-            this.dataCount = resp.data.totalElement;
-          } else {
-            this.$Message.error(resp.message);
-          }
-          this.loading = false;
-        });
+          .post(this.host + "/uc/withdraw/address/page", params)
+          .then(response => {
+            var resp = response.body;
+            if (resp.code == 0 && resp.data.content) {
+              this.dataRecharge = resp.data.content;
+              this.dataCount = resp.data.totalElement;
+            } else {
+              this.$Message.error(resp.message);
+            }
+            this.loading = false;
+          });
     },
     remove(index) {
       this.dataRecharge.splice(index, 1);
@@ -305,25 +326,25 @@ export default {
         if (this.formValidateAddr.mobileNo) {
           //获取手机code
           this.$http
-            .post(this.host + "/uc/mobile/add/address/code")
-            .then(response => {
-              var resp = response.body;
-              if (resp.code == 0) {
-                this.$Message.success(resp.message);
-                me.sendMsgDisabled2 = true;
-                this.interval = window.setInterval(() => {
-                  if (me.time2-- <= 0) {
-                    me.time2 = 60;
-                    me.sendMsgDisabled2 = false;
-                    window.clearInterval(this.interval);
-                    this.disbtn = false;
-                  }
-                }, 1000);
-              } else {
-                this.$Message.error(resp.message);
-                this.disbtn = false;
-              }
-            });
+              .post(this.host + "/uc/mobile/add/address/code")
+              .then(response => {
+                var resp = response.body;
+                if (resp.code == 0) {
+                  this.$Message.success(resp.message);
+                  me.sendMsgDisabled2 = true;
+                  this.interval = window.setInterval(() => {
+                    if (me.time2-- <= 0) {
+                      me.time2 = 60;
+                      me.sendMsgDisabled2 = false;
+                      window.clearInterval(this.interval);
+                      this.disbtn = false;
+                    }
+                  }, 1000);
+                } else {
+                  this.$Message.error(resp.message);
+                  this.disbtn = false;
+                }
+              });
         } else {
           this.$refs.formValidateAddr.validateField("mobileNo");
           this.disbtn = false;
@@ -342,9 +363,7 @@ export default {
         this.$Message.warning(this.$t("uc.finance.withdraw.symboltip"));
       } else if (!this.withdrawAddr) {
         this.$Message.warning(this.$t("uc.finance.withdraw.addresstip"));
-      } else if (!this.remark) {
-        this.$Message.warning(this.$t("uc.finance.withdraw.remarktip"));
-      } else if (this.coinType && this.remark && this.withdrawAddr) {
+      }  else if (this.coinType && this.withdrawAddr) {
         this.modal2 = true;
       }
     },
@@ -361,17 +380,17 @@ export default {
           let params = {};
           params["id"] = id;
           this.$http
-            .post(this.host + "/uc/withdraw/address/delete", params)
-            .then(response => {
-              var resp = response.body;
-              if (resp.code == 0) {
-                this.$Message.success(resp.message);
-                this.refresh();
-              } else {
-                this.$Message.error(resp.message);
-              }
-              this.loading = false;
-            });
+              .post(this.host + "/uc/withdraw/address/delete", params)
+              .then(response => {
+                var resp = response.body;
+                if (resp.code == 0) {
+                  this.$Message.success(resp.message);
+                  this.refresh();
+                } else {
+                  this.$Message.error(resp.message);
+                }
+                this.loading = false;
+              });
         },
         onCancel: () => {}
       });
@@ -399,18 +418,18 @@ export default {
       param["remark"] = this.remark;
 
       this.$http
-        .post(this.host + "/uc/withdraw/address/add", param)
-        .then(response => {
-          var resp = response.body;
-          if (resp.code == 0) {
-            this.$Message.success(this.$t("uc.finance.withdraw.savemsg2"));
-            this.formValidateAddr.vailCode2 = "";
-            this.refresh();
-            this.modal2 = false;
-          } else {
-            this.$Message.error(resp.message);
-          }
-        });
+          .post(this.host + "/uc/withdraw/address/add", param)
+          .then(response => {
+            var resp = response.body;
+            if (resp.code == 0) {
+              this.$Message.success(this.$t("uc.finance.withdraw.savemsg2"));
+              this.formValidateAddr.vailCode2 = "";
+              this.refresh();
+              this.modal2 = false;
+            } else {
+              this.$Message.error(resp.message);
+            }
+          });
     }
   },
   computed: {}
@@ -495,13 +514,28 @@ p.describe {
           &:focus {
             -moz-box-shadow: 2px 2px 5px transparent, -2px -2px 4px transparent;
             -webkit-box-shadow: 2px 2px 5px transparent,
-              -2px -2px 4px transparent;
+            -2px -2px 4px transparent;
             box-shadow: 2px 2px 5px transparent, -2px -2px 4px transparent;
           }
         }
       }
     }
   }
+}
+.xs_table {
+  width: 100%;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 2px;
+  }
+
+
+
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
 }
 </style>
 

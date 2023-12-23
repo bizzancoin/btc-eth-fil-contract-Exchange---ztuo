@@ -4,7 +4,10 @@
       <div class="bill_box rightarea padding-right-clear">
         <div class="shaow">
           <div class="money_table">
-            <Table :columns="tableColumns" :data="orderList" :loading="loading" :disabled-hover="true"></Table>
+            <div class="xs_table" v-if="xsWidth">
+              <Table :columns="tableColumns" :data="orderList" :loading="loading" :disabled-hover="true" style="width: 300%;"></Table>
+            </div>
+            <Table v-else :columns="tableColumns" :data="orderList" :loading="loading" :disabled-hover="true"></Table>
             <div class="page">
               <Page :total="total" :pageSize="pageSize" :current="pageNo" @on-change="loadDataPage"></Page>
             </div>
@@ -19,6 +22,7 @@ export default {
   components: {},
   data() {
     return {
+      xsWidth:window.innerWidth < 767,
       loginmsg: this.$t("common.logintip"),
       total: 0,
       pageSize: 10,
@@ -73,24 +77,24 @@ export default {
         key: "type",
         align: "center",
         render(h, params) {
-          let text = self.$t("activity.activitytype0");
+          let text = "未知";
           if(params.row.type == 1){
-            text = self.$t("activity.activitytype1");
+            text = "首发抢购";
           }
           if(params.row.type == 2){
-            text = self.$t("activity.activitytype2");
+            text = "首发分摊";
           }
           if(params.row.type == 3){
-            text = self.$t("activity.activitytype3");
+            text = "持仓瓜分";
           }
           if(params.row.type == 4){
-            text = self.$t("activity.activitytype4");
+            text = "自由认购";
           }
           if(params.row.type == 5){
-            text = self.$t("activity.activitytype5");
+            text = "云矿机认购";
           }
           if(params.row.type == 6){
-            text = self.$t("activity.activitytype6");
+            text = "锁仓";
           }
           return h(
             "span",{}, text
@@ -117,26 +121,26 @@ export default {
         key: "state",
         align: "center",
         render(h, params) {
-          let text = self.$t("activity.activitystatus0");
+          let text = "临时";
           if(params.row.type == 5) {
             if(params.row.state == 1) {
-              text = self.$t("activity.activitystatus1");
+              text = "未部署";
             }
             if(params.row.state == 2) {
-              text = self.$t("activity.activitystatus2");
+              text = "已部署";
             }
             if(params.row.state == 3) {
-              text = self.$t("activity.activitystatus3");
+              text = "已撤销";
             }
           }else{
             if(params.row.state == 1) {
-              text = self.$t("activity.activitystatus4");
+              text = "待成交";
             }
             if(params.row.state == 2) {
-              text = self.$t("activity.activitystatus5");
+              text = "已成交";
             }
             if(params.row.state == 3) {
-              text = self.$t("activity.activitystatus6");
+              text = "已撤销";
             }
           }
           return h(
@@ -265,4 +269,19 @@ export default {
     cursor: pointer;
   }
 }
+.xs_table {
+        width: 100%;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+          height: 2px;
+        }
+
+        
+
+        &::-webkit-scrollbar-track-piece {
+          background: transparent;
+        }
+
+      }
 </style>

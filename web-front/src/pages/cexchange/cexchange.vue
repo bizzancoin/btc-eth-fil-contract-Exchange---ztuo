@@ -1,6 +1,5 @@
 <template>
   <div class="cexchange">
-    <div style="display:none;background-image: linear-gradient( 135deg, #FD6585 10%, #0D25B9 100%);text-align: center;height:30px;line-height:30px;letter-spacing: 1px;">本功能非商业基础版功能，需额外付费！</div>
     <img class="bannerimg" src="../../assets/images/ctc-bg.jpg">
     <div class="ctc_container">
       <h1>{{$t('cexchange.desc')}}</h1>
@@ -518,9 +517,6 @@ export default {
     margin-bottom: 10px;
     text-align: left;
 }
-.cexchange .trade_wrap .trade-input input::-webkit-input-placeholder {
-
-}
 .cexchange .trade_wrap .ivu-form-item-content label.before {
     position: absolute;
     top: 4px;
@@ -564,9 +560,6 @@ export default {
 }
 .trade_bd_ctc Button.bg-gray:hover{
     color: #9fabb5!important;
-}
-.trade_bd_ctc Button:hover {
-    /* background: #54679F; */
 }
 .cexchange .trade_wrap .ivu-btn{
   color: #FFF!important;

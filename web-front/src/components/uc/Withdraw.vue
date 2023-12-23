@@ -5,8 +5,8 @@
         <section class="trade-groups merchant-tops">
           <!-- <i class="merchant-icon tips"></i>
           <span class="tips-word">{{$t('uc.finance.withdraw.pickup')}}</span> -->
-          <router-link to="/uc/withdraw/address">{{$t('uc.finance.withdraw.addressmanager')}}</router-link>
-          <router-link to="/uc/withdraw/code" style="margin-right:10px;">{{$t('uc.finance.withdraw.withdrawbycode')}}</router-link>
+          <router-link style="width:140px" to="/uc/withdraw/address">{{$t('uc.finance.withdraw.addressmanager')}}</router-link>
+          <router-link to="/uc/withdraw/code" style="margin-right:10px;width:140px">{{$t('uc.finance.withdraw.withdrawbycode')}}</router-link>
         </section>
         <section>
           <div class="table-inner action-box">
@@ -45,7 +45,7 @@
                 <div class="input-group">
                   <Poptip trigger="focus" :content="$t('uc.finance.withdraw.tip1')+currentCoin.withdrawScale+$t('uc.finance.withdraw.tip11')+currentCoin.minAmount+' ,'+$t('uc.finance.withdraw.tip2')+currentCoin.maxAmount" style="width: 100%;">
                     <InputNumber @on-change="computerAmount" v-model="withdrawAmount" :placeholder="$t('uc.finance.withdraw.numtip1')" size="large" :min="currentCoin.minAmount" :max="currentCoin.maxAmount"></InputNumber>
-                    <span class="input-group-addon addon-tag uppercase firstt">{{currentCoin.unit}}</span>
+                    <span class="input-group-addon addon-tag uppercase firstt" >{{currentCoin.unit}}</span>
                   </Poptip>
                 </div>
               </div>
@@ -60,8 +60,8 @@
                 <div class="input-group" style="margin-top:30px;">
                   <Slider style="float: left;width: 100%;" v-if="currentCoin.maxTxFee > currentCoin.minTxFee" v-model="withdrawFee" show-input :step="(currentCoin.maxTxFee - currentCoin.minTxFee)/10" :max="currentCoin.maxTxFee" :min="currentCoin.minTxFee"></Slider>
                   <!--<Poptip v-else trigger="focus" :content="$t('uc.finance.withdraw.tip1')+currentCoin.minTxFee+$t('uc.finance.withdraw.tip1')+currentCoin.maxTxFee" style="width: 100%;">-->
-                  <InputNumber readonly v-model="withdrawFee" :min="currentCoin.minTxFee" :max="currentCoin.maxTxFee" size="large"></InputNumber>
-                  <span class="input-group-addon addon-tag uppercase">{{currentCoin.unit}}</span>
+                  <InputNumber style="display: none" readonly v-model="withdrawFee" :min="currentCoin.minTxFee" :max="currentCoin.maxTxFee" size="large"></InputNumber>
+                  <span class="input-group-addon addon-tag uppercase" v-if="!xsShow">{{currentCoin.unit}}</span>
                   <!--</Poptip>-->
                 </div>
               </div>
@@ -74,8 +74,11 @@
                 </div>
               </div>
             </div>
-            <div class="action-foot">
-              <Button id="withdrawSubmit" long size="large" type="primary" style="height:40px;" @click="apply">{{$t('uc.finance.withdraw.pickup')}}</Button>
+            <div class="" v-if="xsShow" style="margin-top: 20px;">
+              <Button id="withdrawSubmit" long size="large" type="primary" style="height:40px;width: 58px" @click="apply">{{$t('uc.finance.withdraw.pickup')}}</Button>
+            </div>
+            <div class="action-foot" v-else>
+              <Button id="withdrawSubmit" long size="large" type="primary" style="height:40px;width: 58px" @click="apply">{{$t('uc.finance.withdraw.pickup')}}</Button>
             </div>
             <div class="action-content pt10">
               <div class="action-body">
@@ -83,13 +86,16 @@
                 <p class="acb-p2">• {{$t('uc.finance.withdraw.msg3')}}：{{currentCoin.minAmount}} {{coinType}}。<br>• {{$t('uc.finance.withdraw.msg5')}}<br>• {{$t('uc.finance.withdraw.msg6')}} </p>
               </div>
             </div>
-            <div class="action-content">
+            <div class="action-content " >
               <div class="action-body">
                 <p class="acb-p1">{{$t('uc.finance.withdraw.record')}}</p>
                 <div class="order-table">
                   <p class="acb-p2" style="margin-bottom:10px;">• {{$t('uc.finance.withdraw.click')}}
                     <i class="ivu-icon ivu-icon-funnel"></i>{{$t('uc.finance.withdraw.filtrate')}}</p>
-                  <Table :no-data-text="$t('common.nodata')" :columns="tableColumnsWithdraw" :data="tableWithdraw" :loading="loading"></Table>
+                  <div v-if="xsShow" class="xs_table">
+                    <Table :no-data-text="$t('common.nodata')" :columns="tableColumnsWithdraw" :data="tableWithdraw" :loading="loading" style="width: 200%;"></Table>
+                  </div>
+                  <Table v-else :no-data-text="$t('common.nodata')" :columns="tableColumnsWithdraw" :data="tableWithdraw" :loading="loading" style=""></Table>
                   <div id="pages">
                     <div style="float: right;">
                       <Page class="pages_a" :total="transaction.total" :current="transaction.page + 1" @on-change="changePage"></Page>
@@ -114,12 +120,12 @@
         <!-- <FormItem>
           <Input type="text" v-model="user.mobilePhone" disabled></Input>
         </FormItem> -->
-<!--        <FormItem prop="code">-->
-<!--          <Input type="text" v-model="formInline.code" :placeholder="$t('uc.forget.smscode')">-->
-<!--          </Input>-->
-<!--          <input id="sendCode" @click="sendCode();" type="Button" :value="sendcodeValue" :disabled="codeIsSending">-->
-<!--          </input>-->
-<!--        </FormItem>-->
+        <!--        <FormItem prop="code">-->
+        <!--          <Input type="text" v-model="formInline.code" :placeholder="$t('uc.regist.smscode')">-->
+        <!--          </Input>-->
+        <!--          <input id="sendCode" @click="sendCode();" type="Button" :value="sendcodeValue" :disabled="codeIsSending">-->
+        <!--          </input>-->
+        <!--        </FormItem>-->
         <FormItem>
           <Input type="password" v-model="formInline.fundpwd" :placeholder="$t('otc.chat.msg7')"></Input>
         </FormItem>
@@ -135,6 +141,8 @@
 export default {
   data() {
     return {
+      xsShow: false,//手机显示
+      activeWidth: window.innerWidth,
       user: {},
       codeIsSending: false,
       sendcodeValue: this.$t("uc.regist.sendcode"),
@@ -166,8 +174,20 @@ export default {
   watch: {
     currentCoin: function() {
       this.withdrawFee =
-        this.currentCoin.minTxFee +
-        (this.currentCoin.maxTxFee - this.currentCoin.minTxFee) / 2;
+          this.currentCoin.minTxFee +
+          (this.currentCoin.maxTxFee - this.currentCoin.minTxFee) / 2;
+    },
+    activeWidth: {
+
+      handler(val, oldVal) {
+        if (val <= 416) {
+          this.xsShow = true;
+        } else {
+          this.xsShow = false;
+        }
+      },
+      deep: true,//true 深度监听
+      immediate: true,
     }
   },
   methods: {
@@ -241,7 +261,7 @@ export default {
     ok() {
       // if (this.formInline.code == "") {
       //   this.modal = true;
-      //   this.$Message.error("请填写短信验证码");
+      //   this.$Message.error("请填写验证码");
       //   return;
       // }
       if (this.formInline.fundpwd == "") {
@@ -261,50 +281,50 @@ export default {
       params["amount"] = this.withdrawAmount;
       params["fee"] = this.withdrawFee;
       params["jyPassword"] = this.formInline.fundpwd;
-      // params["code"] = this.formInline.code;
+      params["code"] = this.formInline.code;
       this.$http
-        .post(this.host + "/uc/withdraw/apply/code", params)
-        .then(response => {
-          this.fundpwd = "";
-          var resp = response.body;
-          if (resp.code == 0) {
-            this.modal = false;
-            this.formInline.code = "";
-            this.formInline.fundpwd = "";
-            this.transaction.page = 0;
-            this.getList();
-            this.clearValues();
-            this.$Message.success(resp.message);
-          } else {
-            this.$Message.error(resp.message);
-          }
-        });
+          .post(this.host + "/uc/withdraw/apply/code", params)
+          .then(response => {
+            this.fundpwd = "";
+            var resp = response.body;
+            if (resp.code == 0) {
+              this.modal = false;
+              this.formInline.code = "";
+              this.formInline.fundpwd = "";
+              this.transaction.page = 0;
+              this.getList();
+              this.clearValues();
+              this.$Message.success(resp.message);
+            } else {
+              this.$Message.error(resp.message);
+            }
+          });
     },
     getAddrList() {
       // 初始化页面上的值
       this.clearValues();
       //获取地址
       this.$http
-        .post(this.host + "/uc/withdraw/support/coin/info")
-        .then(response => {
-          var resp = response.body;
-          if (resp.code == 0 && resp.data.length > 0) {
-            this.coinList = resp.data;
-            if (this.coinType) {
-              for (let i = 0; i < resp.data.length; i++) {
-                if (this.coinType == resp.data[i].unit) {
-                  this.currentCoin = resp.data[i];
-                  break;
+          .post(this.host + "/uc/withdraw/support/coin/info")
+          .then(response => {
+            var resp = response.body;
+            if (resp.code == 0 && resp.data.length > 0) {
+              this.coinList = resp.data;
+              if (this.coinType) {
+                for (let i = 0; i < resp.data.length; i++) {
+                  if (this.coinType == resp.data[i].unit) {
+                    this.currentCoin = resp.data[i];
+                    break;
+                  }
                 }
+              } else {
+                this.currentCoin = this.coinList[0];
+                this.coinType = this.currentCoin.unit;
               }
             } else {
-              this.currentCoin = this.coinList[0];
-              this.coinType = this.currentCoin.unit;
+              this.$Message.error(resp.message);
             }
-          } else {
-            this.$Message.error(resp.message);
-          }
-        });
+          });
     },
     getList() {
       this.loading = true;
@@ -313,18 +333,18 @@ export default {
       params["page"] = this.transaction.page;
       params["pageSize"] = this.transaction.pageSize;
       this.$http
-        .post(this.host + "/uc/withdraw/record", params)
-        .then(response => {
-          var resp = response.body;
-          if (resp.code == 0) {
-            this.tableWithdraw = resp.data.content;
-            this.transaction.total = resp.data.totalElements;
-            this.transaction.page = resp.data.number;
-          } else {
-            this.$Message.error(resp.message);
-          }
-          this.loading = false;
-        });
+          .post(this.host + "/uc/withdraw/record", params)
+          .then(response => {
+            var resp = response.body;
+            if (resp.code == 0) {
+              this.tableWithdraw = resp.data.content;
+              this.transaction.total = resp.data.totalElements;
+              this.transaction.page = resp.data.number;
+            } else {
+              this.$Message.error(resp.message);
+            }
+            this.loading = false;
+          });
     },
     accSub(arg1, arg2) {
       var r1, r2, m, n;
@@ -352,17 +372,17 @@ export default {
     },
     computerAmount() {
       this.withdrawOutAmount = this.round(
-        this.accSub(this.withdrawAmount, this.withdrawFee),
-        this.currentCoin.withdrawScale
+          this.accSub(this.withdrawAmount, this.withdrawFee),
+          this.currentCoin.withdrawScale
       );
     },
     computerAmount2() {
       this.withdrawAmount =
-        (this.withdrawAmount + "").replace(/([0-9]+\.[0-9]{6})[0-9]*/, "$1") -
-        0;
+          (this.withdrawAmount + "").replace(/([0-9]+\.[0-9]{6})[0-9]*/, "$1") -
+          0;
       this.withdrawOutAmount = this.round(
-        this.accSub(this.withdrawAmount, this.withdrawFee),
-        this.currentCoin.withdrawScale
+          this.accSub(this.withdrawAmount, this.withdrawFee),
+          this.currentCoin.withdrawScale
       );
     },
     valid() {
@@ -374,25 +394,25 @@ export default {
         this.$Message.error(this.$t("uc.finance.withdraw.addresstip"));
         return false;
       } else if (
-        this.withdrawAmount == "" ||
-        this.withdrawAmount == 0 ||
-        this.withdrawAmount - 0 < this.currentCoin.minAmount
+          this.withdrawAmount == "" ||
+          this.withdrawAmount == 0 ||
+          this.withdrawAmount - 0 < this.currentCoin.minAmount
       ) {
         this.$Message.error(
-          this.$t("uc.finance.withdraw.numtip2") + this.currentCoin.minAmount
+            this.$t("uc.finance.withdraw.numtip2") + this.currentCoin.minAmount
         );
         return false;
       } else if (this.withdrawAmount - 0 < this.withdrawFee) {
         this.$Message.error(this.$t("uc.finance.withdraw.numtip3"));
         return false;
       } else if (
-        this.withdrawFee == "" ||
-        this.withdrawFee == 0 ||
-        this.withdrawFee - 0 > this.currentCoin.maxTxFee ||
-        this.withdrawFee - 0 < this.currentCoin.minTxFee
+          this.withdrawFee == "" ||
+          this.withdrawFee == 0 ||
+          this.withdrawFee - 0 > this.currentCoin.maxTxFee ||
+          this.withdrawFee - 0 < this.currentCoin.minTxFee
       ) {
         this.$Message.error(
-          this.$t("uc.finance.withdraw.feetip1") +
+            this.$t("uc.finance.withdraw.feetip1") +
             this.currentCoin.minTxFee +
             " , " +
             this.$t("uc.finance.withdraw.feetip2") +
@@ -419,40 +439,32 @@ export default {
       //获取个人安全信息
       let self = this;
       this.$http.post(this.host + "/uc/approve/security/setting").then(response => {
-          var resp = response.body;
-          if (resp.code == 0) {
-            this.user = resp.data;
-            if (resp.data.realName == null || resp.data.realName == "") {
-              this.$Notice.error({
-                title: this.$t("common.tip"),
-                desc: this.$t("otc.publishad.submittip1")
-              });
-              // 判断是否实名认证，未认证跳转到实名认证页面；
-              //this.$Message.success(this.$t("otc.publishad.submittip1"));
-              self.$router.push("/uc/safe");
-            }
-            // else if (resp.data.phoneVerified == 0) {
-            //   this.$Notice.error({
-            //     title: this.$t("common.tip"),
-            //     desc: this.$t("otc.publishad.submittip2")
-            //   });
-            //   // 判断是否是手机号0，1，未认证跳转到实名认证页面；
-            //   //this.$Message.success(this.$t("otc.publishad.submittip2"));
-            //   self.$router.push("/uc/safe");
-            // }
-            else if (resp.data.fundsVerified == 0) {
-              this.$Notice.error({
-                title: this.$t("common.tip"),
-                desc: this.$t("otc.publishad.submittip3")
-              });
-              // 判断是否设置交易密码，未认证跳转到实名认证页面；
-              //this.$Message.success(this.$t("otc.publishad.submittip3"));
-              self.$router.push("/uc/safe");
-            }
-          } else {
-            this.$Message.error(resp.message);
-          }
-        });
+        var resp = response.body;
+        if (resp.code == 0) {
+          this.user = resp.data;
+          // if (resp.data.realName == null || resp.data.realName == "") {
+          //   this.$Notice.error({
+          //     title: this.$t("common.tip"),
+          //     desc: this.$t("otc.publishad.submittip1")
+          //   });
+            // 判断是否实名认证，未认证跳转到实名认证页面；
+            //this.$Message.success(this.$t("otc.publishad.submittip1"));
+          //   self.$router.push("/uc/safe");
+          // }
+          
+          // else if (resp.data.fundsVerified == 0) {
+          //   this.$Notice.error({
+          //     title: this.$t("common.tip"),
+          //     desc: this.$t("otc.publishad.submittip3")
+          //   });
+          //   // 判断是否设置交易密码，未认证跳转到实名认证页面；
+          //   //this.$Message.success(this.$t("otc.publishad.submittip3"));
+          //   self.$router.push("/uc/safe");
+          // }
+        } else {
+          this.$Message.error(resp.message);
+        }
+      });
     }
   },
   created() {
@@ -470,7 +482,7 @@ export default {
     },
     tableColumnsWithdraw() {
       let columns = [],
-        filters = [];
+          filters = [];
       if (this.coinList.length > 0) {
         this.coinList.forEach(v => {
           filters.push({
@@ -542,13 +554,14 @@ export default {
     line-height: 40px;
   }
 }
+
 </style>
 
 <style scoped lang="scss">
 .ivu-slider-wrap{
-	top: 75px !important;
-	z-index: 999 !important;
-	width: 100% !important;
+  top: 75px !important;
+  z-index: 999 !important;
+  width: 100% !important;
 }
 
 #sendCode {
@@ -915,6 +928,21 @@ table.table .table-inner.action-box {
       }
     }
   }
+}
+.xs_table {
+  width: 360px;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    height: 2px;
+  }
+
+
+
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+
 }
 </style>
 

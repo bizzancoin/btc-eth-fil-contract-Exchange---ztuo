@@ -1,46 +1,56 @@
 <template>
   <div class="content-wraps">
-    <div class="containers" id="List">
+    <div class="containers bz_container" id="List">
+      <!-- banner -->
       <div class="fiat">
         <div class="to_business">
-          <h3>{{$t('otc.title')}}</h3>
-          <span>{{$t('otc.desc')}}</span>
-          <a href="javascript:void(0)" @click="goBusiness">{{$t('otc.buttontxt')}}</a>
-          <!-- <router-link to="/identbusiness">成为商家</router-link> -->
+          <h3>{{ $t('otc.title') }}</h3>
+          <span>{{ $t('otc.desc') }}</span>
+          <a href="javascript:void(0)" @click="goBusiness">{{ $t('otc.buttontxt') }}</a>
         </div>
       </div>
+      <!-- table -->
       <div class="content">
-        <Menu ref="navMenu" mode="horizontal" width="auto" :active-name="activeMenuName" @on-select="menuSelected" class='tradelist'>
+        <Menu
+          ref="navMenu"
+          mode="horizontal"
+          width="auto"
+          :active-name="activeMenuName"
+          @on-select="menuSelected"
+          class="tradelist"
+        >
           <MenuGroup>
-            <template v-for="(coin,index) in coins">
-              <MenuItem :name="'coin-'+index"> {{coin.unit}}
-              </MenuItem>
+            <template v-for="(coin, index) in coins">
+              <MenuItem :name="'coin-' + index" :key="index"> {{ coin.unit }} </MenuItem>
             </template>
           </MenuGroup>
         </Menu>
         <router-view></router-view>
       </div>
+      <!-- product -->
       <div class="advantage">
         <ul>
           <li>
-            <div class="image"><img src="../../assets/images/price.png" alt=""></div>
-            <div class="title">{{$t('otc.title1')}}</div>
-            <div class="content1">{{$t('otc.desc1')}}</div>
+            <img src="../../assets/images/price.png" alt="" />
+            <div class="title">{{ $t('otc.title1') }}</div>
+            <div class="content1">{{ $t('otc.desc1') }}</div>
           </li>
           <li>
-            <div class="image"><img src="../../assets/images/poundage.png" alt=""></div>
-            <div class="title">{{$t('otc.title2')}}</div>
-            <div class="content1">{{$t('otc.desc2')}}</div>
-            <li>
-              <div class="image"><img src="../../assets/images/instant.png" alt=""></div>
-              <div class="title">{{$t('otc.title3')}}</div>
-              <div class="content1">{{$t('otc.desc3')}}</div>
-            </li>
-            <li>
-              <div class="image"><img src="../../assets/images/platedanbao.png" alt=""></div>
-              <div class="title">{{$t('otc.title4')}}</div>
-              <div class="content1">{{$t('otc.desc4')}}</div>
-            </li>
+            <img src="../../assets/images/poundage.png" alt="" />
+            <div class="title">{{ $t('otc.title2') }}</div>
+            <div class="content1">{{ $t('otc.desc2') }}</div>
+          </li>
+
+          <li>
+            <img src="../../assets/images/instant.png" alt="" />
+            <div class="title">{{ $t('otc.title3') }}</div>
+            <div class="content1">{{ $t('otc.desc3') }}</div>
+          </li>
+          <li>
+            <img src="../../assets/images/platedanbao.png" alt="" />
+            <div class="title">{{ $t('otc.title4') }}</div>
+            <div class="content1">{{ $t('otc.desc4') }}</div>
+          </li>
         </ul>
       </div>
     </div>
@@ -48,21 +58,20 @@
 </template>
 
 <style scoped lang="scss">
+@import url('../../assets/css/common.scss');
 .content-wraps {
-  padding: 0 12%;
-  // background-color: #fff;
   padding-top: 60px;
   .containers {
-    width: 100%;
-    margin: 20px 0;
+    margin: 20px auto;
+    // banner
     .fiat {
       border-radius: 5px;
-      height: 250px;
-      background: url("../../assets/images/otc_bg.jpg") no-repeat center center;
-      background-size: 100%;
+      background: url('../../assets/images/otc_bg.jpg') no-repeat center;
+      background-size: 100% 100%;
       display: flex; //flex布局
       justify-content: center; //使子项目水平居中
       align-items: center; //使子项目垂直居中
+      padding: 50px 0;
       .to_business {
         color: #fff;
         text-align: center;
@@ -94,41 +103,78 @@
       background-color: #192330;
       border-radius: 4px;
     }
+    // product
     .advantage {
       background-color: #192330;
       border-radius: 4px;
       ul {
         display: flex;
-        justify-content: center;
-        align-items: center;
         padding: 30px;
         li {
           width: 25%;
           list-style-type: none;
-          min-height: 190px;
-          div {
-            text-align: center;
-          }
-          div.image {
-            width: 50px;
-            height: 50px;
-            margin: 20px auto;
-            img {
-              width: 80%;
-              // height: 80%;
-              vertical-align: middle;
-            }
+          text-align: center;
+          padding: 10px;
+          img {
+            width: 30px;
+            height: 30px;
+            display: block;
+            margin: 10px auto;
           }
           div.title {
-            line-height: 30px;
             font-size: 16px;
             color: #fff;
           }
           div.content1 {
-            padding: 20px 40px;
+            padding: 10px;
             line-height: 20px;
             font-size: 12px;
             color: #999;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .content-wraps {
+    padding-top: 34px;
+    .containers {
+      margin: 10px auto;
+      padding: 0;
+      .fiat {
+        padding: 30px 0;
+        .to_business {
+          h3 {
+            font-size: 22px;
+            letter-spacing: 10px;
+          }
+          span {
+            font-size: 14px;
+            letter-spacing: 2px;
+            display: block;
+          }
+          a {
+            width: 140px;
+            height: 30px;
+            font-size: 16px;
+            line-height: 30px;
+            color: #000;
+            margin-top: 20px;
+          }
+        }
+      }
+      .content {
+        margin: 10px 0;
+      }
+      .advantage {
+        background-color: #192330;
+        border-radius: 4px;
+        ul {
+          flex-wrap: wrap;
+          padding: 10px 0;
+          li {
+            width: 50%;
           }
         }
       }
@@ -176,70 +222,70 @@ export default {
   data() {
     return {
       coins: [],
-      activeMenuName: "coin-1"
-    };
+      activeMenuName: 'coin-1',
+    }
   },
   computed: {
     isLogin: function() {
-      return this.$store.getters.isLogin;
-    }
+      return this.$store.getters.isLogin
+    },
   },
-  watch:{
+  watch: {
     $route(to, from) {
-      this.activeMenu();
-    }
+      this.activeMenu()
+    },
   },
   methods: {
     init() {
-      this.$store.commit("navigate", "nav-otc");
+      this.$store.commit('navigate', 'nav-otc')
       this.$http.post(this.host + this.api.otc.coin).then(response => {
         if (response.body.code == 0) {
-          this.coins = response.body.data;
-          this.activeMenu();
+          this.coins = response.body.data
+          this.activeMenu()
           this.$nextTick(function() {
-            this.$refs.navMenu.updateActiveName();
-          });
+            this.$refs.navMenu.updateActiveName()
+          })
         }
-      });
+      })
     },
     goBusiness() {
       if (this.isLogin) {
         this.$router.push({
-          path: "/identbusiness"
-        });
+          path: '/identbusiness',
+        })
       } else {
-        this.$Message.warning("请先登录");
+        this.$Message.warning('请先登录')
       }
     },
     menuSelected(menuName) {
-      if (menuName.startsWith("coin")) {
-        var coin = this.coins[menuName.split("-")[1]];
-        this.$router.push({path: "/otc/trade/" + coin.unit, query: {unit: coin.unit}});
+      if (menuName.startsWith('coin')) {
+        var coin = this.coins[menuName.split('-')[1]]
+        this.$router.push({ path: '/otc/trade/' + coin.unit, query: { unit: coin.unit } })
       } else {
-        this.$router.push("/otc/" + menuName);
+        this.$router.push('/otc/' + menuName)
       }
     },
     activeMenu() {
-      let coin = this.$route.params[0] || "USDT";
-      coin = coin.toUpperCase();
-      let index=0;
-      this.coins.forEach((v,i)=>{
-        if(v.unit===coin){
-          index=i;
+      let coin = this.$route.params[0] || 'USDT'
+      coin = coin.toUpperCase()
+      let index = 0
+      this.coins.forEach((v, i) => {
+        if (v.unit === coin) {
+          index = i
         }
       })
-      this.activeMenuName = `coin-${index}`;
+      this.activeMenuName = `coin-${index}`
       this.$nextTick(function() {
-        this.$refs.navMenu.updateActiveName();
-      });
-    }
+        this.$refs.navMenu.updateActiveName()
+      })
+    },
   },
   created: function() {
-    this.init();
+    this.init()
     // this.activeMenuName = "coin-1";
     // this.$nextTick(function() {
     //   this.$refs.navMenu.updateActiveName();
     // });
-  }
-};
+  },
+}
 </script>

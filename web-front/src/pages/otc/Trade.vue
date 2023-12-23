@@ -1,29 +1,59 @@
 <template>
   <div class="nav-right tradeCenter">
-    <!-- <section class="trade-group merchant-top"> -->
-    <!-- <i class="merchant-icon tips"></i>
-            <span class="tips-word">{{this.coin.toUpperCase()}}</span> -->
-    <!-- <a href="/user/merchants">申请为认证商家&gt;&gt;</a> -->
-    <!--<a href="/#/identbusiness">{{$t("otc.applymerchant")}}&gt;&gt;</a>-->
-    <!-- </section> -->
     <section class="list-content">
       <Tabs :value="tabPage" v-model="tabPage">
         <TabPane :label="$t('otc.buyin')" name="buy">
           <div class="table-responsive list-table">
-            <Table :no-data-text="$t('common.nodata')" :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 250 : ''" :size="tableSize" :data="advertiment.ask.rows" :columns="advertiment.columns" :loading="loading" :disabled-hover="true"></Table>
+            <Table
+              :no-data-text="$t('common.nodata')"
+              :border="showBorder"
+              :stripe="showStripe"
+              :show-header="showHeader"
+              :height="fixedHeader ? 250 : ''"
+              :size="tableSize"
+              :data="advertiment.ask.rows"
+              :columns="advertiment.columns"
+              :loading="loading"
+              :disabled-hover="true"
+              class="table-item"
+            ></Table>
             <div class="page_change">
               <div style="float: right;">
-                <Page v-if="advertiment.ask.totalElement > 0" :pageSize="advertiment.ask.pageNumber" :total="advertiment.ask.totalElement" :current="advertiment.ask.currentPage" @on-change="changePage"></Page>
+                <Page
+                  v-if="advertiment.ask.totalElement > 0"
+                  :pageSize="advertiment.ask.pageNumber"
+                  :total="advertiment.ask.totalElement"
+                  :current="advertiment.ask.currentPage"
+                  @on-change="changePage"
+                ></Page>
               </div>
             </div>
           </div>
         </TabPane>
         <TabPane :label="$t('otc.sellout')" name="sell">
           <div class="table-responsive list-table">
-            <Table :no-data-text="$t('common.nodata')" :border="showBorder" :stripe="showStripe" :show-header="showHeader" :height="fixedHeader ? 250 : ''" :size="tableSize" :data="advertiment.bid.rows" :columns="advertiment.columns" :loading="loading" :disabled-hover="true"></Table>
+            <Table
+              :no-data-text="$t('common.nodata')"
+              :border="showBorder"
+              :stripe="showStripe"
+              :show-header="showHeader"
+              :height="fixedHeader ? 250 : ''"
+              :size="tableSize"
+              :data="advertiment.bid.rows"
+              :columns="advertiment.columns"
+              :loading="loading"
+              :disabled-hover="true"
+              class="table-item"
+            ></Table>
             <div class="page_change">
               <div style="float: right;">
-                <Page v-if="advertiment.bid.totalElement > 0" :pageSize="advertiment.bid.pageNumber" :total="advertiment.bid.totalElement" :current="advertiment.bid.currentPage" @on-change="changePage"></Page>
+                <Page
+                  v-if="advertiment.bid.totalElement > 0"
+                  :pageSize="advertiment.bid.pageNumber"
+                  :total="advertiment.bid.totalElement"
+                  :current="advertiment.bid.currentPage"
+                  @on-change="changePage"
+                ></Page>
               </div>
             </div>
           </div>
@@ -33,25 +63,54 @@
   </div>
 </template>
 
-
 <style scoped lang="scss">
+// .bz_container{
+//   padding: ;
+// }
 #List .nav-right {
   color: #26264c;
   padding-right: 0;
   .list-content {
     color: #fff;
+    // overflow: auto;
   }
 }
 </style>
 <style lang="scss">
+@import url('../../assets/css/common.scss');
+.list-table {
+  overflow: auto !important;
+  &::-webkit-scrollbar {
+    height: 1px;
+  }
+  &::-webkit-scrollbar-thumb {
+    // background: #ccc;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  .table {
+    width: 200%;
+  }
+}
+.table-item {
+  width: 1200px !important;
+}
+@media screen and (max-width: 768px) {
+  .table-item {
+    width: 800px !important;
+  }
+}
 #List .nav-right {
   color: #26264c;
   padding-right: 0;
   .list-content {
     color: #fff;
+    // overflow: auto;
     .ivu-tabs {
+      // overflow: auto;
       .ivu-tabs-bar {
-        border-bottom:none;
+        border-bottom: none;
         .ivu-tabs-nav-container {
           .ivu-tabs-nav-wrap {
             .ivu-tabs-nav-scroll {
@@ -74,24 +133,24 @@
         .ivu-tabs-tabpane {
           .ivu-table-wrapper {
             border: none;
-            .ivu-table-body{
-              .ivu-table-tbody{
-                .ivu-table-row{
-                  .ivu-table-cell.ivu-table-cell-ellipsis{
-                    .user-face.user-avatar-public{
-                      span{
-                        background:#f0ac19;
+            .ivu-table-body {
+              .ivu-table-tbody {
+                .ivu-table-row {
+                  .ivu-table-cell.ivu-table-cell-ellipsis {
+                    .user-face.user-avatar-public {
+                      span {
+                        background: #f0ac19;
                       }
                     }
-                    p a{
-                      color:#f0ac19;
+                    p a {
+                      color: #f0ac19;
                     }
                   }
                 }
               }
             }
           }
-          .page_change{
+          .page_change {
             margin: 10px;
             overflow: hidden;
           }
@@ -116,114 +175,6 @@
   margin-bottom: 40px;
 }
 
-// #List .nav-right .bread {
-//   font-size: 16px;
-// }
-
-// #List .nav-right .bread a {
-//   color: #e24a64;
-//   display: inline-block;
-//   padding-left: 1rem;
-//   cursor: pointer;
-// }
-
-// #List .nav-right .list-content .list-title {
-//   box-shadow: 0 4px 0 0 rgba(69, 112, 128, 0.06);
-//   -webkit-box-shadow: 0 4px 0 0 rgba(69, 112, 128, 0.06);
-//   z-index: 1;
-//   position: relative;
-// }
-
-// #List .nav-right .list-content .list-title .search {
-//   background-color: #fff;
-//   height: 40px;
-//   padding: 6px 12px;
-// }
-
-// #List .nav-right .list-content .list-title .search .dropdown-box {
-//   display: flex;
-//   flex: 1;
-//   justify-content: flex-start;
-//   align-items: center;
-//   height: 100%;
-// }
-
-// #List .nav-right .list-content .list-title .search .dropdown-box .select-menu {
-//   border: transparent;
-//   outline: none;
-//   background-color: transparent;
-// }
-
-// #List .nav-right .list-content .list-title .search .dropdown-box .select-items {
-//   width: 25%;
-//   display: flex;
-//   justify-content: flex-start;
-//   align-items: center;
-// }
-
-// .nav .open > a,
-// .nav .open > a:hover,
-// .nav .open > a:focus {
-//   background: transparent;
-// }
-
-// #List .nav-right .list-content .list-title .search-btn {
-//   background-color: #c5cdd7;
-//   display: flex;
-//   justify-content: center;
-//   border-radius: 0 4px 4px 0;
-// }
-
-// #List .nav-right .list-content .list-title .search-btn span {
-//   font-size: 18px;
-//   height: 36px;
-//   line-height: 36px;
-// }
-
-// #List .nav-right .list-content .list-title .search-btn em {
-//   height: 36px;
-//   line-height: 36px;
-//   margin-left: 6px;
-//   font-style: normal;
-// }
-
-// #List .nav-right .list-content .list-table table {
-//   table-layout: fixed;
-// }
-
-// #List .nav-right .list-content .list-table tr:nth-of-type(even) {
-//   background-color: #fff;
-// }
-
-// #List .nav-right .list-content .list-table tr > td {
-//   vertical-align: middle;
-//   line-height: normal;
-//   width: 25%;
-// }
-
-// #List .nav-right .list-content .list-table .table > tbody > tr > td {
-//   border-top: 1px solid transparent;
-//   text-align: left;
-//   height: 75px;
-// }
-// .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
-//   color: #f0a70a;
-// }
-// #List .nav-right .list-content .list-table .user-name {
-//   display: flex;
-//   justify-content: flex-start;
-//   padding-left: 5%;
-// }
-
-// #List .nav-right .list-content .list-table .user-name .user-icon {
-//   background: #00b5f6;
-//   border-radius: 50%;
-//   height: 42px;
-//   width: 42px;
-//   display: flex;
-//   justify-content: center;
-// }
-
 #List .nav-right .list-content .list-table .user-name .user-icon span {
   font-size: 22px;
   color: white;
@@ -243,47 +194,6 @@
   height: 16px;
   margin: 0 0 3px;
 }
-
-// #List .nav-right .list-content .list-table .user-name .user-info .merchant {
-//   height: 17px;
-//   width: 67px;
-//   display: inline-block;
-  /* background: url("../../images/comm/merchant-flag.png") no-repeat; */
-// }
-
-// #List .nav-right .list-content .list-table .price p {
-//   font-size: 16px;
-//   font-weight: bolder;
-//   color: #444f71;
-// }
-
-// #List .nav-right .list-content .list-table .price h5 {
-//   font-size: 12px;
-//   color: #8994a3;
-//   margin-top: 0;
-// }
-
-// #List .nav-right .list-content .list-table .Btn a {
-//   border-radius: 6px;
-//   background-color: transparent;
-//   color: #e24a64;
-//   display: inline-block;
-//   padding: 6px;
-//   width: 100px;
-//   text-align: center;
-//   text-decoration: none;
-// }
-
-// #List .nav-right .list-content .list-table .Btn .sell {
-//   background-color: #0db124;
-//   color: #fff;
-// }
-
-// #List .nav-right .list-content .list-table .Btn .buy {
-//   background-color: #ed7325;
-//   color: #fff;
-// }
-
 #List .nav-right .list-content .pagelist {
   display: flex;
   justify-content: flex-end;
@@ -497,7 +407,7 @@
 }
 
 .merchant-item .item-hd .item-pay .states.merchant {
-  background: url("../../assets/img/renzheng.png") no-repeat;
+  background: url('../../assets/img/renzheng.png') no-repeat;
   background-size: 100% 100%;
 }
 
@@ -652,7 +562,7 @@
   height: 17px;
   width: 67px;
   display: inline-block;
-  background: url("../../assets/img/renzheng.png") no-repeat;
+  background: url('../../assets/img/renzheng.png') no-repeat;
   background-size: 100% 100%;
   transform: translateY(-10px);
   display: block;
@@ -691,7 +601,7 @@
 }
 
 .ivu-table-cell .user-avatar-public {
-  width:45px;
+  width: 45px;
   display: inline-block;
   margin: 10px 10px 10px 0;
   vertical-align: middle;
@@ -705,42 +615,13 @@
   /*width: 60%;*/
   display: inline-block;
 }
-
-/*新加的样式*/
-// .list-content
-//   .ivu-table-body
-//   .ivu-table-tbody
-//   .ivu-table-cell.ivu-table-cell-ellipsis
-//   p
-//   a {
-//   color: #f0a70a;
-// }
-// .list-content {
-//   .ivu-tabs-bar {
-//     .ivu-tabs-nav-container {
-//       .ivu-tabs-ink-bar.ivu-tabs-ink-bar-animated {
-//         background: #f0a70a;
-//       }
-//       .ivu-tabs-tab.ivu-tabs-tab-active.ivu-tabs-tab-focused {
-//         color: #f0a70a;
-//       }
-//       .ivu-tabs-tab {
-//         &:hover {
-//           color: #f0a70a;
-//         }
-//       }
-//     }
-//   }
-// }
 </style>
-
-
 
 <script>
 export default {
   components: {},
   data() {
-    var self = this;
+    var self = this
     return {
       showBorder: false,
       showStripe: false,
@@ -750,8 +631,8 @@ export default {
       fixedHeader: false,
       loading: true,
       dataCount: 10,
-      tableSize: "large",
-      tabPage: "buy",
+      tableSize: 'large',
+      tabPage: 'buy',
       advertiment: {
         //卖出的广告数据
         ask: {
@@ -759,7 +640,7 @@ export default {
           currentPage: 1,
           totalPage: 1,
           pageNumber: 10,
-          totalElement: 0
+          totalElement: 0,
         },
         //买入的广告数据
         bid: {
@@ -767,70 +648,68 @@ export default {
           currentPage: 1,
           totalPage: 1,
           pageNumber: 10,
-          totalElement: 0
+          totalElement: 0,
         },
         columns: [
           {
-            title: self.$t("otc.merchant"),
-            key: "memberName",
+            title: self.$t('otc.merchant'),
+            key: 'memberName',
             // width: 160,
             ellipsis: true,
             render: function(h, params) {
               var avatar = params.row.avatar,
-                haveAvatar = false;
-              var innerCNT = [];
-              if (avatar != null && avatar != "") {
+                haveAvatar = false
+              var innerCNT = []
+              if (avatar != null && avatar != '') {
                 innerCNT[0] = h(
-                  "div",
+                  'div',
                   {
                     attrs: {
-                      class: "user-face user-avatar-public"
-                    }
+                      class: 'user-face user-avatar-public',
+                    },
                   },
                   [
-                    h("img", {
+                    h('img', {
                       attrs: {
                         src: avatar,
-                        width: "45px",
-                        height: "45px"
+                        width: '45px',
+                        height: '45px',
                       },
                       style: {
-                        "border-radius": "50%"
-                      }
-                    })
+                        'border-radius': '50%',
+                      },
+                    }),
                   ]
-                );
+                )
               } else {
                 innerCNT[0] = h(
-                  "div",
+                  'div',
                   {
                     attrs: {
-                      class: "user-face user-avatar-public"
-                    }
+                      class: 'user-face user-avatar-public',
+                    },
                   },
                   [
                     h(
-                      "span",
+                      'span',
                       {
                         attrs: {
-                          class: "user-avatar-in"
-                        }
+                          class: 'user-avatar-in',
+                        },
                       },
-                      params.row.memberName
-                        .replace(/^\s+|\s+$/g, "")
-                        .slice(0, 1)
-                    )
+                      params.row.memberName.replace(/^\s+|\s+$/g, '').slice(0, 1)
+                    ),
                   ]
-                );
+                )
               }
-              innerCNT[1] = h("p", [
+              innerCNT[1] = h('p', [
                 h(
-                  "a",
+                  'a',
                   {
                     style: {
-                      marginRight: "8px",
-                      cursor: "pointer",
-                      paddingTop: "5px"
+                      marginRight: '8px',
+                      cursor: 'pointer',
+                      paddingTop: '5px',
                     },
                     class: {
                       // renzhengA: params.row.renzheng
@@ -838,81 +717,79 @@ export default {
                     on: {
                       click: function() {
                         if (self.isLogin) {
-                          self.$router.push(
-                            "/checkuser?id=" + params.row.memberName
-                          );
+                          self.$router.push('/checkuser?id=' + params.row.memberName)
                         } else {
-                          self.$router.push("/login");
+                          self.$router.push('/login')
                         }
-                      }
-                    }
+                      },
+                    },
                   },
                   params.row.memberName
                   // self.strpro(params.row.memberName)
                 ),
                 h(
-                  "div",
+                  'div',
                   {
                     class: {
                       // renzheng: params.row.renzheng
-                    }
+                    },
                   },
-                  ""
-                )
-              ]);
+                  ''
+                ),
+              ])
               if (params.row.level == 2)
                 innerCNT[2] = h(
-                  "div",
+                  'div',
                   {
                     attrs: {
-                      class: "user-business-v"
+                      class: 'user-business-v',
                     },
                     style: {
-                      display: "inline-block",
-                      "vertical-align": "text-top"
-                    }
+                      display: 'inline-block',
+                      'vertical-align': 'text-top',
+                    },
                   },
                   [
-                    h("img", {
+                    h('img', {
                       attrs: {
-                        src: require("../../assets/images/business_v.png")
-                      }
-                    })
+                        src: require('../../assets/images/business_v.png'),
+                      },
+                    }),
                   ]
-                );
-              return h("div", innerCNT);
-            }
+                )
+              return h('div', innerCNT)
+            },
           },
           {
-            title: self.$t("otc.volume"),
-            key: "transactions",
-            width:100,
-            align:"center"
+            title: self.$t('otc.volume'),
+            key: 'transactions',
+            width: 100,
+            align: 'center',
           },
           {
-            title: self.$t("otc.paymethod"),
-            key: "payMode",
-            align:"center",
+            title: self.$t('otc.paymethod'),
+            key: 'payMode',
+            align: 'center',
             // width:130
           },
           {
-            align:"center",
-            title: self.$t("otc.amount"),
-            key: "remainAmount"
+            align: 'center',
+            title: self.$t('otc.amount'),
+            key: 'remainAmount',
           },
           {
-            title:"限额",
-            align:'center',
-            render:(h, params)=>{
-              return h('div',{},params.row.minLimit + "-" + params.row.maxLimit + "CNY")
-            }
+            title: '限额',
+            align: 'center',
+            render: (h, params) => {
+              return h('div', {}, params.row.minLimit + '-' + params.row.maxLimit + 'CNY')
+            },
           },
           {
-            title:"单价",
-            align:'center',
-            render:(h, params)=>{
-              return h('div',{},params.row.price + "CNY")
-            }
+            title: '单价',
+            align: 'center',
+            render: (h, params) => {
+              return h('div', {}, params.row.price + 'CNY')
+            },
           },
           // {
           //   title: self.$t("otc.price_coin"),
@@ -942,35 +819,33 @@ export default {
           //   }
           // },
           {
-            title: self.$t("otc.operate"),
-            key: "buyBtn",
-            width:70,
-            align:"center",
+            title: self.$t('otc.operate'),
+            key: 'buyBtn',
+            width: 70,
+            align: 'center',
             render: function(h, params) {
-              return h("p", [
+              return h('p', [
                 h(
-                  "a",
+                  'a',
                   {
                     style: {
-                      color: params.row.advertiseType == 0 ? "#f15057" : "#00b275",
+                      color: params.row.advertiseType == 0 ? '#f15057' : '#00b275',
                     },
                     on: {
                       click: () => {
                         if (!self.isLogin) {
-                          self.$router.push("/login");
+                          self.$router.push('/login')
                         } else if (!self.member.realName) {
                           //                                            } else if (!self.member.memberLevel) {
-                          self.$Message.error(self.$t("otc.validate"));
+                          self.$Message.error(self.$t('otc.validate'))
                           setTimeout(() => {
-                            self.$router.push("/uc/safe");
-                          }, 2000);
+                            self.$router.push('/uc/safe')
+                          }, 2000)
                         } else {
-                          self.$router.push(
-                            "/otc/tradeInfo?tradeId=" + params.row.advertiseId
-                          );
+                          self.$router.push('/otc/tradeInfo?tradeId=' + params.row.advertiseId)
                         }
-                      }
-                    }
+                      },
+                    },
                   },
                   // [
                   //   h(
@@ -986,104 +861,100 @@ export default {
                   //         width: "80%",
                   //       }
                   //     },
-                      params.row.advertiseType == 0
-                        ? self.$t("otc.sell")
-                        : self.$t("otc.buy")
-                    // )
+                  params.row.advertiseType == 0 ? self.$t('otc.sell') : self.$t('otc.buy')
+                  // )
                   // ]
-                )
-              ]);
-            }
-          }
-        ]
-      }
-    };
+                ),
+              ])
+            },
+          },
+        ],
+      },
+    }
   },
   computed: {
     isLogin: function() {
-      return this.$store.getters.isLogin;
+      return this.$store.getters.isLogin
     },
     member: function() {
-      return this.$store.getters.member;
+      return this.$store.getters.member
     },
     coin: function() {
-      if(this.$route.query.unit == undefined) return "USDT";
-      return this.$route.query.unit;
+      if (this.$route.query.unit == undefined) return 'USDT'
+      return this.$route.query.unit
     },
     lang: function() {
-      return this.$store.state.lang;
-    }
+      return this.$store.state.lang
+    },
   },
   watch: {
     coin: function() {
-      this.reloadAd();
+      this.reloadAd()
     },
     lang: function() {
-      this.updateLangData();
-    }
+      this.updateLangData()
+    },
   },
   methods: {
     updateLangData() {
-      this.advertiment.columns[0].title = this.$t("otc.merchant");
-      this.advertiment.columns[1].title = this.$t("otc.volume");
-      this.advertiment.columns[2].title = this.$t("otc.paymethod");
-      this.advertiment.columns[2].title = this.$t("otc.amount");
-      this.advertiment.columns[2].title = this.$t("otc.price_coin");
-      this.advertiment.columns[2].title = this.$t("otc.operate");
+      this.advertiment.columns[0].title = this.$t('otc.merchant')
+      this.advertiment.columns[1].title = this.$t('otc.volume')
+      this.advertiment.columns[2].title = this.$t('otc.paymethod')
+      this.advertiment.columns[2].title = this.$t('otc.amount')
+      this.advertiment.columns[2].title = this.$t('otc.price_coin')
+      this.advertiment.columns[2].title = this.$t('otc.operate')
     },
     loadAd(pageNo, advertiseType, table) {
       //获取广告
-      let params = {};
-      table.rows = [];
-      table.totalElement = 0;
-      table.currentPage = pageNo;
-      params["pageNo"] = pageNo;
-      params["pageSize"] = table.pageNumber;
-      params["advertiseType"] = advertiseType;
-      params["unit"] = this.coin;
-      this.$http
-        .post(this.host + this.api.otc.advertise, params)
-        .then(response => {
-          var resp = response.body;
-          if (resp.code == 0) {
-            if (resp.data.context) {
-              table.rows = resp.data.context;
-              table.totalElement = resp.data.totalElement;
-            }
-          } else {
-            this.$Message.error(resp.message);
+      let params = {}
+      table.rows = []
+      table.totalElement = 0
+      table.currentPage = pageNo
+      params['pageNo'] = pageNo
+      params['pageSize'] = table.pageNumber
+      params['advertiseType'] = advertiseType
+      params['unit'] = this.coin
+      this.$http.post(this.host + this.api.otc.advertise, params).then(response => {
+        var resp = response.body
+        if (resp.code == 0) {
+          if (resp.data.context) {
+            table.rows = resp.data.context
+            table.totalElement = resp.data.totalElement
           }
-          this.loading = false;
-        });
+        } else {
+          this.$Message.error(resp.message)
+        }
+        this.loading = false
+      })
     },
     changePage(page) {
-      if (this.tabPage == "sell") {
-        this.loadAd(page, 0, this.advertiment.bid);
+      if (this.tabPage == 'sell') {
+        this.loadAd(page, 0, this.advertiment.bid)
       } else {
-        this.loadAd(page, 1, this.advertiment.ask);
+        this.loadAd(page, 1, this.advertiment.ask)
       }
     },
     reloadAd() {
       // this.tabPage = "buy";
-      this.loadAd(1, 0, this.advertiment.bid);
-      this.loadAd(1, 1, this.advertiment.ask);
+      this.loadAd(1, 0, this.advertiment.bid)
+      this.loadAd(1, 1, this.advertiment.ask)
     },
     strpro(str) {
-      let newStr = str;
-      str = str.slice(1);
-      var re = /[\D\d]*/g;
+      let newStr = str
+      str = str.slice(1)
+      var re = /[\D\d]*/g
       var str2 = str.replace(re, function(str) {
-        var result = "";
+        var result = ''
         for (var i = 0; i < str.length; i++) {
-          result += "*";
+          result += '*'
         }
-        return result;
-      });
-      return newStr.slice(0, 1) + str2;
-    }
+        return result
+      })
+      return newStr.slice(0, 1) + str2
+    },
   },
   created() {
-    this.reloadAd();
-  }
-};
+    this.reloadAd()
+  },
+}
 </script>

@@ -25,6 +25,9 @@
 .form.ivu-form-inline .ivu-form-item {
   display: inline-block;
 }
+.new_form.ivu-form-inline .ivu-form-item{
+    display: block;
+  }
 </style>
 <style lang="scss">
 .entrusthistory .ivu-table th,
@@ -34,13 +37,51 @@
 .table .ivu-table-cell-expand {
   color: #f0a70a;
 }
+.xs_table {
+        width: 100%;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+          height: 2px;
+        }
+
+        
+
+        &::-webkit-scrollbar-track-piece {
+          background: transparent;
+        }
+
+      }
 </style>
 
 
 
 <template>
   <div class="entrusthistory">
-    <Form class="form" :model="formItem" :label-width="75" inline>
+    <Form class="new_form" :model="formItem" :label-width="75" inline v-if="xsWidth">
+      <FormItem :label="$t('uc.finance.trade.symbol')">
+        <Select v-model="formItem.symbol" style="width:80%;" :placeholder="$t('common.pleaseselect')">
+          <Option v-for="(item,index) in symbol" :key="index" :value="item.symbol">{{item.symbol}}</Option>
+        </Select>
+      </FormItem>
+      <FormItem :label="$t('uc.finance.trade.type')">
+        <Select v-model="formItem.type" style="width:80%;" :placeholder="$t('common.pleaseselect')">
+          <Option value="LIMIT_PRICE">{{$t('uc.finance.trade.limit')}}</Option>
+          <Option value="MARKET_PRICE">{{$t('uc.finance.trade.market')}}</Option>
+        </Select>
+      </FormItem>
+      <FormItem :label="$t('uc.finance.trade.direction')">
+        <Select v-model="formItem.direction" style="width:80%;" :placeholder="$t('common.pleaseselect')">
+          <Option value="0">{{$t('uc.finance.trade.buy')}}</Option>
+          <Option value="1">{{$t('uc.finance.trade.sell')}}</Option>
+        </Select>
+      </FormItem>
+      <FormItem>
+        <Button type="warning" @click="handleSubmit">{{$t('uc.finance.trade.search')}}</Button>
+        <Button style="margin-left: 8px" @click="handleClear" class="clear_btn">{{$t('uc.finance.trade.clear')}}</Button>
+      </FormItem>
+    </Form>
+    <Form class="form" :model="formItem" :label-width="75" inline v-else>
       <FormItem :label="$t('uc.finance.trade.start_end')">
         <DatePicker type="daterange" v-model="formItem.date" style="width:180px;"></DatePicker>
       </FormItem>
@@ -67,7 +108,10 @@
       </FormItem>
     </Form>
     <div class="table">
-      <Table :no-data-text="$t('common.nodata')" :columns="columns" :data="orders" :loading="loading"></Table>
+      <div class="xs_table" v-if="xsWidth">
+        <Table style="width: 300%;" :no-data-text="$t('common.nodata')" :columns="columns" :data="orders" :loading="loading"></Table>
+      </div>
+      <Table v-else :no-data-text="$t('common.nodata')" :columns="columns" :data="orders" :loading="loading"></Table>
       <div class="page">
         <Page :total="total" :pageSize="pageSize" :current="pageNo" @on-change="loadDataPage"></Page>
       </div>
@@ -81,8 +125,10 @@ import expandRow from "@components/exchange/expand.vue";
 export default {
   components: { expandRow },
   data() {
+    
     const self = this;
     return {
+      xsWidth:window.innerWidth < 767,
       loading: false,
       pageSize: 10,
       pageNo: 1,

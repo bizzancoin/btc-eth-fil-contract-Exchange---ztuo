@@ -1,18 +1,39 @@
 <template>
   <div class="nav-rights">
-    <div class="nav-right col-xs-12 col-md-10 padding-right-clear">
+    <div class="nav-right col-xs-12 col-md-10 padding-right-clear" v-if="xsShow">
+      <div class="bill_box rightarea padding-right-clear">
+        <div class="shaow">
+          <div class="money_table" style="text-align: left;">
+            <div style="width: 100%;">
+            <div style="letter-spacing:1px;padding-top: 5px; text-align:left;">
+                <p style="font-size:12px;color:#828ea1;">{{$t('uc.finance.swap.totalassets')}}</p>
+                <span style="font-size: 15px;color:#D8E1EB;">${{totalUSDT}}</span>
+                <span style="font-size:10px;color:#828ea1;margin-left: 5px;"> ≈ ¥{{totalCny}}</span>
+            </div>
+            <Input style="" class="search" search :placeholder="$t('common.searchplaceholder')" @on-change="seachInputChange" v-model="searchKey"/>
+
+            <Button type="primary" @click="onTransferClick" style="padding: 2px 15px;margin:10px 0;background-color:#f0a70a;color:#f0a70a; height: 30px;background-color:transparent;border:1px solid #f0ac19;">{{$t('uc.finance.swap.transfor')}}</Button>
+            </div>
+            <div class="xs_table">
+              <Table style="width: 200%;" :no-data-text="$t('common.nodata')" :columns="tableColumnsMoney" :data="tableMoneyShow" :loading="loading" :disabled-hover="true"></Table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-right col-xs-12 col-md-10 padding-right-clear" v-else>
       <div class="bill_box rightarea padding-right-clear">
         <div class="shaow">
           <div class="money_table">
             <div style="width: 100%;height: 50px;">
-              <div style="float:left;letter-spacing:1px;padding-top: 5px;">
+            <div style="float:left;letter-spacing:1px;padding-top: 5px;">
                 <span style="font-size:12px;color:#828ea1;">{{$t('uc.finance.swap.totalassets')}}</span>
                 <span style="font-size: 18px;color:#D8E1EB;">${{totalUSDT}}</span>
-<!--                <span style="font-size:10px;color:#828ea1;margin-left: 5px;"> ≈ ¥{{totalCny}}</span>-->
-              </div>
-              <Input style="float:right;" class="search" search :placeholder="$t('common.searchplaceholder')" @on-change="seachInputChange" v-model="searchKey"/>
+                <span style="font-size:10px;color:#828ea1;margin-left: 5px;"> ≈ ¥{{totalCny}}</span>
+            </div>
+            <Input style="float:right;" class="search" search :placeholder="$t('common.searchplaceholder')" @on-change="seachInputChange" v-model="searchKey"/>
 
-              <Button type="primary" @click="onTransferClick" style="padding: 6px 15px;margin-right:30px;letter-spacing:2px;color:#f0ac19;background-color:transparent;border:1px solid #f0ac19;float:right;">{{$t('uc.finance.swap.transfor')}}</Button>
+            <Button type="primary" @click="onTransferClick" style="padding: 6px 15px;margin-right:30px;letter-spacing:2px;color:#f0ac19;background-color:transparent;border:1px solid #f0ac19;float:right;">{{$t('uc.finance.swap.transfor')}}</Button>
             </div>
             <Table :no-data-text="$t('common.nodata')" :columns="tableColumnsMoney" :data="tableMoneyShow" :loading="loading" :disabled-hover="true"></Table>
           </div>
@@ -54,8 +75,8 @@
       </p>
 
       <div slot="footer">
-        <Button size="large" @click="transferModal = false">{{$t("common.close")}}</Button>
-        <Button type="primary" size="large" @click="confirmOk">{{$t("uc.finance.swap.oktransfer")}}</Button>
+          <Button size="large" @click="transferModal = false">{{$t("common.close")}}</Button>
+          <Button type="primary" size="large" @click="confirmOk">{{$t("uc.finance.swap.oktransfer")}}</Button>
       </div>
     </Modal>
   </div>
@@ -65,6 +86,8 @@ export default {
   components: {},
   data() {
     return {
+      xsShow: false,//手机显示
+      activeWidth: window.innerWidth,
       loginmsg: this.$t("common.logintip"),
       loading: true,
       ordKeyword: "",
@@ -189,6 +212,20 @@ export default {
     this.getMoney();
     this.getAssets();
   },
+  watch: {
+      activeWidth: {
+
+        handler(val, oldVal) {
+          if (val <= 416) {
+            this.xsShow = true;
+          } else {
+            this.xsShow = false;
+          }
+        },
+        deep: true,//true 深度监听
+        immediate: true,
+      }
+    },
   filters:{
     fixed2: function(value){
       return value.toFixed(2);
@@ -220,12 +257,12 @@ export default {
         align: "center",
         render(h, params) {
           return h(
-              "span",
-              {
-                attrs: {
+            "span",
+            {
+              attrs: {
                   title: params.row.symbol
-                }
-              },
+              }
+            },
               params.row.symbol.replace("/", "") + " " + self.$t("uc.finance.swap.swap"),
           );
         }
@@ -236,8 +273,8 @@ export default {
         align: "center",
         render(h, params) {
           return h(
-              "span",{},
-              (params.row.usdtBalance + params.row.usdtFrozenBalance + params.row.usdtBuyPrincipalAmount + params.row.usdtSellPrincipalAmount + params.row.usdtTotalProfitAndLoss).toFixed(4)
+            "span",{},
+            (params.row.usdtBalance + params.row.usdtFrozenBalance + params.row.usdtBuyPrincipalAmount + params.row.usdtSellPrincipalAmount + params.row.usdtTotalProfitAndLoss).toFixed(4)
           );
         }
       });
@@ -246,13 +283,13 @@ export default {
         align: "center",
         render(h, params) {
           return h(
-              "span",
-              {
-                attrs: {
-                  title: params.row.usdtTotalProfitAndLoss
-                }
-              },
-              self.toFloor(params.row.usdtTotalProfitAndLoss.toFixed(4) || "0")
+            "span",
+            {
+              attrs: {
+                title: params.row.usdtTotalProfitAndLoss
+              }
+            },
+            self.toFloor(params.row.usdtTotalProfitAndLoss.toFixed(4) || "0")
           );
         }
       });
@@ -262,13 +299,13 @@ export default {
         align: "center",
         render(h, params) {
           return h(
-              "span",
-              {
-                attrs: {
-                  title: params.row.usdtBalance
-                }
-              },
-              self.toFloor(params.row.usdtBalance.toFixed(4) || "0")
+            "span",
+            {
+              attrs: {
+                title: params.row.usdtBalance
+              }
+            },
+            self.toFloor(params.row.usdtBalance.toFixed(4) || "0")
           );
         }
       });
@@ -277,13 +314,13 @@ export default {
         align: "center",
         render(h, params) {
           return h(
-              "span",
-              {
-                attrs: {
-                  title: params.row.toReleased
-                }
-              },
-              (params.row.usdtBuyPrincipalAmount + params.row.usdtSellPrincipalAmount).toFixed(4)
+            "span",
+            {
+              attrs: {
+                title: params.row.toReleased
+              }
+            },
+            (params.row.usdtBuyPrincipalAmount + params.row.usdtSellPrincipalAmount).toFixed(4)
           );
         }
       });
@@ -292,13 +329,13 @@ export default {
         align: "center",
         render(h, params) {
           return h(
-              "span",
-              {
-                attrs: {
-                  title: params.row.usdtFrozenBalance
-                }
-              },
-              self.toFloor(params.row.usdtFrozenBalance.toFixed(4) || "0")
+            "span",
+            {
+              attrs: {
+                title: params.row.usdtFrozenBalance
+              }
+            },
+            self.toFloor(params.row.usdtFrozenBalance.toFixed(4) || "0")
           );
         }
       });
@@ -307,6 +344,7 @@ export default {
   }
 };
 </script>
+
 <style lang="scss">
 .nav-right {
   .rightarea.bill_box {
@@ -406,4 +444,5 @@ export default {
     cursor: pointer;
   }
 }
+
 </style>

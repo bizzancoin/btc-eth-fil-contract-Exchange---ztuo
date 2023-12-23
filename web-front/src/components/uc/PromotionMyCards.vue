@@ -7,7 +7,10 @@
             <div style="width: 100%;height: 50px;">
               <div class="header-btn" @click="exchangeCard">{{$t('uc.promotion.exchangewithcode')}}</div>
             </div>
-            <Table :no-data-text="$t('common.nodata')" :columns="tableColumnsCard" :data="tableCardList" :loading="loading" :disabled-hover="true"></Table>
+            <div class="xs_table" v-if="xsWidth">
+              <Table :no-data-text="$t('common.nodata')" :columns="tableColumnsCard" :data="tableCardList" :loading="loading" :disabled-hover="true" style="width: 300%;"></Table>
+            </div>
+            <Table v-else :no-data-text="$t('common.nodata')" :columns="tableColumnsCard" :data="tableCardList" :loading="loading" :disabled-hover="true"></Table>
           </div>
         </div>
       </div>
@@ -33,7 +36,7 @@
       <div style="position:relative;width: 318px;" id="promotionImage" ref="promotionImage">
         <img style="width:100%;display:block;" src="../../assets/images/promotion/promotionbg1.jpg"></img>
         <p style="position:absolute;top: 210px;text-align:center;width: 100%;text-align:center;font-size:26px;color:#F90;font-weight:bold;">{{promotionCode}}</p>
-        <p style="position:absolute;top: 250px;text-align:center;width: 100%;text-align:center;">{{$t('invite.context_title')}}</p>
+        <p style="position:absolute;top: 250px;text-align:center;width: 100%;text-align:center;">推广合伙人专属兑换码</p>
       </div>
       <p style="text-align:center;font-size:12px;color:#888;margin-top: 10px;">{{$t('invite.imagetips')}}</p>
       <Button type="error" size="large" :loading="saveImageLoading" long style="margin-top: 20px;" @click="saveImage">{{$t('invite.saveimage')}}</Button>
@@ -47,6 +50,7 @@ export default {
   components: {},
   data() {
     return {
+      xsWidth:window.innerWidth < 767,
       loginmsg: this.$t("common.logintip"),
       loading: true,
       tableCardList: [],
@@ -83,7 +87,7 @@ export default {
         return new Blob([u8arr], { type: mime });
     },
     saveImage(){
-      this.save("promotionImage", "promotionImage");
+      this.save("promotionImage", "推广合伙人图片");
       this.saveImageLoading = true;
     },
     save(divText, imgText) {
@@ -355,4 +359,19 @@ export default {
     cursor: pointer;
   }
 }
+.xs_table {
+        width: 100%;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+          height: 2px;
+        }
+
+        
+
+        &::-webkit-scrollbar-track-piece {
+          background: transparent;
+        }
+
+      }
 </style>

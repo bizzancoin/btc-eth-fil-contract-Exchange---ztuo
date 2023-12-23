@@ -6,10 +6,10 @@
     width: 100%;
     background: #192330;
     overflow: hidden;
-    padding: 30px 15px 30px 0 ;
+    padding: 30px 15px 30px 0;
     ul.ivu-menu.ivu-menu-light.ivu-menu-vertical {
       padding: 0 10px;
-      text-align:left;
+      text-align: left;
       float: left;
       background: #192330;
       min-height: 662px;
@@ -50,7 +50,8 @@
             .isclick {
               background-color: #fff;
             }
-            .content,.ivu-icon {
+            .content,
+            .ivu-icon {
               color: #fff;
             }
           }
@@ -62,12 +63,12 @@
             border-radius: 50%;
             margin-top: 16px;
             line-height: 50px;
-            display:none;
+            display: none;
           }
           .content {
             padding-left: 5px;
             padding-top: 5px;
-            color:#fff;
+            color: #fff;
           }
         }
         .ivu-menu {
@@ -107,59 +108,59 @@
     }
   }
 }
-.header_nav_mobile_triggle{
+.header_nav_mobile_triggle {
   display: none;
   margin-bottom: 20px;
 }
 
-@media screen and (max-width:768px){
-  .pc_menu{
-    display: none!important;
+@media screen and (max-width: 768px) {
+  .pc_menu {
+    display: none !important;
   }
-  .header_nav_mobile_triggle{
-    display: block!important;
-    text-align:left;
+  .header_nav_mobile_triggle {
+    display: block !important;
+    text-align: left;
     padding-left: 20px;
   }
-  .mymsg_wrapper{
-    padding: 40px 0!important;
+  .mymsg_wrapper {
+    padding: 40px 0 !important;
   }
-  .mymsg_wrapper .wrapper{
-    padding: 0px 0px 30px 0px!important;
+  .mymsg_wrapper .wrapper {
+    padding: 0px 0px 30px 0px !important;
   }
-  .mymsg_wrapper .wrapper .nav-rights{
-    width: 100%!important;
+  .mymsg_wrapper .wrapper .nav-rights {
+    width: 100% !important;
   }
 
-  .mymsg_wrapper .account-box .account-in .account-item .account-item-in{
-    padding: 15px 5px 15px 5px!important;
+  .mymsg_wrapper .account-box .account-in .account-item .account-item-in {
+    padding: 15px 5px 15px 5px !important;
   }
-  .mymsg_wrapper .account-box .account-in .account-item .account-item-in .bankInfo{
-    width: 50%!important;
+  .mymsg_wrapper .account-box .account-in .account-item .account-item-in .bankInfo {
+    width: 50% !important;
   }
-  .mymsg_wrapper .account-box .account-in .account-item .account-item-in .card-number{
-    width: 100px!important;
+  .mymsg_wrapper .account-box .account-in .account-item .account-item-in .card-number {
+    width: 100px !important;
   }
-  .mymsg_wrapper .nav-right{
-    padding-left: 0px!important;
+  .mymsg_wrapper .nav-right {
+    padding-left: 0px !important;
   }
 }
 
-.uc_header_nav .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu){
-    text-align: left;
-    padding-left: 20px!important;
+.uc_header_nav .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) {
+  text-align: left;
+  padding-left: 20px !important;
 }
-.uc_header_nav .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) a{
-  color: #f0a70a!important;
+.uc_header_nav .ivu-menu-light.ivu-menu-vertical .ivu-menu-item-active:not(.ivu-menu-submenu) a {
+  color: #f0a70a !important;
 }
-.uc_header_nav .ivu-menu-light.ivu-menu-vertical .ivu-menu-item:not(.ivu-menu-submenu){
-    text-align: left;
-    padding-left: 20px!important;
-    color: #DDD;
+.uc_header_nav .ivu-menu-light.ivu-menu-vertical .ivu-menu-item:not(.ivu-menu-submenu) {
+  text-align: left;
+  padding-left: 20px !important;
+  color: #ddd;
 }
 
-.uc_header_nav .ivu-menu-light.ivu-menu-vertical .ivu-menu-item:not(.ivu-menu-submenu) a{
-    color: #828ea1;
+.uc_header_nav .ivu-menu-light.ivu-menu-vertical .ivu-menu-item:not(.ivu-menu-submenu) a {
+  color: #828ea1;
 }
 </style>
 
@@ -169,107 +170,135 @@
       <Row :gutter="20" style="min-height: 600px;padding-top: 10px;">
         <Col :xs="24" :sm="24" :md="4" :lg="4">
           <div class="header_nav_mobile_triggle" @click="toggleMemu()">
-            <Icon type="md-menu" style="font-size: 26px;color:#cccccc;"/> {{$t('uc.member.usercenter')}}
+            <Icon type="md-menu" style="font-size: 26px;color:#cccccc;" /> {{ $t('uc.member.usercenter') }}
           </div>
-          <Menu class="pc_menu" :active-name="activename" :open-names="opennames" @on-open-change="sss" ref="test" :accordion="true" style="width:100%;">
-            <div class="title">{{$t('uc.member.usercenter')}}</div>
+          <Menu
+            class="pc_menu"
+            :active-name="activename"
+            :open-names="opennames"
+            @on-open-change="sss"
+            ref="test"
+            :accordion="true"
+            style="width:100%;"
+          >
+            <div class="title">{{ $t('uc.member.usercenter') }}</div>
+
             <Submenu name="1">
               <template slot="title">
                 <span class="isclick"></span>
-                <span class="content">{{$t('uc.member.account')}}</span>
+                <span class="content">{{ $t('uc.member.account') }}</span>
               </template>
               <MenuItem name="1-1">
-              <router-link to="/uc/safe">{{$t('uc.member.securitysetting')}}</router-link>
+                <router-link to="/uc/safe">{{ $t('uc.member.securitysetting') }}</router-link>
               </MenuItem>
-<!--              <MenuItem name="1-2">-->
-<!--              <router-link to="/uc/account">{{$t('uc.member.accountsetting')}}</router-link>-->
-<!--              </MenuItem>-->
+              <MenuItem name="1-2">
+                <router-link to="/uc/account">{{ $t('uc.member.accountsetting') }}</router-link>
+              </MenuItem>
             </Submenu>
+
             <Submenu name="2">
               <template slot="title">
                 <span class="isclick"></span>
-                <span class="content">{{$t('uc.member.assets')}}</span>
+                <span class="content">{{ $t('uc.member.assets') }}</span>
               </template>
               <MenuItem name="2-1">
-              <router-link to="/uc/money">{{$t('uc.finance.personalassets')}}</router-link>
+                <router-link to="/uc/money">{{ $t('uc.finance.personalassets') }}</router-link>
               </MenuItem>
               <MenuItem name="2-10">
-              <router-link to="/uc/swapAssets">{{$t('uc.finance.swapassets')}}</router-link>
+                <router-link to="/uc/swapAssets">{{ $t('uc.finance.swapassets') }}</router-link>
+              </MenuItem>
+              <MenuItem name="2-11">
+                <router-link to="/uc/secondAssets">{{ $t('uc.finance.second.swap') }}</router-link>
               </MenuItem>
               <MenuItem name="2-2">
-              <router-link to="/uc/record">{{$t('uc.finance.billdetail')}}</router-link>
+                <router-link to="/uc/record">{{ $t('uc.finance.billdetail') }}</router-link>
               </MenuItem>
-<!--              <MenuItem name="2-9">-->
-<!--              <router-link to="/uc/quickExchange">{{$t('uc.finance.record.quickExchange')}}</router-link>-->
-<!--              </MenuItem>-->
+<!--              <MenuItem name="2-9">
+                <router-link to="/uc/quickExchange">{{ $t('uc.finance.record.quickExchange') }}</router-link>
+              </MenuItem> -->
               <MenuItem name="2-3">
-              <router-link to="/uc/recharge">{{$t('uc.finance.charge')}}</router-link>
+                <router-link to="/uc/recharge">{{ $t('uc.finance.charge') }}</router-link>
               </MenuItem>
               <MenuItem name="2-4">
-              <router-link to="/uc/withdraw">{{$t('uc.finance.pickup')}}</router-link>
+                <router-link to="/uc/withdraw">{{ $t('uc.finance.pickup') }}</router-link>
               </MenuItem>
             </Submenu>
+
             <Submenu name="3">
               <template slot="title">
                 <span class="isclick"></span>
-                <span class="content">{{$t('uc.member.exchange')}}</span>
+                <span class="content">{{ $t('uc.member.exchange') }}</span>
               </template>
               <MenuItem name="3-1">
-              <router-link to="/uc/entrust/current">{{$t('uc.member.curdelegate')}}</router-link>
+                <router-link to="/uc/entrust/current">{{ $t('uc.member.curdelegate') }}</router-link>
               </MenuItem>
               <MenuItem name="3-2">
-              <router-link to="/uc/entrust/history">{{$t('uc.member.hisdelegate')}}</router-link>
+                <router-link to="/uc/entrust/history">{{ $t('uc.member.hisdelegate') }}</router-link>
               </MenuItem>
             </Submenu>
-<!--            <Submenu name="4">-->
-<!--              <template slot="title">-->
-<!--                <span class="isclick"></span>-->
-<!--                <span class="content">{{$t('uc.member.otc')}}</span>-->
-<!--              </template>-->
-<!--              <MenuItem name="4-1">-->
-<!--              <router-link to="/uc/ad">{{$t('otc.myad.title')}}</router-link>-->
-<!--              </MenuItem>-->
-<!--              <MenuItem name="4-2">-->
-<!--              <router-link to="/uc/order">{{$t('otc.myorder')}}</router-link>-->
-<!--              </MenuItem>-->
-<!--            </Submenu>-->
+<!--            <Submenu name="4">
+              <template slot="title">
+                <span class="isclick"></span>
+                <span class="content">{{ $t('uc.member.otc') }}</span>
+              </template>
+              <MenuItem name="4-1">
+                <router-link to="/uc/ad">{{ $t('otc.myad.title') }}</router-link>
+              </MenuItem>
+              <MenuItem name="4-2">
+                <router-link to="/uc/order">{{ $t('otc.myorder') }}</router-link>
+              </MenuItem>
+            </Submenu> -->
             <Submenu name="5">
               <template slot="title">
                 <span class="isclick"></span>
-                <span class="content">{{$t('uc.promotion.title')}}</span>
+                <span class="content">{{ $t('uc.promotion.title') }}</span>
               </template>
               <MenuItem name="5-1">
-              <router-link to="/uc/promotion/mypromotion">{{$t('uc.promotion.subtitle3')}}</router-link>
+                <router-link to="/uc/promotion/mypromotion">{{ $t('uc.promotion.subtitle3') }}</router-link>
               </MenuItem>
               <MenuItem name="5-2">
-              <router-link to="/uc/promotion/mycards">{{$t('uc.promotion.subtitle1')}}</router-link>
+                <router-link to="/uc/promotion/mycards">{{ $t('uc.promotion.subtitle1') }}</router-link>
               </MenuItem>
             </Submenu>
+
             <Submenu name="6">
               <template slot="title">
                 <span class="isclick"></span>
-                <span class="content">{{$t('uc.activity.navTitle')}}</span>
+                <span class="content">{{ $t('uc.activity.navTitle') }}</span>
               </template>
               <MenuItem name="6-1">
-              <router-link to="/uc/innovation/myorders">{{$t('uc.activity.subNavTitle1')}}</router-link>
+                <router-link to="/uc/innovation/myorders">{{ $t('uc.activity.subNavTitle1') }}</router-link>
               </MenuItem>
               <MenuItem name="6-2">
-              <router-link to="/uc/innovation/myminings">{{$t('uc.activity.subNavTitle2')}}</router-link>
+                <router-link to="/uc/innovation/myminings">{{ $t('uc.activity.subNavTitle2') }}</router-link>
               </MenuItem>
               <MenuItem name="6-3">
-              <router-link to="/uc/innovation/mylocked">{{$t('uc.activity.subNavTitle3')}}</router-link>
+                <router-link to="/uc/innovation/mylocked">{{ $t('uc.activity.subNavTitle3') }}</router-link>
               </MenuItem>
             </Submenu>
 
             <Submenu name="7">
-                <template slot="title">
-                    <span class="isclick"></span>
-                    <span class="content">{{$t("uc.api.apiAdmin")}}</span>
-                </template>
-                <MenuItem name="7-1">
-                <router-link to="/uc/apiManage">{{$t("uc.api.apiAdmin")}}</router-link>
-                </MenuItem>
+              <template slot="title">
+                <span class="isclick"></span>
+                <span class="content">{{ $t('uc.finance.finance.financialManagement') }}</span>
+              </template>
+              <MenuItem name="7-1">
+                <router-link to="/uc/financeAssets">{{ $t('uc.finance.finance.account') }}</router-link>
+              </MenuItem>
+              <MenuItem name="7-2">
+                <router-link to="/uc/financeOrders">{{ $t('uc.finance.finance.financialOrder') }}</router-link>
+              </MenuItem>
             </Submenu>
+
+<!--            <Submenu name="8">-->
+<!--              <template slot="title">-->
+<!--                <span class="isclick"></span>-->
+<!--                <span class="content">{{ $t('uc.api.apiAdmin') }}</span>-->
+<!--              </template>-->
+<!--              <MenuItem name="8-1">-->
+<!--                <router-link to="/uc/apiManage">{{ $t('uc.api.apiAdmin') }}</router-link>-->
+<!--              </MenuItem>-->
+<!--            </Submenu>-->
           </Menu>
         </Col>
         <Col :xs="24" :sm="24" :md="20" :lg="20">
@@ -278,95 +307,133 @@
       </Row>
     </div>
     <Drawer :closable="true" width="40" v-model="ucNavDrawerModal" class="header_nav_mobile uc_header_nav">
-      <Menu :active-name="activename" :open-names="opennames" @on-open-change="sss" ref="test" :accordion="true" placement="left" width="auto">
-            <Submenu name="1">
-              <template slot="title">
-                <span class="isclick"></span>
-                <span class="content">{{$t('uc.member.account')}}</span>
-              </template>
-              <MenuItem name="1-1">
-              <router-link to="/uc/safe">{{$t('uc.member.securitysetting')}}</router-link>
-              </MenuItem>
-              <MenuItem name="1-2">
-              <router-link to="/uc/account">{{$t('uc.member.accountsetting')}}</router-link>
-              </MenuItem>
-            </Submenu>
-            <Submenu name="2">
-              <template slot="title">
-                <span class="isclick"></span>
-                <span class="content">{{$t('uc.member.assets')}}</span>
-              </template>
-              <MenuItem name="2-1">
-              <router-link to="/uc/money">{{$t('uc.finance.personalassets')}}</router-link>
-              </MenuItem>
-              <MenuItem name="2-10">
-              <router-link to="/uc/swapAssets">{{$t('uc.finance.swapassets')}}</router-link>
-              </MenuItem>
-              <MenuItem name="2-2">
-              <router-link to="/uc/record">{{$t('uc.finance.billdetail')}}</router-link>
-              </MenuItem>
-              <MenuItem name="2-9">
-              <router-link to="/uc/quickExchange">{{$t('uc.finance.record.quickExchange')}}</router-link>
-              </MenuItem>
-              <MenuItem name="2-3">
-              <router-link to="/uc/recharge">{{$t('uc.finance.charge')}}</router-link>
-              </MenuItem>
-              <MenuItem name="2-4">
-              <router-link to="/uc/withdraw">{{$t('uc.finance.pickup')}}</router-link>
-              </MenuItem>
-            </Submenu>
-            <Submenu name="3">
-              <template slot="title">
-                <span class="isclick"></span>
-                <span class="content">{{$t('uc.member.exchange')}}</span>
-              </template>
-              <MenuItem name="3-1">
-              <router-link to="/uc/entrust/current">{{$t('uc.member.curdelegate')}}</router-link>
-              </MenuItem>
-              <MenuItem name="3-2">
-              <router-link to="/uc/entrust/history">{{$t('uc.member.hisdelegate')}}</router-link>
-              </MenuItem>
-            </Submenu>
-<!--            <Submenu name="4" style="display:none;">-->
-<!--              <template slot="title">-->
-<!--                <span class="isclick"></span>-->
-<!--                <span class="content">{{$t('uc.member.otc')}}</span>-->
-<!--              </template>-->
-<!--              <MenuItem name="4-1">-->
-<!--              <router-link to="/uc/ad">{{$t('otc.myad.title')}}</router-link>-->
-<!--              </MenuItem>-->
-<!--              <MenuItem name="4-2">-->
-<!--              <router-link to="/uc/order">{{$t('otc.myorder')}}</router-link>-->
-<!--              </MenuItem>-->
-<!--            </Submenu>-->
-            <Submenu name="5">
-              <template slot="title">
-                <span class="isclick"></span>
-                <span class="content">{{$t('uc.promotion.title')}}</span>
-              </template>
-              <MenuItem name="5-1">
-              <router-link to="/uc/promotion/mypromotion">{{$t('uc.promotion.subtitle3')}}</router-link>
-              </MenuItem>
-              <MenuItem name="5-2">
-              <router-link to="/uc/promotion/mycards">{{$t('uc.promotion.subtitle1')}}</router-link>
-              </MenuItem>
-            </Submenu>
-            <Submenu name="6">
-              <template slot="title">
-                <span class="isclick"></span>
-                <span class="content">{{$t('uc.activity.navTitle')}}</span>
-              </template>
-              <MenuItem name="6-1">
-              <router-link to="/uc/innovation/myorders">{{$t('uc.activity.subNavTitle1')}}</router-link>
-              </MenuItem>
-              <MenuItem name="6-2">
-              <router-link to="/uc/innovation/myminings">{{$t('uc.activity.subNavTitle2')}}</router-link>
-              </MenuItem>
-              <MenuItem name="6-3">
-              <router-link to="/uc/innovation/mylocked">{{$t('uc.activity.subNavTitle3')}}</router-link>
-              </MenuItem>
-            </Submenu>
-          </Menu>
+      <Menu
+        :active-name="activename"
+        :open-names="opennames"
+        @on-open-change="sss"
+        ref="test"
+        :accordion="true"
+        placement="left"
+        width="auto"
+      >
+        <Submenu name="1">
+          <template slot="title">
+            <span class="isclick"></span>
+            <span class="content">{{ $t('uc.member.account') }}</span>
+          </template>
+          <MenuItem name="1-1">
+            <router-link to="/uc/safe">{{ $t('uc.member.securitysetting') }}</router-link>
+          </MenuItem>
+          <MenuItem name="1-2">
+            <router-link to="/uc/account">{{ $t('uc.member.accountsetting') }}</router-link>
+          </MenuItem>
+        </Submenu>
+
+        <Submenu name="2">
+          <template slot="title">
+            <span class="isclick"></span>
+            <span class="content">{{ $t('uc.member.assets') }}</span>
+          </template>
+          <MenuItem name="2-1">
+            <router-link to="/uc/money">{{ $t('uc.finance.personalassets') }}</router-link>
+          </MenuItem>
+          <MenuItem name="2-10">
+            <router-link to="/uc/swapAssets">{{ $t('uc.finance.swapassets') }}</router-link>
+          </MenuItem>
+          <MenuItem name="2-11">
+            <router-link to="/uc/secondAssets">{{ $t('uc.finance.second.swap') }}</router-link>
+          </MenuItem>
+          <MenuItem name="2-2">
+            <router-link to="/uc/record">{{ $t('uc.finance.billdetail') }}</router-link>
+          </MenuItem>
+          <MenuItem name="2-9">
+            <router-link to="/uc/quickExchange">{{ $t('uc.finance.record.quickExchange') }}</router-link>
+          </MenuItem>
+          <MenuItem name="2-3">
+            <router-link to="/uc/recharge">{{ $t('uc.finance.charge') }}</router-link>
+          </MenuItem>
+          <MenuItem name="2-4">
+            <router-link to="/uc/withdraw">{{ $t('uc.finance.pickup') }}</router-link>
+          </MenuItem>
+        </Submenu>
+
+        <Submenu name="3">
+          <template slot="title">
+            <span class="isclick"></span>
+            <span class="content">{{ $t('uc.member.exchange') }}</span>
+          </template>
+          <MenuItem name="3-1">
+            <router-link to="/uc/entrust/current">{{ $t('uc.member.curdelegate') }}</router-link>
+          </MenuItem>
+          <MenuItem name="3-2">
+            <router-link to="/uc/entrust/history">{{ $t('uc.member.hisdelegate') }}</router-link>
+          </MenuItem>
+        </Submenu>
+        <Submenu name="4" style="display:none;">
+          <template slot="title">
+            <span class="isclick"></span>
+            <span class="content">{{ $t('uc.member.otc') }}</span>
+          </template>
+          <MenuItem name="4-1">
+            <router-link to="/uc/ad">{{ $t('otc.myad.title') }}</router-link>
+          </MenuItem>
+          <MenuItem name="4-2">
+            <router-link to="/uc/order">{{ $t('otc.myorder') }}</router-link>
+          </MenuItem>
+        </Submenu>
+
+        <Submenu name="5">
+          <template slot="title">
+            <span class="isclick"></span>
+            <span class="content">{{ $t('uc.promotion.title') }}</span>
+          </template>
+          <MenuItem name="5-1">
+            <router-link to="/uc/promotion/mypromotion">{{ $t('uc.promotion.subtitle3') }}</router-link>
+          </MenuItem>
+          <MenuItem name="5-2">
+            <router-link to="/uc/promotion/mycards">{{ $t('uc.promotion.subtitle1') }}</router-link>
+          </MenuItem>
+        </Submenu>
+
+        <Submenu name="6">
+          <template slot="title">
+            <span class="isclick"></span>
+            <span class="content">{{ $t('uc.activity.navTitle') }}</span>
+          </template>
+          <MenuItem name="6-1">
+            <router-link to="/uc/innovation/myorders">{{ $t('uc.activity.subNavTitle1') }}</router-link>
+          </MenuItem>
+          <MenuItem name="6-2">
+            <router-link to="/uc/innovation/myminings">{{ $t('uc.activity.subNavTitle2') }}</router-link>
+          </MenuItem>
+          <MenuItem name="6-3">
+            <router-link to="/uc/innovation/mylocked">{{ $t('uc.activity.subNavTitle3') }}</router-link>
+          </MenuItem>
+        </Submenu>
+
+        <Submenu name="7">
+          <template slot="title">
+            <span class="isclick"></span>
+            <span class="content">{{ $t('uc.finance.finance.financialManagement') }}</span>
+          </template>
+          <MenuItem name="7-1">
+            <router-link to="/uc/financeAssets">{{ $t('uc.finance.finance.account') }}</router-link>
+          </MenuItem>
+          <MenuItem name="7-2">
+            <router-link to="/uc/financeOrders">{{ $t('uc.finance.finance.financialOrder') }}</router-link>
+          </MenuItem>
+        </Submenu>
+
+        <Submenu name="8">
+          <template slot="title">
+            <span class="isclick"></span>
+            <span class="content">{{ $t('uc.api.apiAdmin') }}</span>
+          </template>
+          <MenuItem name="8-1">
+            <router-link to="/uc/apiManage">{{ $t('uc.api.apiAdmin') }}</router-link>
+          </MenuItem>
+        </Submenu>
+      </Menu>
     </Drawer>
   </div>
 </template>
@@ -375,129 +442,138 @@ export default {
   components: {},
   data() {
     return {
-      activename: "1-1",
-      opennames: ["1"],
+      activename: '1-1',
+      opennames: ['1'],
       routeArr: {
-        "/uc/safe": "1-1",
-        "/uc/account": "1-2",
-        "/uc/money": "2-1",
-        "/uc/record": "2-2",
-        "/uc/recharge": "2-3",
-        "/uc/withdraw": "2-4",
-        "/uc/trade": "2-5",
-        "/uc/paydividends": "2-6",
-        "/uc/blc": "2-7",
-        "/uc/bjc": "2-8",
-        "/uc/entrust/current": "3-1",
-        "/uc/entrust/history": "3-2",
-        "/uc/ad": "4-1",
-        "/uc/order": "4-2",
-        "/uc/withdraw/address":"2-4",
-        "/uc/ad/create":"4-3",
-        "/uc/ad/update":"4-4",
-        "/uc/promotion/mypromotion":"5-1",
-        "/uc/promotion/mycards":"5-2",
-        "/uc/innovation/myorders":"6-1",
-        "/uc/innovation/myminings":"6-2",
-        "/uc/innovation/mylocked":"6-3",
-        "/uc/quickExchange":"2-9",
-        "/uc/swapAssets": "2-10",
-        "/uc/apiManage": "7-1"
+        '/uc/safe': '1-1',
+        '/uc/account': '1-2',
+        '/uc/money': '2-1',
+        '/uc/record': '2-2',
+        '/uc/recharge': '2-3',
+        '/uc/withdraw': '2-4',
+        '/uc/trade': '2-5',
+        '/uc/paydividends': '2-6',
+        '/uc/blc': '2-7',
+        '/uc/bjc': '2-8',
+        '/uc/entrust/current': '3-1',
+        '/uc/entrust/history': '3-2',
+        '/uc/ad': '4-1',
+        '/uc/order': '4-2',
+        '/uc/withdraw/address': '2-4',
+        '/uc/ad/create': '4-3',
+        '/uc/ad/update': '4-4',
+        '/uc/promotion/mypromotion': '5-1',
+        '/uc/promotion/mycards': '5-2',
+        '/uc/innovation/myorders': '6-1',
+        '/uc/innovation/myminings': '6-2',
+        '/uc/innovation/mylocked': '6-3',
+        '/uc/quickExchange': '2-9',
+        '/uc/swapAssets': '2-10',
+        '/uc/secondAssets': '2-11',
+        '/uc/financeAssets': '7-1',
+        '/uc/financeOrders': '7-2',
+        '/uc/apiManage': '8-1',
       },
-      ucNavDrawerModal: false
-    };
+      ucNavDrawerModal: false,
+    }
   },
   created: function() {
-    this.init();
-    const path = this.$route.path;
-    this.heightLightMenu(path);
+    this.init()
+    const path = this.$route.path
+    this.heightLightMenu(path)
   },
   methods: {
     init() {
-      this.$store.commit("navigate", "nav-other");
-      this.$store.state.HeaderActiveName = "0";
-      this.$store.state.HeaderActiveName = "1-6";
+      this.$store.commit('navigate', 'nav-other')
+      this.$store.state.HeaderActiveName = '0'
+      this.$store.state.HeaderActiveName = '1-6'
       if (!localStorage.TOKEN || !localStorage.MEMBER) {
-        this.$Message.success(this.$t("common.logintip"));
-        this.$router.push("/login");
+        this.$Message.success(this.$t('common.logintip'))
+        this.$router.push('/login')
       }
     },
-    toggleMemu(){
-      this.ucNavDrawerModal = !this.ucNavDrawerModal;
+    toggleMemu() {
+      this.ucNavDrawerModal = !this.ucNavDrawerModal
     },
     sss(name) {
-      let index = 1;
+      let index = 1
       if (name.length >= 1) {
-        index = name[name.length - 1];
-        this.opennames = [index];
-        this.activename = index + "-1";
-        this.link(this.activename);
+        index = name[name.length - 1]
+        this.opennames = [index]
+        this.activename = index + '-1'
+        this.link(this.activename)
       } else {
-        return;
+        return
       }
     },
     link(code) {
       switch (code) {
-        case "1-1":
-          this.$router.push("/uc/safe");
-          break;
-        case "2-1":
-          this.$router.push("/uc/money");
-          break;
-        case "3-1":
-          this.$router.push("/uc/entrust/current");
-          break;
-        case "4-1":
-          this.$router.push("/uc/ad");
-          break;
-        case "5-1":
-          this.$router.push("/uc/promotion/mypromotion");
-          break;
-        case "5-2":
-          this.$router.push("/uc/promotion/mycards");
-          break;
-        case "6-1":
-          this.$router.push("/uc/innovation/myorders");
-          break;
-        case "6-2":
-          this.$router.push("/uc/innovation/myminings");
-          break;
-        case "6-3":
-          this.$router.push("/uc/innovation/mylocked");
-          break;
-        case "2-9":
-          this.$router.push("/uc/quickExchange");
-        case "2-10":
-          this.$router.push("/uc/swapAssets");
-        case "7-1":
-          this.$router.push("/uc/apiManage");
         default:
-          this.$router.push("/uc/safe");
-          break;
+          this.$router.push('/uc/safe')
+          break
+        case '1-1':
+          this.$router.push('/uc/safe')
+          break
+        case '2-1':
+          this.$router.push('/uc/money')
+          break
+        case '3-1':
+          this.$router.push('/uc/entrust/current')
+          break
+        case '4-1':
+          this.$router.push('/uc/ad')
+          break
+        case '5-1':
+          this.$router.push('/uc/promotion/mypromotion')
+          break
+        case '5-2':
+          this.$router.push('/uc/promotion/mycards')
+          break
+        case '6-1':
+          this.$router.push('/uc/innovation/myorders')
+          break
+        case '6-2':
+          this.$router.push('/uc/innovation/myminings')
+          break
+        case '6-3':
+          this.$router.push('/uc/innovation/mylocked')
+          break
+        case '2-9':
+          this.$router.push('/uc/quickExchange')
+          break
+        case '2-10':
+          this.$router.push('/uc/swapAssets')
+          break
+        case '7-1':
+          this.$router.push('/uc/financeAssets')
+          break
+        case '8-1':
+          this.$router.push('/uc/apiManage')
+          break
       }
     },
     heightLightMenu(path) {
-      let acName = this.routeArr[path] || "1-1",
-        opName = acName.split("-")[0];
-      this.opennames = [opName];
-      this.activename = acName;
+      let acName = this.routeArr[path] || '1-1',
+        opName = acName.split('-')[0]
+      this.opennames = [opName]
+      this.activename = acName
       this.$nextTick(function() {
-        this.$refs.test.updateOpened();
-        this.$refs.test.updateActiveName();
-      });
-    }
+        this.$refs.test.updateOpened()
+        this.$refs.test.updateActiveName()
+      })
+    },
   },
   watch: {
     $route(to, form) {
-      console.log(to.path);
-      this.heightLightMenu(to.path);
-    }
+      console.log(to.path)
+      this.heightLightMenu(to.path)
+    },
   },
   mounted: function() {
     this.$nextTick(function() {
-      this.$refs.test.updateOpened();
-      this.$refs.test.updateActiveName();
-    });
-  }
-};
+      this.$refs.test.updateOpened()
+      this.$refs.test.updateActiveName()
+    })
+  },
+}
 </script>

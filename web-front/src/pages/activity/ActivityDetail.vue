@@ -397,7 +397,7 @@ export default {
         this.$http.post(this.host + "/uc/activity/detail", param).then(res => {
         if (res.status == 200 && res.body.code == 0) {
             this.activityDetail = res.body.data;
-            window.document.title = (this.lang == "en_US" ? "活动 - " : "Activity - ") + this.activityDetail.title + " - PEPSICOIN | Global Bitcoin trading platform ";
+            window.document.title = (this.lang == "zh_CN" ? "活动 - " : "Activity - ") + this.activityDetail.title + " - BTXCHAIN | Global Bitcoin trading platform ";
             //持仓瓜分类型进度显示处理
             if(this.activityDetail.type == 3){
                 if(this.activityDetail.step == 1){

@@ -5,19 +5,19 @@
       <h1>{{$t("header.helpcenter")}}</h1>
       <div class="main">
         <div class="section" v-for="section in helpData">
-          <h3 v-if="langPram == 'en_US'">{{section.titleCN}}</h3>
-          <h3 v-if="langPram != 'en_US'">{{section.titleEN}}</h3>
+          <h3 v-if="langPram == 'zh_CN'">{{section.titleCN}}</h3>
+          <h3 v-if="langPram != 'zh_CN'">{{section.titleEN}}</h3>
           <div class="list-wrap">
-            <router-link v-if="langPram == 'en_US'" class="item" :title="item.title" v-for="(item, index) in section.content" :to="{path:'helpdetail',query:{cate:section.cate,id:item.id,cateTitle:section.titleCN}}" :key="index">
+            <router-link v-if="langPram == 'zh_CN'" class="item" :title="item.title" v-for="(item, index) in section.content" :to="{path:'helpdetail',query:{cate:section.cate,id:item.id,cateTitle:section.titleCN}}" :key="index">
               <span class="text">{{item.title}}</span>
             </router-link>
-            <router-link v-if="langPram != 'en_US'" class="item" :title="item.title" v-for="(item, index) in section.content" :to="{path:'helpdetail',query:{cate:section.cate,id:item.id,cateTitle:section.titleEN}}" :key="index">
+            <router-link v-if="langPram != 'zh_CN'" class="item" :title="item.title" v-for="(item, index) in section.content" :to="{path:'helpdetail',query:{cate:section.cate,id:item.id,cateTitle:section.titleEN}}" :key="index">
               <span class="text">{{item.title}}</span>
             </router-link>
           </div>
           <div class="route-wrap">
-            <router-link v-if="langPram == 'en_US'"  :to="{path:'helplist',query:{cate:section.cate, cateTitle:section.titleCN}}">{{$t("common.more")}}>></router-link>
-            <router-link v-if="langPram != 'en_US'"  :to="{path:'helplist',query:{cate:section.cate, cateTitle:section.titleEN}}">{{$t("common.more")}}>></router-link>
+            <router-link v-if="langPram == 'zh_CN'"  :to="{path:'helplist',query:{cate:section.cate, cateTitle:section.titleCN}}">{{$t("common.more")}}>></router-link>
+            <router-link v-if="langPram != 'zh_CN'"  :to="{path:'helplist',query:{cate:section.cate, cateTitle:section.titleEN}}">{{$t("common.more")}}>></router-link>
           </div>
         </div>
       </div>

@@ -107,7 +107,7 @@ export default {
           hsaInTop ? "" : returnTop.unshift(returnArticle);
           this.topList = returnTop;
           this.article = returnArticle;
-          window.document.title = (this.lang == "zh_CN" ? "帮助 - " : "Help - ") + this.article.title + " - PEPSICOIN | Global digital currency trading platform";
+          window.document.title = (this.lang == "zh_CN" ? "帮助 - " : "Help - ") + this.article.title + " - BTXCHAIN | Global digital currency trading platform";
         } else {
           this.$message.error("网络错误");
         }

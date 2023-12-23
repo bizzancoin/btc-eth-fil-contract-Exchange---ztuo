@@ -4,8 +4,8 @@
             <div class="bill_box rightarea padding-right-clear record account-box">
                 <section class="trade-group merchant-top">
                     <i class="merchant-icon tips"></i>
-                    <span class="tips-word">{{$t('uc.account.pagetitle')}}</span>
-                    <span class="tips-g">{{$t('uc.account.pagetip')}}</span>
+                    <span class="tips-word" style="width: 30%;">{{$t('uc.account.pagetitle')}}</span>
+                    <span class="tips-g" style="width: 68%; text-align: left;">{{$t('uc.account.pagetip')}}</span>
                 </section>
                 <section class="accountContent">
                     <div class="account-in">
@@ -19,22 +19,19 @@
                                 <p v-else class="bankInfo">
                                   {{$t('uc.account.backcardtip')}}
                                 </p>
-                                <a class="btn" v-if="user.bankVerified==1" @click="showItem(1)">{{$t('uc.account.modify')}}</a>
-                                <a class="btn" v-else @click="showItem(1)">{{$t('uc.account.bind')}}</a>
+                                <a class="btn" v-if="user.bankVerified==1" @click="showItem(1)" style="width: 15%;">{{$t('uc.account.modify')}}</a>
+                                <a class="btn" v-else @click="showItem(1)" style="width: 15%;">{{$t('uc.account.bind')}}</a>
                             </div>
                             <div class="account-detail" v-show="choseItem==1">
                                 <div class="detail-list">
                                     <Form ref="formValidate1" :model="formValidate1" :rules="ruleValidate" :label-width="85">
                                         <!-- name -->
-                                        <FormItem :label="$t('uc.account.name')" prop="name">
-                                            <Input disabled size="large" v-model="formValidate1.name"></Input>
-                                        </FormItem>
-                                        <!-- bankName -->
-                                        <FormItem :label="$t('uc.account.bankaccount')" prop="bankName">
-                                            <Select v-model="formValidate1.bankName" size="large" :placeholder="$t('common.pleaseselect')">
-                                                <Option v-for="item in bankNameList" :value="item.value" :key="item.value">{{ item.label }}</Option>
-                                            </Select>
-                                        </FormItem>
+                                     <FormItem :label="$t('uc.account.name')" prop="name">
+                                        <Input size="large" v-model="formValidate1.name"></Input>
+                                     </FormItem>
+                                      <FormItem :label="$t('uc.account.bankaccount')" prop="bankName">
+                                        <Input v-model="formValidate1.bankName" size="large"></Input>
+                                      </FormItem>
                                         <!-- bankBranch -->
                                         <FormItem :label="$t('uc.account.bankbranch')" prop="bankBranch">
                                             <Input v-model="formValidate1.bankBranch" size="large"></Input>
@@ -54,117 +51,116 @@
                                         <!-- Button -->
                                         <FormItem>
                                             <Button type="primary" @click="handleSubmit('formValidate1')">{{$t('uc.account.save')}}</Button>
-                                            <!-- <Button type="ghost" @click="handleReset('formValidate1')" style="margin-left: 8px">Reset</Button> -->
                                         </FormItem>
                                     </Form>
                                 </div>
                             </div>
                         </div>
-                        <div class="account-item">
-                            <div class="account-item-in">
-                                <i class="icons alipay"></i>
-                                <span class="card-number">{{$t('uc.account.zfbaccount')}}</span>
-                                <p v-if="user.aliVerified==1" class="bankInfo" style="color: #fff;">
-                                    {{user.alipay.aliNo}}
-                                </p>
-                                <p v-else class="bankInfo">
-                                  {{$t('uc.account.zfbaccounttip')}}
-                                </p>
-                                <a class="btn" v-if="user.aliVerified==1" @click="showItem(2)">{{$t('uc.account.modify')}}</a>
-                                <a class="btn" v-else @click="showItem(2)">{{$t('uc.account.bind')}}</a>
-                            </div>
-                            <div class="account-detail" v-show="choseItem==2">
-                                <div class="detail-list">
-                                    <Form ref="formValidate2" :model="formValidate2" :rules="ruleValidate" :label-width="95">
-                                      <Row>
-                                        <Col span="8">
-                                        <input type="hidden" name="aliPreview" :value="aliPreview" />
-                                        <img v-if="aliImg" :alt="$t('uc.account.imgtip')" style="width: 200px;height: 200px;" :src="aliImg">
-                                        <img v-else :alt="$t('uc.account.imgtip')" style="width: 200px;height: 200px;" src="../../assets/images/upload_placeholder.png">
-                                        <div class="acc_sc">
-                                          <Upload ref="upload1" :on-success="aliHandleSuccess" :headers="uploadHeaders" :action="uploadUrl">
-                                            <Button icon="ios-cloud-upload-outline">{{$t('uc.safe.upload')}}</Button>
-                                          </Upload>
-                                        </div>
-                                        </Col>
+<!--                        <div class="account-item">-->
+<!--                            <div class="account-item-in">-->
+<!--                                <i class="icons alipay"></i>-->
+<!--                                <span class="card-number">{{$t('uc.account.zfbaccount')}}</span>-->
+<!--                                <p v-if="user.aliVerified==1" class="bankInfo" style="color: #fff;">-->
+<!--                                    {{user.alipay.aliNo}}-->
+<!--                                </p>-->
+<!--                                <p v-else class="bankInfo">-->
+<!--                                  {{$t('uc.account.zfbaccounttip')}}-->
+<!--                                </p>-->
+<!--                                <a class="btn" v-if="user.aliVerified==1" @click="showItem(2)" style="width: 15%;">{{$t('uc.account.modify')}}</a>-->
+<!--                                <a class="btn" v-else @click="showItem(2)" style="width: 15%;">{{$t('uc.account.bind')}}</a>-->
+<!--                            </div>-->
+<!--                            <div class="account-detail" v-show="choseItem==2">-->
+<!--                                <div class="detail-list">-->
+<!--                                    <Form ref="formValidate2" :model="formValidate2" :rules="ruleValidate" :label-width="95">-->
+<!--                                      <Row>-->
+<!--                                        <Col span="8">-->
+<!--                                        <input type="hidden" name="aliPreview" :value="aliPreview" />-->
+<!--                                        <img v-if="aliImg" :alt="$t('uc.account.imgtip')" style="width: 200px;height: 200px;" :src="aliImg">-->
+<!--                                        <img v-else :alt="$t('uc.account.imgtip')" style="width: 200px;height: 200px;" src="../../assets/images/upload_placeholder.png">-->
+<!--                                        <div class="acc_sc">-->
+<!--                                          <Upload ref="upload1" :on-success="aliHandleSuccess" :headers="uploadHeaders" :action="uploadUrl">-->
+<!--                                            <Button icon="ios-cloud-upload-outline">{{$t('uc.safe.upload')}}</Button>-->
+<!--                                          </Upload>-->
+<!--                                        </div>-->
+<!--                                        </Col>-->
 
-                                        <Col span="16">
-                                        <!-- name -->
-                                        <FormItem :label="$t('uc.account.name')" prop="name">
-                                            <Input disabled size="large" v-model="formValidate2.name"></Input>
-                                        </FormItem>
-                                        <!-- alipay -->
-                                        <FormItem :label="$t('uc.account.zfbaccount')" prop="alipay">
-                                            <Input v-model="formValidate2.alipay" size="large"></Input>
-                                        </FormItem>
-                                        <!-- passwd -->
-                                        <FormItem :label="$t('uc.account.fundpwd')" prop="password">
-                                            <Input v-model="formValidate2.password" type="password" size="large"></Input>
-                                        </FormItem>
-                                        <!-- Button -->
-                                        <FormItem>
-                                          <Button type="primary" @click="handleSubmit('formValidate2')">{{$t('uc.account.save')}}</Button>
-                                          <!-- <Button type="ghost" @click="handleReset('formValidate2')" style="margin-left: 8px">Reset</Button> -->
-                                        </FormItem>
-                                        </Col>
+<!--                                        <Col span="16">-->
+<!--                                        &lt;!&ndash; name &ndash;&gt;-->
+<!--                                        <FormItem :label="$t('uc.account.name')" prop="name">-->
+<!--                                            <Input disabled size="large" v-model="formValidate2.name"></Input>-->
+<!--                                        </FormItem>-->
+<!--                                        &lt;!&ndash; alipay &ndash;&gt;-->
+<!--                                        <FormItem :label="$t('uc.account.zfbaccount')" prop="alipay">-->
+<!--                                            <Input v-model="formValidate2.alipay" size="large"></Input>-->
+<!--                                        </FormItem>-->
+<!--                                        &lt;!&ndash; passwd &ndash;&gt;-->
+<!--                                        <FormItem :label="$t('uc.account.fundpwd')" prop="password">-->
+<!--                                            <Input v-model="formValidate2.password" type="password" size="large"></Input>-->
+<!--                                        </FormItem>-->
+<!--                                        &lt;!&ndash; Button &ndash;&gt;-->
+<!--                                        <FormItem>-->
+<!--                                          <Button type="primary" @click="handleSubmit('formValidate2')">{{$t('uc.account.save')}}</Button>-->
+<!--                                          &lt;!&ndash; <Button type="ghost" @click="handleReset('formValidate2')" style="margin-left: 8px">Reset</Button> &ndash;&gt;-->
+<!--                                        </FormItem>-->
+<!--                                        </Col>-->
 
-                                      </Row>
+<!--                                      </Row>-->
 
-                                    </Form>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="account-item">
-                            <div class="account-item-in">
-                                <i class="icons wechat"></i>
-                                <span class="card-number">{{$t('uc.account.wxaccount')}}</span>
-                                <p v-if="user.wechatVerified==1" class="bankInfo" style="color: #fff;">
-                                    {{user.wechatPay.wechat}}
-                                </p>
-                                <p v-else class="bankInfo">
-                                  {{$t('uc.account.wxaccounttip')}}
-                                </p>
-                                <a class="btn" v-if="user.wechatVerified==1" @click="showItem(3)">{{$t('uc.account.modify')}}</a>
-                                <a class="btn" v-else @click="showItem(3)">{{$t('uc.account.bind')}}</a>
-                            </div>
-                            <div class="account-detail" v-show="choseItem==3">
-                                <div class="detail-list">
-                                    <Form ref="formValidate3" :model="formValidate3" :rules="ruleValidate" :label-width="85">
-                                      <Row>
-                                        <Col span="8">
-                                          <input type="hidden" name="wePreview" :value="wePreview" />
-                                          <img v-if="weImg" :alt="$t('uc.account.imgtip')" style="width: 200px;height: 200px;" :src="weImg" >
-                                          <img v-else :alt="$t('uc.account.imgtip')" style="width: 200px;height: 200px;" src="../../assets/images/upload_placeholder.png">
-                                          <div class="acc_sc">
-                                            <Upload ref="upload2" :on-success="weHandleSuccess" :headers="uploadHeaders" :action="uploadUrl">
-                                              <Button icon="ios-cloud-upload-outline">{{$t('uc.safe.upload')}}</Button>
-                                            </Upload>
-                                          </div>
-                                        </Col>
-                                        <Col span="16">
-                                        <!-- name -->
-                                        <FormItem :label="$t('uc.account.name')" prop="name">
-                                            <Input disabled size="large" v-model="formValidate3.name"></Input>
-                                        </FormItem>
-                                        <!-- wechat -->
-                                        <FormItem :label="$t('uc.account.wxaccount')" prop="wechat">
-                                            <Input v-model="formValidate3.wechat" size="large"></Input>
-                                        </FormItem>
-                                        <!-- passwd -->
-                                        <FormItem :label="$t('uc.account.fundpwd')" prop="password">
-                                            <Input v-model="formValidate3.password" type="password" size="large"></Input>
-                                        </FormItem>
-                                        <!-- Button -->
-                                        <FormItem>
-                                            <Button type="primary" @click="handleSubmit('formValidate3')">{{$t('uc.account.save')}}</Button>
-                                            <!-- <Button type="ghost" @click="handleReset('formValidate3')" style="margin-left: 8px">Reset</Button> -->
-                                        </FormItem>
-                                        </Col>
-                                      </Row>
-                                    </Form>
-                                </div>
-                            </div>
-                        </div>
+<!--                                    </Form>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="account-item">-->
+<!--                            <div class="account-item-in">-->
+<!--                                <i class="icons wechat"></i>-->
+<!--                                <span class="card-number">{{$t('uc.account.wxaccount')}}</span>-->
+<!--                                <p v-if="user.wechatVerified==1" class="bankInfo" style="color: #fff;">-->
+<!--                                    {{user.wechatPay.wechat}}-->
+<!--                                </p>-->
+<!--                                <p v-else class="bankInfo">-->
+<!--                                  {{$t('uc.account.wxaccounttip')}}-->
+<!--                                </p>-->
+<!--                                <a class="btn" v-if="user.wechatVerified==1" @click="showItem(3)" style="width: 15%;">{{$t('uc.account.modify')}}</a>-->
+<!--                                <a class="btn" v-else @click="showItem(3)" style="width: 15%;">{{$t('uc.account.bind')}}</a>-->
+<!--                            </div>-->
+<!--                            <div class="account-detail" v-show="choseItem==3">-->
+<!--                                <div class="detail-list">-->
+<!--                                    <Form ref="formValidate3" :model="formValidate3" :rules="ruleValidate" :label-width="85">-->
+<!--                                      <Row>-->
+<!--                                        <Col span="8">-->
+<!--                                          <input type="hidden" name="wePreview" :value="wePreview" />-->
+<!--                                          <img v-if="weImg" :alt="$t('uc.account.imgtip')" style="width: 200px;height: 200px;" :src="weImg" >-->
+<!--                                          <img v-else :alt="$t('uc.account.imgtip')" style="width: 200px;height: 200px;" src="../../assets/images/upload_placeholder.png">-->
+<!--                                          <div class="acc_sc">-->
+<!--                                            <Upload ref="upload2" :on-success="weHandleSuccess" :headers="uploadHeaders" :action="uploadUrl">-->
+<!--                                              <Button icon="ios-cloud-upload-outline">{{$t('uc.safe.upload')}}</Button>-->
+<!--                                            </Upload>-->
+<!--                                          </div>-->
+<!--                                        </Col>-->
+<!--                                        <Col span="16">-->
+<!--                                        &lt;!&ndash; name &ndash;&gt;-->
+<!--                                        <FormItem :label="$t('uc.account.name')" prop="name">-->
+<!--                                            <Input disabled size="large" v-model="formValidate3.name"></Input>-->
+<!--                                        </FormItem>-->
+<!--                                        &lt;!&ndash; wechat &ndash;&gt;-->
+<!--                                        <FormItem :label="$t('uc.account.wxaccount')" prop="wechat">-->
+<!--                                            <Input v-model="formValidate3.wechat" size="large"></Input>-->
+<!--                                        </FormItem>-->
+<!--                                        &lt;!&ndash; passwd &ndash;&gt;-->
+<!--                                        <FormItem :label="$t('uc.account.fundpwd')" prop="password">-->
+<!--                                            <Input v-model="formValidate3.password" type="password" size="large"></Input>-->
+<!--                                        </FormItem>-->
+<!--                                        &lt;!&ndash; Button &ndash;&gt;-->
+<!--                                        <FormItem>-->
+<!--                                            <Button type="primary" @click="handleSubmit('formValidate3')">{{$t('uc.account.save')}}</Button>-->
+<!--                                            &lt;!&ndash; <Button type="ghost" @click="handleReset('formValidate3')" style="margin-left: 8px">Reset</Button> &ndash;&gt;-->
+<!--                                        </FormItem>-->
+<!--                                        </Col>-->
+<!--                                      </Row>-->
+<!--                                    </Form>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
                     </div>
                 </section>
             </div>

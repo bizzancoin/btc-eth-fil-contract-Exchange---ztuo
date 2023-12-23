@@ -20,15 +20,18 @@ var momentTimezone = require('moment-timezone');
 
 import ViewUI from 'view-design';
 import locale from 'view-design/dist/locale/zh-CN';
-Vue.use(iView);
+import { Swipe, SwipeItem } from 'vant'
+import 'vant/lib/swipe/style'
+import 'vant/lib/swipe-item/style'
+Vue.use(iView).use(Swipe).use(SwipeItem)
 Vue.use(VueClipboard);
 Vue.use(VueRouter);
 Vue.use(vueResource);
 Vue.use(VueI18n);
 Vue.use(ViewUI, { locale });
 
-Vue.prototype.rootHost = "https://www.bizzans.com"; //GIBXCOIN
-Vue.prototype.host = "https://api.bizzans.com"; //GIBXCOIN
+Vue.prototype.rootHost = "https://pc.usdtest.online"; 
+Vue.prototype.host = "https://sapi.usdtest.online";
 
 Vue.prototype.api = Api;
 Vue.http.options.credentials = true;
@@ -60,7 +63,7 @@ router.afterEach((to,from,next) => {
 });
 
 const i18n = new VueI18n({
-    locale: 'en_US',
+    locale: 'zh_CN',
     messages: {
         'zh_CN': require('./assets/lang/cn.js'),
         'en_US': require('./assets/lang/en.js'),
@@ -71,6 +74,8 @@ const i18n = new VueI18n({
 		'fr_FR': require('./assets/lang/fr.js'),
 		'it_IT': require('./assets/lang/it.js'),
 		'es_ES': require('./assets/lang/es.js'),
+		'ru_RU': require('./assets/lang/ru.js'),
+		'hi_IN': require('./assets/lang/hi.js'),
     },
     silentTranslationWarn: true
 });
@@ -173,6 +178,12 @@ Vue.prototype.getTimezone4K = function(){
 		if(curlang=="zh_CN"){
 			return "Asia/Shanghai";
 		}
+		if(curlang=="hi_IN"){
+			return "Asia/India";
+		}
+		if(curlang=="ru_RU"){
+			return "Europe/Russia";
+		}
 		return curlang;
 };
 Vue.prototype.getLang4K = function(){
@@ -203,6 +214,12 @@ Vue.prototype.getLang4K = function(){
 		}
 		if(curlang=="zh_CN"){
 			return "zh";
+		}
+		if(curlang=="hi_IN"){
+			return "hi";
+		}
+		if(curlang=="ru_RU"){
+			return "ru";
 		}
 		return curlang;
 };

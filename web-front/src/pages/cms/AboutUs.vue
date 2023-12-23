@@ -1,9 +1,10 @@
 <style lang="scss" scoped>
+@import url('../../assets/css/common.scss');
 .about_us_container {
   // background-color: #eee;
   padding: 60px 0 20px 0;
-  .wrapper {
-    margin: 30px 12%;
+  .bz_container {
+    margin: 30px auto;
     background-color: #192330;
     padding: 20px 40px;
     h2 {
@@ -13,27 +14,21 @@
       border-bottom: 1px solid #27313e;
       line-height: 50px;
     }
-    .wrapper_logo ul {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 30px;
+    .wrapper_logo {
+      padding: 30px 0;
       border-bottom: 1px solid #27313e;
-      height:280px;
-      li {
-        width: 25%;
+      .item {
         padding: 0 20px;
-        list-style-type: none;
-        border-right: 1px solid #27313e;
         text-align: center;
-        min-height: 240px;
-        img{
-          width: 100px;
+        img {
+          width: 80px;
+          height: 80px;
+          margin-bottom: 14px;
         }
         h5 {
           line-height: 50px;
           font-size: 20px;
-          font-weight:400;
+          font-weight: 400;
         }
         span {
           color: #828ea1;
@@ -66,63 +61,107 @@
     }
   }
 }
+@media screen and (max-width: 768px) {
+  .about_us_container {
+    padding: 26px 0 10px 0;
+    .bz_container {
+      h2 {
+        text-align: center;
+      }
+      h5 {
+        text-align: center;
+      }
+      margin-bottom: 0;
+      padding: 20px 18px;
+      .wrapper_logo {
+        padding: 10px 0;
+        border-bottom: 1px solid #27313e;
+        .item {
+          padding: 0px;
+          text-align: center;
+          margin-bottom: 20px;
+          img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 0;
+          }
+          h5 {
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: 400;
+          }
+          span {
+            color: #828ea1;
+            font-size: 12px;
+          }
+        }
+      }
+      .content_wrapper {
+        padding: 20px 0;
+        .content1 {
+          p{
+            text-indent: 0px;
+          }
+        }
+      }
+    }
+  }
+}
 </style>
 
 <template>
   <div class="about_us_container">
-    <div class="wrapper">
-      <h2 class="title">{{$t('cms.features')}}</h2>
-      <div class="wrapper_logo">
-        <ul>
-          <li>
-            <img src="../../assets/images/feature_safe.png" alt="">
-            <h5>{{$t('description.title1')}}</h5>
-            <span>{{$t('description.message1')}}</span>
-          </li>
-          <li>
-            <img src="../../assets/images/feature_fast.png" alt="">
-            <h5>{{$t('description.title2')}}</h5>
-            <span>{{$t('description.message2')}}</span>
-          </li>
-          <li>
-            <img src="../../assets/images/feature_global.png" alt="">
-            <h5>{{$t('description.title3')}}</h5>
-            <span>{{$t('description.message3')}}</span>
-          </li>
-          <li style="border:none;">
-            <img src="../../assets/images/feature_choose.png" alt="">
-            <h5>{{$t('description.title4')}}</h5>
-            <span>{{$t('description.message4')}}</span>
-          </li>
-        </ul>
-      </div>
+    <div class="bz_container">
+      <h2 class="title">{{ $t('cms.features') }}</h2>
+      <Row class="wrapper_logo">
+        <Col :xs="12" :sm="6" class="item">
+          <img src="../../assets/images/feature_safe.png" alt="" />
+          <h5>{{ $t('description.title1') }}</h5>
+          <span>{{ $t('description.message1') }}</span>
+        </Col>
+        <Col :xs="12" :sm="6" class="item">
+          <img src="../../assets/images/feature_fast.png" alt="" />
+          <h5>{{ $t('description.title2') }}</h5>
+          <span>{{ $t('description.message2') }}</span>
+        </Col>
+        <Col :xs="12" :sm="6" class="item">
+          <img src="../../assets/images/feature_global.png" alt="" />
+          <h5>{{ $t('description.title3') }}</h5>
+          <span>{{ $t('description.message3') }}</span>
+        </Col>
+        <Col :xs="12" :sm="6" class="item">
+          <img src="../../assets/images/feature_choose.png" alt="" />
+          <h5>{{ $t('description.title4') }}</h5>
+          <span>{{ $t('description.message4') }}</span>
+        </Col>
+      </Row>
       <div class="content_wrapper">
         <div class="content1">
-          <h5>{{$t('cms.aboutus')}}</h5>
-          <p>{{$t('description.aboutdesc1')}}</p>
-          <p>{{$t('description.aboutdesc2')}} </p>
-          <p>{{$t('description.aboutdesc3')}}</p>
-          <p>{{$t('description.aboutdesc4')}}</p>
-          <p>{{$t('description.aboutdesc5')}}</p>
+          <h5>{{ $t('cms.aboutus') }}</h5>
+          <p>{{ $t('description.aboutdesc1') }}</p>
+          <p>{{ $t('description.aboutdesc2') }}</p>
+          <p>{{ $t('description.aboutdesc3') }}</p>
+          <p>{{ $t('description.aboutdesc4') }}</p>
+          <p>{{ $t('description.aboutdesc5') }}</p>
         </div>
         <div class="content1">
-          <h5>{{$t('cms.contactus')}}</h5>
-          <p>{{$t('description.service')}}：service@bizzans.com</p>
-          <p>{{$t('description.support')}}：support@bizzans.com</p>
-          <p>{{$t('description.apply')}}：apply@bizzans.com</p>
-          <p>{{$t('description.report')}}：ceo@bizzans.com</p>
-          <p>{{$t('description.coop')}}：coop@bizzans.com</p>
+          <h5>{{ $t('cms.contactus') }}</h5>
+          <p>{{ $t('description.service') }}：BTXCHAIN@gmail.com</p>
+          <p>{{ $t('description.support') }}：BTXCHAIN@gmail.com</p>
+          <p>{{ $t('description.apply') }}：BTXCHAIN@gmail.com</p>
+          <p>{{ $t('description.report') }}：BTXCHAIN@gmail.com</p>
+          <p>{{ $t('description.coop') }}：BTXCHAIN@gmail.com</p>
         </div>
-        <div class="content1" style="border:none;">
-          <h5>{{$t('description.community')}}</h5>
-          <p>{{$t('description.wechat')}}：{{$t('description.addwechat')}}</p>
-          <p>{{$t('description.weibo')}}：https://weibo.com/</p>
-          <p>{{$t('description.twitter')}}：https://twitter.com/Global</p>
-          <p>{{$t('description.biyong')}}：https://0.plus/official</p>
-          <p>{{$t('description.telegram')}}：https://t.me/official</p>
-          <p>{{$t('description.medium')}}：https://medium.com/@bizzans.com</p>
-          <p>{{$t('description.reddit')}}：https://www.reddit.com/u/global</p>
-        </div>
+<!--        <div class="content1" style="border:none;">
+          <h5>{{ $t('description.community') }}</h5>
+          <p>{{ $t('description.wechat') }}：{{ $t('description.addwechat') }}</p>
+          <p>{{ $t('description.weibo') }}：https://weibo.com/bizzan</p>
+          <p>{{ $t('description.twitter') }}：https://twitter.com/BTXCHAINGlobal</p>
+          <p>{{ $t('description.biyong') }}：https://0.plus/official</p>
+          <p>{{ $t('description.telegram') }}：https://t.me/official</p>
+          <p>{{ $t('description.medium') }}：https://medium.com/@BTXCHAIN</p>
+          <p>{{ $t('description.reddit') }}：https://www.reddit.com/u/bizzanglobal</p>
+        </div> -->
       </div>
     </div>
   </div>
@@ -131,19 +170,19 @@
 export default {
   components: {},
   created() {
-    this.init();
+    this.init()
   },
   computed: {
     lang() {
-      return this.$store.state.lang;
-    }
+      return this.$store.state.lang
+    },
   },
   methods: {
     init() {
-      this.$store.commit("navigate", "nav-about");
-    }
-  }
-};
+      this.$store.commit('navigate', 'nav-about')
+    },
+  },
+}
 </script>
 <style scoped>
 .container {

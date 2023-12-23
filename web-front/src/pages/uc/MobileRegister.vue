@@ -1,103 +1,205 @@
 <template>
-  <div class="login_form">
+  <div class="login_form mob-login">
     <div class="login_right">
+      <div style="color: #F90;margin-bottom: 60px;margin-top: 60px;">
+        <h1 style="border-left: 5px solid #F90;padding-left: 10px;letter-spacing: 2px;line-height:30px;height:30px;">
+          BTXCHAIN
+        </h1>
+        <p style="padding-left:15px;letter-spacing: 6px;">{{ $t('footer.gsmc') }}</p>
+        <div
+          style="margin-left:5px;letter-spacing: 2px;margin-top: 10px;color: rgb(226, 226, 227);font-size:13px;padding: 5px 10px;"
+        >
+          安全 ● 诚实 ● 公平 ● 热情 ● 开放
+        </div>
+      </div>
       <Form v-if="allowRegister" ref="formInline" :model="formInline" :rules="ruleInline" inline>
-        <FormItem style="text-align:center;">
-          <ButtonGroup>
-            <Button v-for="(list,index) in buttonLists" :key="list.text" :class="{ active:changeActive == index}" @click="actives(index)">{{list.text}}</Button>
-          </ButtonGroup>
-        </FormItem>
         <FormItem prop="username" style="display:none;">
-          <Input type="text" v-model="formInline.username" :placeholder="$t('uc.regist.username')">
-          </Input>
+          <Input type="text" v-model="formInline.username" :placeholder="$t('uc.regist.username')"> </Input>
         </FormItem>
         <FormItem prop="user">
-          <!--          <Input type="text" v-model="formInline.user" :placeholder="key" v-if="changeActive==0">-->
-          <!--            <Select v-model="country" slot="prepend" style="width: 65px;border-bottom: 1px solid #27313e;">-->
-          <!--              <Option value="中国" label="+86"><span>+86</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.china')}}</span></Option>             -->
-          <!--			        <Option value="新加坡" label="+65"><span>+65</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.singapore')}}</span></Option>-->
-          <!--              <Option value="韩国" label="+82"><span>+82</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.korea')}}</span></Option>-->
-          <!--              <Option value="日本" label="+81"><span>+81</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.japan')}}</span></Option>-->
-          <!--              <Option value="泰国" label="+66"><span>+66</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.thailand')}}</span></Option>-->
-          <!--              <Option value="俄罗斯" label="+7"><span>+7</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.russia')}}</span></Option>-->
-          <!--              <Option value="英国" label="+44"><span>+44</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.uk')}}</span></Option>-->
-          <!--              <Option value="越南" label="+84"><span>+84</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.vietnam')}}</span></Option>-->
-          <!--              <Option value="印度" label="+91"><span>+91</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.india')}}</span></Option>-->
-          <!--              <Option value="意大利" label="+39"><span>+39</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.italy')}}</span></Option>-->
-          <!--              <Option value="香港" label="+852"><span>+852</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.hk')}}</span></Option>-->
-          <!--              <Option value="马来西亚" label="+60"><span>+60</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.malaysia')}}</span></Option>-->
-          <!--              <Option value="台湾省" label="+886"><span>+886</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.taiwan')}}</span></Option>-->
-          <!--              <Option value="土耳其" label="+90"><span>+90</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.turkey')}}</span></Option>-->
-          <!--              <Option value="德国" label="+49"><span>+49</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.germany')}}</span></Option>-->
-          <!--              <Option value="法国" label="+33"><span>+33</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.france')}}</span></Option>-->
-          <!--              <Option value="西班牙" label="+34"><span>+34</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.spain')}}</span></Option>-->
-          <!--              <Option value="美国" label="+1"><span>+1</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.us')}}</span></Option>-->
-          <!--              <Option value="加拿大" label="+1"><span>+1</span><span style="margin-left:10px;color:#ccc">{{$t('uc.regist.canada')}}</span></Option>-->
-          <!--            </Select>-->
-          <!--          </Input>-->
-          <Input type="text" v-model="formInline.user" :placeholder="key" v-if="changeActive==1">
+          <Input type="text" v-model="formInline.user" :placeholder="key">
+            <Select v-model="country" slot="prepend" style="width: 65px;border-bottom: 1px solid #27313e;">
+              <Option value="中国" label="+86"
+                ><span>+86</span><span style="margin-left:10px;color:#ccc">中国</span></Option
+              >
+              <Option value="新加坡" label="+65"
+                ><span>+65</span
+                ><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.singapore') }}</span></Option
+              >
+              <Option value="韩国" label="+82"
+                ><span>+82</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.korea') }}</span></Option
+              >
+              <Option value="日本" label="+81"
+                ><span>+81</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.japan') }}</span></Option
+              >
+              <Option value="泰国" label="+66"
+                ><span>+66</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.thailand') }}</span></Option
+              >
+              <Option value="俄罗斯" label="+7"
+                ><span>+7</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.russia') }}</span></Option
+              >
+              <Option value="英国" label="+44"
+                ><span>+44</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.uk') }}</span></Option
+              >
+              <Option value="越南" label="+84"
+                ><span>+84</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.vietnam') }}</span></Option
+              >
+              <Option value="印度" label="+91"
+                ><span>+91</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.india') }}</span></Option
+              >
+              <Option value="意大利" label="+39"
+                ><span>+39</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.italy') }}</span></Option
+              >
+              <Option value="香港" label="+852"
+                ><span>+852</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.hk') }}</span></Option
+              >
+              <Option value="马来西亚" label="+60"
+                ><span>+60</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.malaysia') }}</span></Option
+              >
+              <Option value="台湾省" label="+886"
+                ><span>+886</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.taiwan') }}</span></Option
+              >
+              <Option value="土耳其" label="+90"
+                ><span>+90</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.turkey') }}</span></Option
+              >
+              <Option value="德国" label="+49"
+                ><span>+49</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.germany') }}</span></Option
+              >
+              <Option value="法国" label="+33"
+                ><span>+33</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.france') }}</span></Option
+              >
+              <Option value="西班牙" label="+34"
+                ><span>+34</span><span style="margin-left:10px;color:#ccc">{{ $t('uc.regist.spain') }}</span></Option
+              >
+            </Select>
           </Input>
         </FormItem>
 
-        <FormItem prop="code">
-          <Input type="text" v-model="formInline.code" :placeholder="$t('uc.safe.emailcode')">
-          </Input>
-          <input id="sendCode" type="Button" shape="circle" :value="sendcodeValue" :disabled='codedisabled'>
-          </input>
+        <FormItem prop="code" v-show="showCode">
+          <Input type="text" v-model="formInline.code" :placeholder="$t('uc.regist.smscode')"> </Input>
+          <input
+            id="sendCode"
+            @click="sendCode()"
+            type="Button"
+            shape="circle"
+            :value="sendcodeValue"
+            :disabled="codedisabled"
+          />
         </FormItem>
-        <FormItem prop="password"  class="password">
-          <Input type="password" v-model="formInline.password" :placeholder="$t('uc.regist.pwd')">
-          </Input>
+        <FormItem prop="password" class="password">
+          <Input type="password" v-model="formInline.password" :placeholder="$t('uc.regist.pwd')"> </Input>
         </FormItem>
-        <FormItem prop="repassword"  class="password">
-          <Input type="password" v-model="formInline.repassword" :placeholder="$t('uc.regist.repwd')">
-          </Input>
+        <FormItem prop="repassword" class="password">
+          <Input type="password" v-model="formInline.repassword" :placeholder="$t('uc.regist.repwd')"> </Input>
         </FormItem>
         <FormItem prop="promotion">
           <Input type="text" v-model="formInline.promotion">
-            <span slot="prepend" style="margin-left: 7px;">{{$t('uc.regist.promotion')}} :</span>
+            <span slot="prepend">{{ $t('uc.regist.promotion') }} :</span>
           </Input>
         </FormItem>
         <div class="check-agree" style="">
           <label>
-            <Checkbox v-model="agree">{{$t('uc.regist.agreement')}}</Checkbox>
+            <Checkbox v-model="agree">{{ $t('uc.regist.agreement') }}</Checkbox>
           </label>
-          <a v-if="lang=='zh_CN'" href="/helpdetail?cate=1&id=5&cateTitle=常见问题" target="_blank" style="">《{{$t('uc.regist.userprotocol')}}》</a>
-          <a v-if="lang=='en_US'" href="/helpdetail?cate=1&id=35&cateTitle=Privacy Policy" target="_blank" style="">《{{$t('uc.regist.userprotocol')}}》</a>
+          <a v-if="lang == 'zh_CN'" href="/helpdetail?cate=1&id=5&cateTitle=常见问题" target="_blank" style=""
+            >《{{ $t('uc.regist.userprotocol') }}》</a
+          >
+          <a v-if="lang == 'zh_CN'" href="/helpdetail?cate=1&id=35&cateTitle=Privacy Policy" target="_blank" style=""
+            >《{{ $t('uc.regist.userprotocol') }}》</a
+          >
         </div>
         <FormItem>
-          <Button class="register_btn" @click="handleSubmit('formInline')" :disabled="registing">{{$t('uc.regist.regist')}}</Button>
+          <Button class="register_btn" @click="handleSubmit('formInline')" :disabled="registing">{{
+            $t('uc.regist.regist')
+          }}</Button>
         </FormItem>
       </Form>
-      <Alert v-else type="warning">
-        Coming soon!
-        <template slot="desc">
-          bizzans.com will open register soon
-        </template>
-      </Alert>
+    </div>
+    <div class="section" id="page4">
+      <ul>
+        <li>
+          <div><img src="../../assets/images/feature_safe.png" alt="" /></div>
+          <p class="title">{{ $t('description.title1') }}</p>
+          <p>{{ $t('description.message1') }}</p>
+        </li>
+        <li>
+          <div><img src="../../assets/images/feature_fast.png" alt="" /></div>
+          <p class="title">{{ $t('description.title2') }}</p>
+          <p>{{ $t('description.message2') }}</p>
+        </li>
+        <li>
+          <div><img src="../../assets/images/feature_global.png" alt="" /></div>
+          <p class="title">{{ $t('description.title3') }}</p>
+          <p>{{ $t('description.message3') }}</p>
+        </li>
+        <li>
+          <div><img src="../../assets/images/feature_choose.png" alt="" /></div>
+          <p class="title">{{ $t('description.title4') }}</p>
+          <p>{{ $t('description.message4') }}</p>
+        </li>
+      </ul>
+    </div>
+    <div class="app_bottom_reg">
+      <div class="left_logo">
+        <img style="float:left;" src="../../assets/images/applogo.png" />
+        <div style="float:left;height: 40px;line-height:40px;color:#000;">{{ $t('cms.downloadslogan') }}</div>
+      </div>
+      <div class="right_btn_wrap">
+        <router-link to="/app" class="right_btn">{{ $t('cms.download') }}</router-link>
+      </div>
     </div>
   </div>
 </template>
 <style scoped lang="scss">
+#page4 {
+  background: transparent;
+  padding: 80px 0 80px 0;
+  ul {
+    width: 99%;
+    margin: 0 auto;
+    li {
+      flex: 0 0 25%;
+      display: inline-block;
+      width: 100%;
+      padding: 0 15px;
+      div {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0 auto;
+        img {
+          height: 125px;
+          margin-top: 8px;
+        }
+      }
+      p {
+        font-size: 14px;
+        margin: 20px 0;
+        text-align: center;
+        color: #828ea1;
+      }
+      p.title {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+  }
+}
 .login_form {
-  background: #0b1520 url(../../assets/images/login_bg.png) no-repeat center center;
-  height: 760px;
   position: relative;
-  overflow: hidden;
   .login_right {
     padding: 20px 30px;
-    position: absolute;
-    background: #17212e;
-    width: 350px;
-    height: 485px;
-    left: 50%;
-    top: 50%;
-    margin-left: -175px;
-    margin-top: -205px;
-    border-top: 4px solid #f0ac19;
+    background: transparent;
+    width: 100%;
+    padding-top: 60px;
     border-radius: 5px;
-    .tel-title{
+    .tel-title {
       color: #fff;
+      text-align: left;
+      margin-bottom: 30px;
     }
     form.ivu-form.ivu-form-label-right.ivu-form-inline {
       .ivu-form-item {
@@ -124,9 +226,9 @@
           }
           #sendCode {
             position: absolute;
-            border: 1px solid #f0ac19;
+            border: 1px solid #0b1520;
             background: transparent;
-            top: 0px;
+            top: -10px;
             outline: none;
             right: 0;
             width: 30%;
@@ -190,48 +292,46 @@
 }
 </style>
 <script>
-import gtInit from '../../assets/js/gt.js';
-import $ from "jquery";
+//   import gtInit from '../../assets/js/gt.js';
+import $ from 'jquery'
 export default {
   data() {
     const validateUser = (rule, value, callback) => {
       if (this.changeActive == 0) {
         // var reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
-        // if (value == "") {
-        //   callback(new Error(this.$t("uc.regist.teltip")));
-        // } else if (!reg.test(this.formInline.user)) {
-        //   callback(new Error(this.$t("uc.regist.telerr")));
-        // } else {
-        callback();
-        // }
-      } else {
-        var reg = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
-        reg = /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/;
-        if (value == "") {
-          callback(new Error(this.$t("uc.regist.emailtip")));
-        } else if (!reg.test(this.formInline.user)) {
-          callback(new Error(this.$t("uc.regist.emailerr")));
+        if (value == '') {
+          callback(new Error(this.$t('uc.regist.teltip')))
         } else {
-          callback();
+          callback()
+        }
+      } else {
+        var reg = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/
+        reg = /^(\w)+(\.\w+)*@(\w)+((\.\w{2,3}){1,3})$/
+        if (value == '') {
+          callback(new Error(this.$t('uc.regist.emailtip')))
+        } else if (!reg.test(this.formInline.user)) {
+          callback(new Error(this.$t('uc.regist.emailerr')))
+        } else {
+          callback()
         }
       }
-    };
+    }
     const validateRepassword = (rule, value, callback) => {
-      if (value === "") {
-        callback(new Error(this.$t("uc.regist.confirmpwdtip")));
+      if (value === '') {
+        callback(new Error(this.$t('uc.regist.confirmpwdtip')))
       } else if (value !== this.formInline.password) {
-        callback(new Error(this.$t("uc.regist.confirmpwderr")));
+        callback(new Error(this.$t('uc.regist.confirmpwderr')))
       } else {
-        callback();
+        callback()
       }
-    };
+    }
     return {
-      country: "中国",
-      codedisabled:false,
-      sendcodeValue: this.$t("uc.regist.sendcode"),
+      country: '中国',
+      codedisabled: false,
+      sendcodeValue: this.$t('uc.regist.sendcode'),
       isRegister: false,
-      ticket: "",
-      randStr: "",
+      ticket: '',
+      randStr: '',
       registing: false,
       captchaObj: null,
       modal1: false,
@@ -239,184 +339,155 @@ export default {
       agree: true,
       allowRegister: true,
       buttonLists: [
-        // {
-        //   text: this.$t("uc.regist.telregist")
-        // },
         {
-          text: this.$t("uc.regist.emailregist")
-        }
+          text: this.$t('uc.regist.telregist'),
+        },
+        {
+          text: this.$t('uc.regist.emailregist'),
+        },
       ],
       areas: [],
-      changeActive: 1,
-      showCode: false,
+      changeActive: 0,
+      showCode: true,
       countdown: 60,
       formInline: {
-        username: "",
+        username: '',
         // country: "",
-        user: "",
-        code: "",
-        areaCode: "",
-        password: "",
-        repassword: "",
-        promotion: ""
+        user: '',
+        code: '',
+        areaCode: '',
+        password: '',
+        repassword: '',
+        promotion: '',
       },
       ruleInline: {
-        user: [{ validator: validateUser, trigger: "blur" }],
+        user: [{ validator: validateUser, trigger: 'blur' }],
         code: [
           {
             required: true,
-            message: this.$t("uc.regist.smscodetip"),
-            trigger: "blur"
-          }
+            message: this.$t('uc.regist.smscodetip'),
+            trigger: 'blur',
+          },
         ],
         password: [
           {
             required: true,
-            message: this.$t("uc.regist.pwdtip"),
-            trigger: "blur"
+            message: this.$t('uc.regist.pwdtip'),
+            trigger: 'blur',
           },
           {
-            type: "string",
+            type: 'string',
             min: 6,
-            message: this.$t("uc.regist.pwdmsg"),
-            trigger: "blur"
-          }
+            message: this.$t('uc.regist.pwdmsg'),
+            trigger: 'blur',
+          },
         ],
-        repassword: [{ validator: validateRepassword, trigger: "blur" }]
+        repassword: [{ validator: validateRepassword, trigger: 'blur' }],
       },
-      key: "",
-      code: ""
-    };
+      key: '',
+      code: '',
+    }
   },
   watch: {
     changeActive: function(val) {
-      this.$refs["formInline"].resetFields();
+      this.$refs['formInline'].resetFields()
       // if (val == 0) this.initGtCaptcha();
     },
     lang: function() {
-      this.updateLangData();
-    }
+      this.updateLangData()
+    },
   },
   computed: {
     lang: function() {
-      return this.$store.state.lang;
+      return this.$store.state.lang
     },
     isLogin: function() {
-      return this.$store.getters.isLogin;
-    }
+      return this.$store.getters.isLogin
+    },
   },
   created: function() {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0)
     // var oDiv = document.getElementById("example-navbar-collapse");
     // oDiv && (oDiv.className = "navbar-collapse collapse");
-    this.init();
-    this.actives(this.changeActive);
-    if(this.$route.query.code != undefined && this.$route.query.code != "" && this.$route.query.code != null){
-      this.formInline.promotion = this.$route.query.code;
-    }else{
-      this.formInline.promotion = "";
+    this.init()
+    this.actives(this.changeActive)
+    if (this.$route.query.code != undefined && this.$route.query.code != '' && this.$route.query.code != null) {
+      this.formInline.promotion = this.$route.query.code
+    } else {
+      this.formInline.promotion = ''
     }
   },
   methods: {
     updateLangData() {
       this.buttonLists = [
         {
-          text: this.$t("uc.regist.telregist")
+          text: this.$t('uc.regist.telregist'),
         },
         {
-          text: this.$t("uc.regist.emailregist")
-        }
-      ];
+          text: this.$t('uc.regist.emailregist'),
+        },
+      ]
 
       if (this.changeActive == 0) {
-        this.key = this.$t("uc.regist.telno");
+        this.key = this.$t('uc.regist.telno')
       } else {
-        this.key = this.$t("uc.regist.email");
+        this.key = this.$t('uc.regist.email')
       }
     },
     init() {
-      this.$store.commit("navigate", "nav-other");
-      this.$store.state.HeaderActiveName = "0";
+      this.$store.commit('navigate', 'nav-other')
+      this.$store.state.HeaderActiveName = '0'
       if (this.isLogin) {
-        this.$router.push("/");
+        this.$router.push('/')
       }
+      window.document.title =
+        (this.lang == 'zh_CN' ? '新用户注册 - ' : 'New Register - ') + 'BZEX | Global digital currency trading platform'
       // this.getAreas();
-      this.initGtCaptcha();
+      // this.initGtCaptcha();
     },
     initGtCaptcha() {
       // 直接生成一个验证码对象
-      // var self = this;
-      // var captcha1 = new TencentCaptcha("2076680797", function(res) {
-      //   res.ret == 0 &&
-      //     (self.isRegister = true) &&
-      //     (self.ticket = res.ticket) &&
-      //     (self.randStr = res.randstr) &&
-      //     self.success();
-      // });
-      // captcha1.show(); // 显示验证码
-      var that = this;
-      this.$http.get(this.host + this.api.uc.captcha).then(function(res) {
-        window.initGeetest(
-            {
-              // 以下配置参数来自服务端 SDK
-              gt: res.body.gt,
-              challenge: res.body.challenge,
-              offline: !res.body.success, //表示用户后台检测极验服务器是否宕机
-              new_captcha: res.body.new_captcha, //用于宕机时表示是新验证码的宕机
-              product: "bind",
-              width: "100%",
-              lang: "en"
-            },
-            this.handler
-        );
-      });
-    },
-    handler(captchaObj) {
-      captchaObj.onReady(() => {
-        $("#wait").hide();
-      }).onSuccess(() => {
-        this.isRegister = true;
-        this.success();
-      });
-      $("#sendCode").click(()=> {
-        const tel = this.formInline.user,
-            // flagtel = mobilereg.test(tel) || emailReg.test(tel);
-            flagtel =  true;
-        flagtel && captchaObj.verify();
-        !flagtel && this.$Message.error("请填写正确的手机号或者邮箱号");
-      });
+      var self = this
+      var captcha1 = new TencentCaptcha('2031827463', function(res) {
+        res.ret == 0 &&
+          (self.isRegister = true) &&
+          (self.ticket = res.ticket) &&
+          (self.randStr = res.randstr) &&
+          self.success()
+      })
+      captcha1.show() // 显示验证码
     },
     onAreaChange(value) {
       for (var i = 0; i < this.areas.length; i++) {
         if (this.areas[i].zhName == value) {
-          this.formInline.areaCode = this.areas[i].areaCode;
+          this.formInline.areaCode = this.areas[i].areaCode
         }
       }
     },
     getAreas() {
       this.$http.post(this.host + this.api.common.area).then(response => {
-        var resp = response.body;
-        this.areas = resp.data;
-        this.formInline.country = this.areas[0].zhName;
-        this.formInline.areaCode = this.areas[0].areaCode;
-      });
+        var resp = response.body
+        this.areas = resp.data
+        this.formInline.country = this.areas[0].zhName
+        this.formInline.areaCode = this.areas[0].areaCode
+      })
     },
     actives: function(index) {
-      this.changeActive = 1;
+      this.changeActive = index
       if (this.changeActive == 0) {
-        this.showCode = true;
-        this.key = this.$t("uc.regist.telno");
+        this.showCode = true
+        this.key = this.$t('uc.regist.telno')
         this.ruleInline.code = [
           {
             required: true,
-            message: this.$t("uc.regist.smscodetip"),
-            trigger: "blur"
-          }
-        ];
+            message: this.$t('uc.regist.smscodetip'),
+            trigger: 'blur',
+          },
+        ]
       } else {
-        this.showCode = false;
-        this.key = this.$t("uc.regist.email");
-        this.ruleInline.code = [];
+        this.showCode = false
+        this.key = this.$t('uc.regist.email')
+        this.ruleInline.code = []
       }
     },
     handleSubmit(name) {
@@ -424,186 +495,117 @@ export default {
         if (valid) {
           if (this.agree == true) {
             if (this.changeActive == 1) {
-              if (this.isRegister) {
-                this.registing = true;
-                var params = {};
-                params["email"] = this.formInline.user;
-                params["username"] = this.formInline.username + this.formInline.user;
-                params["password"] = this.formInline.password;
-                params["promotion"] = this.formInline.promotion; // 邀请码
-                params["country"] = this.country;//"中国";
-                params["superPartner"] = "";//this.formInline.superType;
-                params["code"] = this.formInline.code;
-                params["visitCode"] = this.formInline.visitPassword;
-
-                this.$http
-                    .post(this.host + "/uc/register/email", params)
-                    .then(response => {
-                      this.registing = false;
-                      var resp = response.body;
-                      if (resp.code == 0) {
-                        if (
-                            this.formInline.superType == "1" ||
-                            this.formInline.superType == "2"
-                        ) {
-                          this.$Notice.success({
-                            title: this.$t("common.tip"),
-                            desc: "已注册成功!"
-                          });
-                          var that = this;
-                          setTimeout(() => {
-                            that.$router.push("/");
-                          }, 3000);
-                        } else {
-                          this.$Notice.success({
-                            title: this.$t("common.tip"),
-                            desc: resp.message
-                          });
-                          var that = this;
-                          setTimeout(() => {
-                            that.$router.push("/login");
-                          }, 3000);
-                        }
-                      } else {
-                        this.$Notice.error({
-                          title: this.$t("common.tip"),
-                          desc: resp.message
-                        });
-                      }
-                    });
-              } else {
-                this.$Notice.error({
-                  title: this.$t("common.tip"),
-                  desc: "opps"
-                });
-              }
+              this.openValidateModal()
             } else {
               if (this.isRegister) {
-                this.registing = true;
-                var params = {};
-                params["phone"] = this.formInline.user;
-                params["username"] = this.formInline.username + this.formInline.user;
-                params["password"] = this.formInline.password;
-                params["promotion"] = this.formInline.promotion; // 邀请码
-                params["code"] = this.formInline.code;
-                params["country"] = this.country;//"中国";
-                params["superPartner"] = "";//this.formInline.superType;
-                params["ticket"] = this.ticket;
-                params["randStr"] = this.randStr;
+                this.registing = true
+                var params = {}
+                params['phone'] = this.formInline.user
+                params['username'] = this.formInline.username + this.formInline.user
+                params['password'] = this.formInline.password
+                params['promotion'] = this.formInline.promotion // 邀请码
+                params['code'] = this.formInline.code
+                params['country'] = this.country //"中国";
+                params['superPartner'] = '' //this.formInline.superType;
+                params['ticket'] = this.ticket
+                params['randStr'] = this.randStr
 
-                this.$http
-                    .post(this.host + "/uc/register/phone", params)
-                    .then(response => {
-                      this.registing = false;
-                      var resp = response.body;
-                      if (resp.code == 0) {
-                        if (
-                            this.formInline.superType == "1" ||
-                            this.formInline.superType == "2"
-                        ) {
-                          this.$Notice.success({
-                            title: this.$t("common.tip"),
-                            desc: "Success!"
-                          });
-                          var that = this;
-                          setTimeout(() => {
-                            that.$router.push("/");
-                          }, 3000);
-                        } else {
-                          this.$Notice.success({
-                            title: this.$t("common.tip"),
-                            desc: resp.message
-                          });
-                          var that = this;
-                          setTimeout(() => {
-                            that.$router.push("/login");
-                          }, 3000);
-                        }
-                      } else {
-                        this.$Notice.error({
-                          title: this.$t("common.tip"),
-                          desc: resp.message
-                        });
-                      }
-                    });
+                this.$http.post(this.host + '/uc/register/phone', params).then(response => {
+                  this.registing = false
+                  var resp = response.body
+                  if (resp.code == 0) {
+                    if (this.formInline.superType == '1' || this.formInline.superType == '2') {
+                      this.$Notice.success({
+                        title: this.$t('common.tip'),
+                        desc: '已注册成功',
+                      })
+                      var that = this
+                      setTimeout(() => {
+                        that.$router.push('/app')
+                      }, 3000)
+                    } else {
+                      this.$Notice.success({
+                        title: this.$t('common.tip'),
+                        desc: resp.message,
+                      })
+                      var that = this
+                      setTimeout(() => {
+                        that.$router.push('/app')
+                      }, 3000)
+                    }
+                  } else {
+                    this.$Notice.error({
+                      title: this.$t('common.tip'),
+                      desc: resp.message,
+                    })
+                  }
+                })
               } else {
                 this.$Notice.error({
-                  title: this.$t("common.tip"),
-                  desc: "请输入正确的验证码"
-                });
+                  title: this.$t('common.tip'),
+                  desc: '请输入正确的验证码',
+                })
               }
             }
           } else {
             this.$Notice.error({
-              title: this.$t("common.tip"),
-              desc: this.$t("uc.regist.agreementtip")
-            });
+              title: this.$t('common.tip'),
+              desc: this.$t('uc.regist.agreementtip'),
+            })
           }
+        } else {
+          console.log('999')
         }
-      });
+      })
     },
     settime() {
-      this.sendcodeValue = this.$t("uc.regist.resendcode") + this.countdown + ")";
-      this.codedisabled = true;
-      var _this = this;
+      this.sendcodeValue = this.$t('uc.regist.resendcode') + this.countdown + ')'
+      this.codedisabled = true
+      var _this = this
       let timercode = setInterval(() => {
-        _this.countdown--;
-        _this.sendcodeValue = _this.$t("uc.regist.resendcode") + _this.countdown + ")";
+        _this.countdown--
+        _this.sendcodeValue = _this.$t('uc.regist.resendcode') + _this.countdown + ')'
         if (this.countdown <= 0) {
-          clearInterval(timercode);
-          _this.codedisabled = false;
-          _this.sendcodeValue = _this.$t("uc.regist.sendcode");
-          _this.countdown = 60;
+          clearInterval(timercode)
+          _this.codedisabled = false
+          _this.sendcodeValue = _this.$t('uc.regist.sendcode')
+          _this.countdown = 60
         }
-      }, 1000);
+      }, 1000)
     },
-    // sendCode() {
-    //   if(this.changeActive == 0) {
-    //     var mobilePhone = this.formInline.user;
-    //     // let reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
-    //     if (mobilePhone == "") {
-    //       this.$Message.error(this.$t("uc.regist.teltip"));
-    //       return;
-    //     } else {
-    //       this.initGtCaptcha();
-    //     }
-    //   }else{
-    //     this.initGtCaptcha();
-    //   }
-    // },
-    success() {
-      if(this.changeActive == 0){
-        var params = {};
-        params["phone"] = this.formInline.user;
-        params["country"] = this.country;
-        // var reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/;
-        // reg.test(params["phone"]) &&
-        this.$http.post(this.host + "/uc/mobile/code", params).then(response => {
-          var resp = response.body;
-          resp.code == 0 && this.$Notice.success({title: this.$t("common.tip"),desc: resp.message});
-          resp.code == 0 && this.settime();
-          resp.code != 0 && this.$Notice.error({title: this.$t("common.tip"),desc: resp.message});
-        });
-        // !reg.test(params["phone"]) &&this.$Notice.error({title: this.$t("common.tip"),desc: this.$t("uc.finance.withdraw.telerr")});
-      }else{
-        var params = {};
-        params["email"] = this.formInline.user;
-        this.$http.post(this.host + "/uc/reg/email/code", params).then(response => {
-          var resp = response.body;
-          resp.code == 0 && this.$Notice.success({title: this.$t("common.tip"),desc: resp.message});
-          resp.code == 0 && this.settime();
-          resp.code != 0 && this.$Notice.error({title: this.$t("common.tip"),desc: resp.message});
-        });
+    sendCode() {
+      var mobilePhone = this.formInline.user
+      let reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/
+      // if (mobilePhone == "" || !reg.test(mobilePhone)) {
+      if (mobilePhone == '') {
+        this.$Message.error(this.$t('uc.regist.teltip'))
+        return
+      } else {
+        this.initGtCaptcha()
       }
-    }
-  }
-};
+    },
+    success() {
+      var params = {}
+      params['phone'] = this.formInline.user
+      params['country'] = '中国'
+      var reg = /^[1][3,4,5,6,7,8,9][0-9]{9}$/
+      // reg.test(params["phone"]) && this.$http.post(this.host + "/uc/mobile/code", params).then(response => {
+      this.$http.post(this.host + '/uc/mobile/code', params).then(response => {
+        var resp = response.body
+        resp.code == 0 && this.$Notice.success({ title: this.$t('common.tip'), desc: resp.message })
+        resp.code == 0 && this.settime()
+        resp.code != 0 && this.$Notice.error({ title: this.$t('common.tip'), desc: resp.message })
+      })
+      // !reg.test(params["phone"]) &&this.$Notice.error({title: this.$t("common.tip"),desc: this.$t("uc.finance.withdraw.telerr")});
+    },
+  },
+}
 </script>
 <style lang="scss">
 .login_form {
   .login_right {
     form.ivu-form.ivu-form-label-right.ivu-form-inline {
-      text-align:center;
+      text-align: center;
       .ivu-form-item {
         .ivu-form-item-content {
           .ivu-input-wrapper.ivu-input-type {
@@ -611,8 +613,8 @@ export default {
               border: none;
               border-bottom: 1px solid #27313e;
               font-size: 14px;
-              background:transparent;
-              border-radius:0;
+              background: transparent;
+              border-radius: 0;
               // color:#fff;
               &:focus {
                 border: none;
@@ -644,12 +646,11 @@ export default {
               background-color: #f0ac19;
             }
           }
-
         }
-        .ivu-checkbox-wrapper.ivu-checkbox-default{
-          .ivu-checkbox{
-            .ivu-checkbox-inner{
-              background:transparent;
+        .ivu-checkbox-wrapper.ivu-checkbox-default {
+          .ivu-checkbox {
+            .ivu-checkbox-inner {
+              background: transparent;
             }
           }
         }
@@ -659,54 +660,65 @@ export default {
 }
 </style>
 <style>
-.ivu-select-single .ivu-select-selection .ivu-select-placeholder, .ivu-select-single .ivu-select-selection .ivu-select-selected-value{
+.ivu-select-single .ivu-select-selection .ivu-select-placeholder,
+.ivu-select-single .ivu-select-selection .ivu-select-selected-value {
   padding-right: 20px;
 }
-.ivu-select-arrow{
+.ivu-select-single .ivu-select-selection {
+  background-color: transparent;
+}
+.ivu-select-arrow {
   right: 4px;
 }
-.ivu-input{
-  border: none;
-  border-bottom: 1px solid #27313e;
-  font-size: 14px;
-  background:transparent;
-  border-radius:0;
-}
-.ivu-input-default{
-  border: none;
-  border-bottom: 1px solid #27313e;
-  font-size: 14px;
-  background:transparent;
-  border-radius:0;
-}
-.ivu-form-item-error .ivu-input-group-append, .ivu-form-item-error .ivu-input-group-prepend,.ivu-input-group-append, .ivu-input-group-prepend{
-  background-color: #17212e;
-  border-bottom: 1px solid #27313e;
-  border-top:none;
+.mob-login .ivu-form-item-error .ivu-input-group-append,
+.mob-login .ivu-form-item-error .ivu-input-group-prepend,
+.mob-login .ivu-input-group-append,
+.mob-login .ivu-input-group-prepend {
+  background-color: #0b1520 !important;
+  border-top: none;
   border-left: none;
   border-right: none;
 }
 
-.ivu-select-item span:first-child{
+.ivu-select-item span:first-child {
   display: inline-block;
   width: 30px;
   text-align: left;
 }
-.ivu-btn-group>.ivu-btn.ivu-btn-default{
-  background: transparent!important;
-  color: #828ea1;
+.ivu-input-group-append .ivu-select-selection,
+.ivu-input-group-prepend .ivu-select-selection {
+  margin: 0;
 }
-.ivu-btn-group>.ivu-btn.active, .ivu-btn-group>.ivu-btn:active, .ivu-btn-group>.ivu-btn:hover{
-  border-color: transparent!important;
-  color: #f0ac19!important;
+.app_bottom_reg {
+  z-index: 999;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(242, 246, 250, 1) !important;
 }
-.ivu-btn-group>.ivu-btn:focus{
-  box-shadow: none!important;
+.app_bottom_reg .left_logo img {
+  height: 30px;
+  margin-top: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
-.ivu-btn-group>.ivu-btn{
-  font-size: 16px;
+.app_bottom_reg .right_btn_wrap {
+  float: right;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 5px;
 }
-.ivu-input-group-append, .ivu-input-group-prepend{
-  padding: 0 0!important;
+.app_bottom_reg .right_btn {
+  color: #fff;
+  border-radius: 3px;
+  padding: 0px 10px;
+  line-height: 26px;
+  height: 26px;
+  display: block;
+  margin-top: 7px;
+  background: linear-gradient(200deg, #ff9900, #ffbe2b, #ffa500);
 }
 </style>

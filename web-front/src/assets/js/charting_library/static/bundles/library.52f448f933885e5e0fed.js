@@ -23181,7 +23181,7 @@ webpackJsonp([4], [function(t, e, i) {
     function i(t) { var e = new XMLHttpRequest; return e.open("GET", t, !1), e.send(), 200 === e.status ? JSON.parse(e.responseText) : null }
     if (Object.defineProperty(e, "__esModule", { value: !0 }), window.language) {
         if (!window._tv_languages) {
-            var o = "https://bizzanss.oss-cn-hangzhou.aliyuncs.com/assets/charting_library/static/localization/translations/" + window.language + ".json";
+            var o = "https://bzeex.oss-cn-hongkong.aliyuncs.com/assets/charting_library/static/localization/translations/" + window.language + ".json";
             window._tv_languages = {}, window._tv_languages[window.language] = i(o) || {}
         }
     } else window.language = "en"

@@ -34,7 +34,10 @@
               <div class="action-body">
                 <p class="acb-p1 describe">{{$t('uc.finance.withdraw.withdrawcodelist')}}</p>
                 <div class="order-table">
-                  <Table :columns="tableColumnsWithdrawRecord" :data="dataWithdrawCodeList" :disabled-hover="true"></Table>
+                  <div class="xs_table" v-if="xsShow">
+                    <Table :columns="tableColumnsWithdrawRecord" :data="dataWithdrawCodeList" :disabled-hover="true" style="width: 140%;"></Table>
+                  </div>
+                  <Table v-else :columns="tableColumnsWithdrawRecord" :data="dataWithdrawCodeList" :disabled-hover="true"></Table>
                   <div style="margin: 10px;overflow: hidden">
                     <div style="float: right;">
                       <Page :total="dataCount" :current="1" @on-change="changePage" :loading="loading" class="recharge_btn"></Page>
@@ -83,6 +86,8 @@ export default {
   data() {
     var that = this;
     return {
+      xsShow: false,//手机显示
+      activeWidth: window.innerWidth,
       interval: function() {},
       disbtn: false,
       dataCount: 10,
@@ -148,6 +153,20 @@ export default {
     this.coinType = this.$route.query.name;
     this.getCoin();
   },
+  watch: {
+      activeWidth: {
+
+        handler(val, oldVal) {
+          if (val <= 416) {
+            this.xsShow = true;
+          } else {
+            this.xsShow = false;
+          }
+        },
+        deep: true,//true 深度监听
+        immediate: true,
+      }
+    },
   methods: {
     refresh() {
       (this.coinType = null), (this.withdrawAddr = null), (this.remark = null);
@@ -354,6 +373,21 @@ span.addon-tag:last-child {
     }
   }
 }
+.xs_table {
+        width: 100%;
+        overflow-x: scroll;
+
+        &::-webkit-scrollbar {
+          height: 2px;
+        }
+
+        
+
+        &::-webkit-scrollbar-track-piece {
+          background: transparent;
+        }
+
+      }
 </style>
 
 

@@ -70,14 +70,14 @@
     <div class="wrapper">
       <div class="content_wrapper">
         <div class="content1">
-          <h5>BZB介绍</h5>
-          <p>BZB是bizzans.com交易平台权益凭证，总发行量5亿枚，永不增发。BZB的持有者除了可享受代币升值、收益分红、上币分红等权益外，还可以通过参与(bizzans.com)超级节点(合伙人)投票获得节点收益，超级节点具有决策参与权、第一知情权、优先上币权以及未来上市股票分配等传统企业股东权益。
+          <h5>BTX介绍</h5>
+          <p>BTX是BTXCHAIN交易平台权益凭证，总发行量5亿枚，永不增发。BTX的持有者除了可享受代币升值、收益分红、上币分红等权益外，还可以通过参与BTXCHAIN超级节点(合伙人)投票获得节点收益，超级节点具有决策参与权、第一知情权、优先上币权以及未来上市股票分配等传统企业股东权益。
 </p>
-          <p>BZB除了是交易平台权益凭证，也将成为bizzans.com生态项目的唯一权益凭证，如矿池、DEX、游戏、钱包、资讯等生态项目，bizzans.com是开放生态型交易所，我们欢迎任何项目方加入BZB生态，并在初期给予一定数量的BZB作为生态项目成员的发展基金。
+          <p>BTX除了是交易平台权益凭证，也将成为生态项目的唯一权益凭证，如矿池、DEX、游戏、钱包、资讯等生态项目，是开放生态型交易所，我们欢迎任何项目方加入BTX生态，并在初期给予一定数量的BTX作为生态项目成员的发展基金。
           </p>
         </div>
       </div>
-      <h2 class="title">BZB权益</h2>
+      <h2 class="title">BTX权益</h2>
       <div class="wrapper_logo">
         <ul>
           <li>
@@ -125,8 +125,8 @@
       <div class="content_wrapper">
         <div class="content1">
           <h5>白皮书</h5>
-          <p>(bizzans.com)数字资产交易平台白皮书-中文版.pdf</p>
-          <p>bizzans.com Exchange Platform White Paper-English.pdf</p>
+          <p>BTX数字资产交易平台白皮书-中文版.pdf</p>
+          <p> Exchange Platform White Paper-English.pdf</p>
         </div>
       </div>
     </div>

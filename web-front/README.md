@@ -1,39 +1,24 @@
-# GIBX_web_front
+# 币严用户前端web-vue-2023年新搭建
 
-> web端
+#### 介绍
+此前端和uniapp 端 整合修复优化。
 
-## Install Prerequisites
-The following dependencies are required to run an instance:
-
-1. NodeJS - 9.11.2
-2. Npm - 5.6.0
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm i
-
-# serve with hot reload at localhost:8080
-npm run dev
-
-# build for production with minification
-npm run build
-
-```
+2023年9月27日
 
 
 
-## Future
-1. 统一改用less,实验可以通过变量覆盖的方式定制主题;
-2. iview组件按需引用;
-3. exchange.vue等大文件，代码拆分/组件化;
+<!--   my-skils -->
 
+| 项目模块      | 仓库地址                                                     |
+| ------------- | ------------------------------------------------------------ |
+| **后端**      | [![Github Actions Badge](https://img.shields.io/badge/-Git%20-2088FF?style=flat&logo=Git&logoColor=white)](https://gitee.com/yuyanke/coin-yan-backend-2023) |
+| **前端PC**    | [![Github Actions Badge](https://img.shields.io/badge/-Git%20-2088FF?style=flat&logo=Git&logoColor=white)](https://gitee.com/yuyanke/web_v2) |
+| **Andriod**   | [![Github Actions Badge](https://img.shields.io/badge/-Git%20-2088FF?style=flat&logo=Git&logoColor=white)](https://gitee.com/yuyanke/bizzan-2023-online-packaging) |
+| **混合式APP** | [![Github Actions Badge](https://img.shields.io/badge/-Git%20-2088FF?style=flat&logo=Git&logoColor=white)](https://gitee.com/yuyanke/btxchain-uniapp) |
+| **管理员web** | [![Github Actions Badge](https://img.shields.io/badge/-Git%20-2088FF?style=flat&logo=Git&logoColor=white)](https://gitee.com/yuyanke/btx-admin-web) |
+| **苹果APP**   |                                                              |
+| **机器人**    | [![Github Actions Badge](https://img.shields.io/badge/-Git%20-2088FF?style=flat&logo=Git&logoColor=white)](https://gitee.com/yuyanke/robot) |
+| **代理商web** | [![Github Actions Badge](https://img.shields.io/badge/-Git%20-2088FF?style=flat&logo=Git&logoColor=white)](https://gitee.com/yuyanke/web_agent) |
 
-## 前端开发规范
-1. 页面使用驼峰法命名，如Exchange.vue,WithdrawRecord.vue,名称为英文单词，并且要能正确描述该模块功能
-2. 变量命名禁止使用拼音，特别是拼音缩写
-3. 页面比较多时应该使用文件夹做分类
-4. 模块中data变量应该尽量少，比较多时应该使用子对象进行管理
-
+<!--   GitHub stats graph -->
 

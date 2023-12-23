@@ -4,7 +4,7 @@
       <Form ref="formInline" :model="formInline" :rules="ruleInline" inline>
         <FormItem style="text-align:center;">
           <ButtonGroup>
-		<div class="tel-title">{{$t('uc.forget.title')}}</div>
+            <div class="tel-title">{{$t('uc.forget.title')}}</div>
           </ButtonGroup>
         </FormItem>
         <FormItem prop="user">
@@ -14,8 +14,7 @@
         <FormItem prop="code">
           <Input type="text" v-model="formInline.code" :placeholder="$t('uc.forget.smscode')">
           </Input>
-          <input id="sendCode"  type="Button" :value="sendcodeValue" :disabled="codedisabled">
-          </input>
+          <input id="sendCode"  type="Button" :value="sendcodeValue" :disabled="codedisabled" />
         </FormItem>
         <FormItem prop="password"  class="password">
           <Input type="password" v-model="formInline.password" :placeholder="$t('uc.forget.newpwd')">
@@ -292,65 +291,65 @@ export default {
       var that = this;
       this.$http.get(this.host + this.api.uc.captcha).then(function(res) {
         window.initGeetest(
-          {
-            // 以下配置参数来自服务端 SDK
-            gt: res.body.gt,
-            challenge: res.body.challenge,
-            offline: !res.body.success, //表示用户后台检测极验服务器是否宕机
-            new_captcha: res.body.new_captcha, //用于宕机时表示是新验证码的宕机
-            product: "bind",
-            width: "100%",
-			lang: "zh_CN"
-          },
-          this.handler
+            {
+              // 以下配置参数来自服务端 SDK
+              gt: res.body.gt,
+              challenge: res.body.challenge,
+              offline: !res.body.success, //表示用户后台检测极验服务器是否宕机
+              new_captcha: res.body.new_captcha, //用于宕机时表示是新验证码的宕机
+              product: "bind",
+              width: "100%",
+              lang: "en_US"
+            },
+            this.handler
         );
       });
     },
     handler(captchaObj) {
       captchaObj.onReady(() => {
-          $("#wait").hide();
-        }).onSuccess(() => {
-          let result = (this._captchaResult = captchaObj.getValidate());
-          if (!result) {
-            this.$Message.error("请完成验证");
-          } else {
-            // mobilereg.test(this.formInline.user) && this.afterValidate();
-            // this.afterValidate();
-            emailReg.test(this.formInline.user) && this.emailReset();
-	  }
-        });
+        $("#wait").hide();
+      }).onSuccess(() => {
+        let result = (this._captchaResult = captchaObj.getValidate());
+        if (!result) {
+          this.$Message.error("请完成验证");
+        } else {
+          // mobilereg.test(this.formInline.user) && this.afterValidate();
+          // this.afterValidate();
+          emailReg.test(this.formInline.user) && this.emailReset();
+        }
+      });
       $("#sendCode").click(()=> {
-         const tel = this.formInline.user,
-                    // flagtel = mobilereg.test(tel) || emailReg.test(tel);
-                    flagtel =  true;
-         flagtel && captchaObj.verify();
-         !flagtel && this.$Message.error("请填写正确的手机号或者邮箱号");
+        const tel = this.formInline.user,
+            // flagtel = mobilereg.test(tel) || emailReg.test(tel);
+            flagtel =  true;
+        flagtel && captchaObj.verify();
+        !flagtel && this.$Message.error("请填写正确的手机号或者邮箱号");
       });
     },
     emailReset() {
-        this.modal1 = false;
-        var params = {};
-        params["account"] = this.formInline.user;
-        params["geetest_challenge"] = this._captchaResult.geetest_challenge; //极验验证二次验证表单数据 chllenge
-        params["geetest_validate"] = this._captchaResult.geetest_validate; //极验验证二次验证表单数据 validate
-        params["geetest_seccode"] = this._captchaResult.geetest_seccode; //极验验证二次验证表单数据 seccode
+      this.modal1 = false;
+      var params = {};
+      params["account"] = this.formInline.user;
+      params["geetest_challenge"] = this._captchaResult.geetest_challenge; //极验验证二次验证表单数据 chllenge
+      params["geetest_validate"] = this._captchaResult.geetest_validate; //极验验证二次验证表单数据 validate
+      params["geetest_seccode"] = this._captchaResult.geetest_seccode; //极验验证二次验证表单数据 seccode
 
-        this.$http.post(this.host + "/uc/reset/email/code", params).then(response => {
-            this.countdown = 60;
-            var resp = response.body;
-            if (resp.code == 0) {
-              this.settime();
-                this.$Notice.success({
-                    title: this.$t("common.tip"),
-                    desc: resp.message
-                });
-            } else {
-                this.$Notice.error({
-                    title: this.$t("common.tip"),
-                    desc: resp.message
-                });
-            }
-        });
+      this.$http.post(this.host + "/uc/reset/email/code", params).then(response => {
+        this.countdown = 60;
+        var resp = response.body;
+        if (resp.code == 0) {
+          this.settime();
+          this.$Notice.success({
+            title: this.$t("common.tip"),
+            desc: resp.message
+          });
+        } else {
+          this.$Notice.error({
+            title: this.$t("common.tip"),
+            desc: resp.message
+          });
+        }
+      });
     },
     afterValidate() {
       this.modal1 = false;
@@ -363,21 +362,21 @@ export default {
         params["geetest_seccode"] = this._captchaResult.geetest_seccode; //极验验证二次验证表单数据 seccode
 
         this.$http.post(this.host + "/uc/reset/email/code", params).then(response => {
-            this.countdown = 60;
-            var resp = response.body;
-            if (resp.code == 0) {
-              this.settime();
-              this.$Notice.success({
-                title: this.$t("common.tip"),
-                desc: resp.message
-              });
-            } else {
-              this.$Notice.error({
-                title: this.$t("common.tip"),
-                desc: resp.message
-              });
-            }
-          });
+          this.countdown = 60;
+          var resp = response.body;
+          if (resp.code == 0) {
+            this.settime();
+            this.$Notice.success({
+              title: this.$t("common.tip"),
+              desc: resp.message
+            });
+          } else {
+            this.$Notice.error({
+              title: this.$t("common.tip"),
+              desc: resp.message
+            });
+          }
+        });
       } else {
         var params = {};
         params["account"] = this.formInline.user;
@@ -385,14 +384,14 @@ export default {
         params["geetest_validate"] = this._captchaResult.geetest_validate; //极验验证二次验证表单数据 validate
         params["geetest_seccode"] = this._captchaResult.geetest_seccode; //极验验证二次验证表单数据 seccode
         this.$http.post(this.host + "/uc/mobile/reset/code", params).then(response => {
-            var resp = response.body;
-            if (resp.code == 0) {
-              this.settime();
-              this.$Notice.success({title: this.$t("common.tip"),desc: resp.message });
-            } else {
-              this.$Notice.error({title: this.$t("common.tip"),desc: resp.message});
-            }
-          });
+          var resp = response.body;
+          if (resp.code == 0) {
+            this.settime();
+            this.$Notice.success({title: this.$t("common.tip"),desc: resp.message });
+          } else {
+            this.$Notice.error({title: this.$t("common.tip"),desc: resp.message});
+          }
+        });
       }
     },
     handleSubmit(name) {
@@ -405,23 +404,23 @@ export default {
             params["mode"] = 1;
             params["password"] = this.formInline.password;
             this.$http
-              .post(this.host + "/uc/reset/login/password", params)
-              .then(response => {
-                this.countdown = 60;
-                var resp = response.body;
-                if (resp.code == 0) {
-                  this.$Notice.success({
-                    title: this.$t("common.tip"),
-                    desc: resp.message
-                  });
-                  this.$router.push("/login");
-                } else {
-                  this.$Notice.error({
-                    title: this.$t("common.tip"),
-                    desc: resp.message
-                  });
-                }
-              });
+                .post(this.host + "/uc/reset/login/password", params)
+                .then(response => {
+                  this.countdown = 60;
+                  var resp = response.body;
+                  if (resp.code == 0) {
+                    this.$Notice.success({
+                      title: this.$t("common.tip"),
+                      desc: resp.message
+                    });
+                    this.$router.push("/login");
+                  } else {
+                    this.$Notice.error({
+                      title: this.$t("common.tip"),
+                      desc: resp.message
+                    });
+                  }
+                });
           } else {
             var params = {};
             params["account"] = this.formInline.user;
@@ -429,22 +428,22 @@ export default {
             params["mode"] = 0;
             params["password"] = this.formInline.password;
             this.$http
-              .post(this.host + "/uc/reset/login/password", params)
-              .then(response => {
-                var resp = response.body;
-                if (resp.code == 0) {
-                  this.$Notice.success({
-                    title: this.$t("common.tip"),
-                    desc:'重置成功'
-                  });
-                  this.$router.push("/login");
-                } else {
-                  this.$Notice.error({
-                    title: this.$t("common.tip"),
-                    desc: resp.message
-                  });
-                }
-              });
+                .post(this.host + "/uc/reset/login/password", params)
+                .then(response => {
+                  var resp = response.body;
+                  if (resp.code == 0) {
+                    this.$Notice.success({
+                      title: this.$t("common.tip"),
+                      desc:'重置成功'
+                    });
+                    this.$router.push("/login");
+                  } else {
+                    this.$Notice.error({
+                      title: this.$t("common.tip"),
+                      desc: resp.message
+                    });
+                  }
+                });
           }
           // this.$Message.success(this.$t('uc.forget.resetpwdsuccess'));
         } else {

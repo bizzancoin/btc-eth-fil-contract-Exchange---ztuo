@@ -1,6 +1,20 @@
 <template>
   <div class="nav-rights">
-    <div class="nav-right col-xs-12 col-md-10 padding-right-clear">
+    <div class="nav-right col-xs-12 col-md-10 padding-right-clear" v-if="xsShow">
+      <div class="bill_box rightarea padding-right-clear" style="padding-left: 5px;">
+        <div class="shaow">
+          <div class="money_table" style="text-align: left;">
+            <div style="width: 100%;">
+              <Input style="" class="search" search :placeholder="$t('common.searchplaceholder')" @on-change="seachInputChange" v-model="searchKey"/>
+
+              <Button type="primary" @click="onTransferClick" style="padding: 2px 15px;height: 30px; margin-bottom: 10px; letter-spacing:2px;color:#f0ac19;background-color:transparent;border:1px solid #f0ac19;">{{$t('uc.finance.swap.transfor')}}</Button>
+            </div>
+            <Table :no-data-text="$t('common.nodata')" :columns="tableColumnsMoney" :data="tableMoneyShow" :loading="loading" :disabled-hover="true"></Table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="nav-right col-xs-12 col-md-10 padding-right-clear" v-else>
       <div class="bill_box rightarea padding-right-clear">
         <div class="shaow">
           <div class="money_table">
@@ -48,9 +62,11 @@
           {{$t('uc.finance.swap.avaamount')}}：{{swapWallet.balance | fixed2}}
         </div>
       </div>
-      <p style="margin-top: 15px;">{{$t('uc.finance.swap.inputtransferamount')}}:
-        <InputNumber style="width: 330px;margin-left:15px;" type="text" v-model="transferAmount" :placeholder="$t('uc.finance.swap.inputtransferamount')"></InputNumber>
-        <span class="trans-all-btn" @click="onTransAll">{{$t('uc.finance.swap.all')}}</span>
+      <p style="margin-top: 25px;">{{$t('uc.finance.swap.inputtransferamount')}}:
+        <InputNumber v-if="xsShow" style="width: 60%;margin-left:10px;" type="text" v-model="transferAmount" :placeholder="$t('uc.finance.swap.inputtransferamount')"></InputNumber>
+        <InputNumber v-else style="width: 330px;margin-left:15px;" type="text" v-model="transferAmount" :placeholder="$t('uc.finance.swap.inputtransferamount')"></InputNumber>
+        <span v-if="xsShow" class="trans-all-btn" style="margin-left:10px;" @click="onTransAll">{{$t('uc.finance.swap.all')}}</span>
+        <span v-else class="trans-all-btn" @click="onTransAll">{{$t('uc.finance.swap.all')}}</span>
       </p>
 
       <div slot="footer">
@@ -65,6 +81,8 @@ export default {
   components: {},
   data() {
     return {
+      xsShow: false,//手机显示
+      activeWidth: window.innerWidth,
       loginmsg: this.$t("common.logintip"),
       loading: true,
       ordKeyword: "",
@@ -208,6 +226,20 @@ export default {
     this.getMoney();
     this.getTradeCoins();
   },
+  watch: {
+      activeWidth: {
+
+        handler(val, oldVal) {
+          if (val <= 416) {
+            this.xsShow = true;
+          } else {
+            this.xsShow = false;
+          }
+        },
+        deep: true,//true 深度监听
+        immediate: true,
+      }
+    },
   filters:{
     fixed2: function(value){
       return value.toFixed(2);

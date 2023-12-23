@@ -188,14 +188,12 @@ export default {
                   click: function() {
                     if (!self.isLogin) {
                       self.$router.push("/login");
-                    }
-                    // else if (!self.member.realName) {
-                    //   self.$Message.error(self.$t("otc.checkuser.operatemsg"));
-                    //   setTimeout(() => {
-                    //     self.$router.push("/uc/safe");
-                    //   }, 2000);
-                    // }
-                    else {
+                    } else if (!self.member.realName) {
+                      self.$Message.error(self.$t("otc.checkuser.operatemsg"));
+                      setTimeout(() => {
+                        self.$router.push("/uc/safe");
+                      }, 2000);
+                    } else {
                       self.$router.push(
                         "/otc/tradeInfo?tradeId=" + params.row.advertiseId
                       );
@@ -288,14 +286,12 @@ export default {
                   click: function() {
                     if (!self.isLogin) {
                       self.$router.push("/login");
-                    }
-                    // else if (!self.member.realName) {
-                    //   self.$Message.error(self.$t("otc.checkuser.operatemsg"));
-                    //   setTimeout(() => {
-                    //     self.$router.push("/uc/safe");
-                    //   }, 2000);
-                    // }
-                    else {
+                    } else if (!self.member.realName) {
+                      self.$Message.error(self.$t("otc.checkuser.operatemsg"));
+                      setTimeout(() => {
+                        self.$router.push("/uc/safe");
+                      }, 2000);
+                    } else {
                       self.$router.push(
                         "/otc/tradeInfo?tradeId=" + params.row.advertiseId
                       );

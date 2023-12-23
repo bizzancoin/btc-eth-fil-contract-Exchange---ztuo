@@ -1,8 +1,8 @@
 <template>
   <div class="pdf">
-    <embed src="https://bizzanss.oss-cn-hangzhou.aliyuncs.com/GIBXWhitePaperVer%201.0.pdf" width="100%" height="800">
+    <embed src="https://bzeex.oss-cn-hongkong.aliyuncs.com/WhitePaper.pdf" width="100%" height="800">
     <p class="arrow" style="text-align:center;color:#000;margin: 20px 0 20px 0;">
-      <a style="color: #FFF;" href="https://raw.githubusercontent.com/GIBXpublic/gibx/master/GIBXWhitePaperVer%201.0.pdf" target="_blank">{{$t("sectionPage.downloadwhite")}}</a>
+      <a style="color: #FFF;" href="https://raw.githubusercontent.com/bizzanpublic/bizzan/master/BTXCHAINWhitePaperVer%201.0.pdf" target="_blank">{{$t("sectionPage.downloadwhite")}}</a>
     </p>
   </div>
 </template>
@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      src: 'https://bizzanss.oss-cn-hangzhou.aliyuncs.com/GIBXWhitePaperVer%201.0.pdf'
+      src: 'https://bzeex.oss-cn-hongkong.aliyuncs.com/WhitePaper.pdf'
     };
   },
   created: function() {
