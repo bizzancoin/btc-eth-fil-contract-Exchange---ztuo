@@ -47,13 +47,15 @@
 
 ## 备注
 
-### 1、停止kill java 服务顺序
+#### 1、停止kill java 服务顺序
 
 `首先停止 er_robot_normal.jar、er_market.jar`
 
 `接着 exchange-api.jar、contract-option-api.jar、contract-second-api.jar、contract-swap-api.jar`
 
 `最后，ucenter-api.jar、cloud.jar、exchange.jar、market.jar、agent-api.jar、admin-api.jar、wallet_udun.jar、chat.jar、otc-api.jar、kline-robot.jar`
+
+#### 2、spark-core-2.6.0.jar 已上传
 
 ## 项目外包
 
