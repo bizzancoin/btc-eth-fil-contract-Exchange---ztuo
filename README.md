@@ -59,7 +59,7 @@ Java后端原始代码、原生APP代码、代理商源码、超级机器人Java
 | 币严Bizzan平台币控盘K线操作-视频教程    | https://www.youtube.com/watch?v=5LnzDJwIAss       |
 | 视频介绍                                | https://www.youtube.com/watch?v=aVVEOkefJlE&t=29s |
 | 服务器搭建教程-文档，简易版，不适合新手 | 附件:文档\00_服务器部署                           |
-
+| 新版：币严Bizzan平台币控盘K线操作-视频教程 | https://www.youtube.com/watch?v=9bkKyKrwkQQ  |
 
 
 # 开源和收费
