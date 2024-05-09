@@ -26,21 +26,23 @@ Java后端原始代码、原生APP代码、代理商源码、超级机器人Java
 
 
 
-# 商业版演示地址
+# 商业版演示地址2024
 
-> 前端PC站：https://pc.usdtest.online
+> PC端：https://btxpc.worldbrains.chat
 >
-> 前端H5（uniapp）：https://mob.usdtest.online
+> 测试账号：ovouvogh@gmail.com
 >
-> 代理商登录：https://agent.usdtest.online
+> 测试密码：123456
 >
-> 测试账号：
+> H5端：https://btxh5.worldbrains.chat
 >
-> ```
-> douyaolai@qq.com
-> ```
+> 后台管理：https://btxad.worldbrains.chat
 >
-> 测试密码：admin123
+> 管理员：admin
+>
+> 管理员密码：123456
+>
+> 代理商端：https://btxag.worldbrains.chat
 
 **<font color=OrangeRed>本项目源码仅供研究、学习使用，请遵守当地法律！</font>**
 
