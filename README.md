@@ -28,21 +28,9 @@ Java后端原始代码、原生APP代码、代理商源码、超级机器人Java
 
 # 商业版演示地址2024
 
-> PC端：https://btxpc.worldbrains.chat
+> PC端：https://btxpc.testjys.shop
 >
-> 测试账号：ovouvogh@gmail.com
->
-> 测试密码：123456
->
-> H5端：https://btxh5.worldbrains.chat
->
-> 后台管理：https://btxad.worldbrains.chat
->
-> 管理员：admin
->
-> 管理员密码：123456
->
-> 代理商端：https://btxag.worldbrains.chat
+> 测试域名已更新。
 
 **<font color=OrangeRed>本项目源码仅供研究、学习使用，请遵守当地法律！</font>**
 
