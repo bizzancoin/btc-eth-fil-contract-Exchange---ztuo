@@ -2,6 +2,12 @@
 
 # 源码介绍
 
+![image-20251104212422050](images/image-20251104212422050.png)
+
+## 新款源码了解：https://github.com/bizzancoin/jiaoyisuoguide
+
+
+
 # 2025币严bizzan商业版全开源版本目前已降价，提供全套部署教程，手把手。
 
 数字货币交易所 ，区块链永续合约、秒合约交易所开源代码，基于Springboot 、vue 开发的开源数字货币交易所。
@@ -30,9 +36,7 @@ Java后端原始代码、原生APP代码、代理商源码、超级机器人Java
 
 # 商业版演示地址2024
 
-> PC端：https://btxpc.testjys.shop
->
-> 测试域名已更新。
+> 测试站已关闭。
 
 **<font color=OrangeRed>本项目源码仅供研究、学习使用，请遵守当地法律！</font>**
 
