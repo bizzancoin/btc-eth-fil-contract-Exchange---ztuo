@@ -2,13 +2,11 @@
 
 # 源码介绍
 
-![image-20251104212422050](images/image-20251104212422050.png)
-
-## 新款源码了解：https://github.com/bizzancoin/jiaoyisuoguide
-
 
 
 # 2025币严bizzan商业版全开源版本目前已降价，提供全套部署教程，手把手。
+
+![image-20260119195046948](images/image-20260119195046948.png)
 
 数字货币交易所 ，区块链永续合约、秒合约交易所开源代码，基于Springboot 、vue 开发的开源数字货币交易所。
 
